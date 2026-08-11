@@ -1,0 +1,407 @@
+{
+  "simulado": "Simulado 2 - CSA ServiceNow",
+  "questoes": [
+    {
+      "id": "sim2_q01",
+      "materia": "CSA - ServiceNow",
+      "tema": "Data Management (Import Sets)",
+      "enunciado": "What is the primary application used to load data into ServiceNow?",
+      "alternativas": ["Service Level Management", "Configuration", "System Import Sets", "System Update Sets"],
+      "resposta_correta": [2]
+    },
+    {
+      "id": "sim2_q02",
+      "materia": "CSA - ServiceNow",
+      "tema": "Data Management (Import Sets)",
+      "enunciado": "Which of the following steps can be used to import new data into ServiceNow from a spreadsheet?",
+      "alternativas": ["Select Data Source, Schedule Transform", "Load Data, Create Transform Map, Run Transform", "Define Data Source, Select Transform Map, Run Transform", "Select Import Set, Select Transform Map, Run Transform"],
+      "resposta_correta": [1]
+    },
+    {
+      "id": "sim2_q03",
+      "materia": "CSA - ServiceNow",
+      "tema": "CMDB",
+      "enunciado": "Which tool is used for creating dependencies between configuration items in the CMDB?",
+      "alternativas": ["CI Relationship Editor", "CMDB Builder", "CI Service Manager", "CI Class Manager"],
+      "resposta_correta": [0]
+    },
+    {
+      "id": "sim2_q04",
+      "materia": "CSA - ServiceNow",
+      "tema": "Scripting/Client Development",
+      "enunciado": "What is the difference between a UI Policy and Data Policy?",
+      "alternativas": ["Data Policies run when data is entered through the form, Import Sets, or web services, while UI Policies are set only by web services.", "Data Policies run regardless of how data is entered into ServiceNow, while UI Policies are used for form interactions.", "Data Policies can be converted into UI Policies, but UI Policies cannot be converted into Data Policies.", "Data Policies run only after UI Policies have executed successfully."],
+      "resposta_correta": [1]
+    },
+    {
+      "id": "sim2_q05",
+      "materia": "CSA - ServiceNow",
+      "tema": "Update Sets",
+      "enunciado": "Which of the following is an accurate list of changes that are captured in an Update Set?",
+      "alternativas": ["Changes made to: tables, forms, schedules, and client scripts", "Changes made to: tables, forms, Business Rules, and data records", "Changes made to: tables, forms, groups, and configuration items (CIs)", "Changes made to: tables, forms, views, and fields"],
+      "resposta_correta": [3]
+    },
+    {
+      "id": "sim2_q06",
+      "materia": "CSA - ServiceNow",
+      "tema": "Update Sets",
+      "enunciado": "What are the steps to retrieve an Update Set?",
+      "alternativas": ["Verify Update Set is Complete, Retrieve, Preview, Apply", "Verify Update Set is Complete, Test Connection, Apply", "Verify Update Set is Complete, Test Connection, Commit", "Verify Update Set is Complete, Retrieve, Preview, Commit"],
+      "resposta_correta": [3]
+    },
+    {
+      "id": "sim2_q07",
+      "materia": "CSA - ServiceNow",
+      "tema": "Integrations (Flow Designer)",
+      "enunciado": "IntegrationHub allows for the execution of third-party APIs as a part of a flow. These integrations are referred to as:",
+      "alternativas": ["An action", "A spoke", "A connection", "An integration step"],
+      "resposta_correta": [1]
+    },
+    {
+      "id": "sim2_q08",
+      "materia": "CSA - ServiceNow",
+      "tema": "Application Scope",
+      "enunciado": "Which of the following protects applications by identifying and restricting access to available files and data?",
+      "alternativas": ["Application Configuration", "Verbose Log", "Access Control Rules", "Application Scope"],
+      "resposta_correta": [3]
+    },
+    {
+      "id": "sim2_q09",
+      "materia": "CSA - ServiceNow",
+      "tema": "Security/ACL",
+      "enunciado": "Which statement correctly describes the evaluation of Access Control rules?",
+      "alternativas": ["Table access rules are evaluated from the general to the specific.", "If more than one rule applies to a record, the older rule is evaluated first.", "If a row level rule and a field level rule exist, both rules must be true before an operation is allowed.", "The role with the most permissions evaluates the rules first."],
+      "resposta_correta": [2]
+    },
+    {
+      "id": "sim2_q10",
+      "materia": "CSA - ServiceNow",
+      "tema": "CMDB",
+      "enunciado": "ServiceNow contains a resource that provides a standard and shared set of service-related definitions and a CMDB framework. What resource do these statements describe?",
+      "alternativas": ["Common Services Data Model (CSDM)", "Information Technology Service Management (ITSM)", "Configuration Management Database (CMDB)", "Information Technology Infrastructure Library (ITIL)"],
+      "resposta_correta": [0]
+    },
+    {
+      "id": "sim2_q11",
+      "materia": "CSA - ServiceNow",
+      "tema": "Task Management",
+      "enunciado": "An IT manager is responsible for the Network and Hardware assignment groups, but cannot see tasks in the \"My Groups Work\" list. What explains this?",
+      "alternativas": ["The list shows active tasks not yet assigned.", "The manager does not have the itil role.", "The manager is not a member of the Service Desk group.", "The manager is not a member of the Network and Hardware groups."],
+      "resposta_correta": [3]
+    },
+    {
+      "id": "sim2_q12",
+      "materia": "CSA - ServiceNow",
+      "tema": "Integrations (Flow Designer)",
+      "enunciado": "What do you need to do before you can use an application-based trigger in your flow?",
+      "alternativas": ["Activate application trigger spoke", "Activate trigger security rules", "Activate application spoke, and plug-ins as needed", "Assign Application trigger role to SME"],
+      "resposta_correta": [2]
+    },
+    {
+      "id": "sim2_q13",
+      "materia": "CSA - ServiceNow",
+      "tema": "UI Fundamentals",
+      "enunciado": "The ServiceNow platform includes which types of interfaces? (Choose three)",
+      "alternativas": ["Now Mobile Apps", "Agent Control Center", "Back Office Dashboard", "Service Portals", "Now Platform User Interfaces"],
+      "resposta_correta": [0, 3, 4]
+    },
+    {
+      "id": "sim2_q14",
+      "materia": "CSA - ServiceNow",
+      "tema": "Update Sets",
+      "enunciado": "Which of the following are NOT included in an Update Set by default? (Choose four)",
+      "alternativas": ["Homepages", "Data (records)", "Published Workflows", "Business Rules", "Schedules", "Database changes", "Related Lists", "Report Definitions", "Scheduled Jobs"],
+      "resposta_correta": [0, 1, 4, 8]
+    },
+    {
+      "id": "sim2_q15",
+      "materia": "CSA - ServiceNow",
+      "tema": "UI Fundamentals",
+      "enunciado": "You are showing a customer a new form and they would like to add a field to it. Where could you do that? (Choose two)",
+      "alternativas": ["Select Fields and Columns module", "Right click on form header, select Configure > Form Layout", "Click on context menu, select Configure > Form Designer", "Select Field Class Manager module"],
+      "resposta_correta": [1, 2]
+    },
+    {
+      "id": "sim2_q16",
+      "materia": "CSA - ServiceNow",
+      "tema": "CMDB",
+      "enunciado": "Which ServiceNow feature is a framework that ensures the data your application requires is strictly mapped to the appropriate CMDB tables?",
+      "alternativas": ["Common Service Data Model (CSDM)", "Service Mapping Utility (SMU)", "Service Schema Map (SSM)", "CMDB Class Manager (CMDBCM)"],
+      "resposta_correta": [0]
+    },
+    {
+      "id": "sim2_q17",
+      "materia": "CSA - ServiceNow",
+      "tema": "System Administration",
+      "enunciado": "What do you activate when you want to add applications or functionality within your development instance?",
+      "alternativas": ["App Package", "Updated Pack", "Patch", "Plugin"],
+      "resposta_correta": [3]
+    },
+    {
+      "id": "sim2_q18",
+      "materia": "CSA - ServiceNow",
+      "tema": "Database/Tables",
+      "enunciado": "Which field contains the 32-character unique identifier of a record?",
+      "alternativas": ["sn_rec_id", "rec_id", "u_id", "sys_id"],
+      "resposta_correta": [3]
+    },
+    {
+      "id": "sim2_q19",
+      "materia": "CSA - ServiceNow",
+      "tema": "Service Catalog",
+      "enunciado": "How would you ensure that only the First Line employees (not managers) could submit a specific catalogue order?",
+      "alternativas": ["Create Record Producer and use the Available For list to specify First Line role", "Create Catalog Item and use the Not Available list to specify the Manager Group", "Create Catalog Item and use the Available For list to specify ITIL role", "Create Order Guide and use the User Criteria list to specify First Line role"],
+      "resposta_correta": [1]
+    },
+    {
+      "id": "sim2_q20",
+      "materia": "CSA - ServiceNow",
+      "tema": "Update Sets",
+      "enunciado": "What is frequently used to move customizations from one instance to another?",
+      "alternativas": ["Update Sets", "Code Sets", "Update Packs", "Configuration Logs"],
+      "resposta_correta": [0]
+    },
+    {
+      "id": "sim2_q21",
+      "materia": "CSA - ServiceNow",
+      "tema": "CMDB",
+      "enunciado": "Which database provides a logical model of your company infrastructure by identifying, controlling, maintaining, and verifying existing CIs?",
+      "alternativas": ["IMDB", "ITSM", "CSDM", "CMDB"],
+      "resposta_correta": [3]
+    },
+    {
+      "id": "sim2_q22",
+      "materia": "CSA - ServiceNow",
+      "tema": "Data Management (Import Sets)",
+      "enunciado": "Which module is used as the first step for importing data?",
+      "alternativas": ["Coalesce Data", "Transform Data", "Import Data", "Load Data"],
+      "resposta_correta": [3]
+    },
+    {
+      "id": "sim2_q23",
+      "materia": "CSA - ServiceNow",
+      "tema": "Integrations (Flow Designer)",
+      "enunciado": "When you need to orchestrate business processes across services with little technical user knowledge, which utility would you use?",
+      "alternativas": ["Flow Manager", "Flow Designer", "Flow Editor", "Workflow Editor"],
+      "resposta_correta": [1]
+    },
+    {
+      "id": "sim2_q24",
+      "materia": "CSA - ServiceNow",
+      "tema": "Security/ACL",
+      "enunciado": "When a user reports that they cannot see modules in the application navigator, what can you do to see exactly what modules are visible to them?",
+      "alternativas": ["Look up their password", "Initiate a Connect Chat session", "Install the Bomgar plug-in", "Impersonate the user"],
+      "resposta_correta": [3]
+    },
+    {
+      "id": "sim2_q25",
+      "materia": "CSA - ServiceNow",
+      "tema": "Reporting",
+      "enunciado": "What is the main difference between Reporting and Performance Analytics?",
+      "alternativas": ["Performance Analytics contains snapshots of data taken over time; Reporting shows only the data as it is.", "Performance Analytics can show trends; Reports cannot.", "Reports can be run on a scheduled basis; Performance Analytics cannot.", "Performance Analytics data can be published to Dashboards; Reports cannot."],
+      "resposta_correta": [0]
+    },
+    {
+      "id": "sim2_q26",
+      "materia": "CSA - ServiceNow",
+      "tema": "UI Fundamentals",
+      "enunciado": "To change the Priority values to display P1, P2, P3, P4 consistently across all Tasks, you would right-click on Priority and select what?",
+      "alternativas": ["Configure Lists", "Show Options", "Configure Task", "Show Choices", "Configure Choices"],
+      "resposta_correta": [4]
+    },
+    {
+      "id": "sim2_q27",
+      "materia": "CSA - ServiceNow",
+      "tema": "Notifications",
+      "enunciado": "Which module would you use to create a new email notification?",
+      "alternativas": ["System Notification > Email > Notifications", "Administration > Notification Overview", "System Properties > Email > Settings", "User Preferences > Email > Notifications"],
+      "resposta_correta": [0]
+    },
+    {
+      "id": "sim2_q28",
+      "materia": "CSA - ServiceNow",
+      "tema": "Integrations (Flow Designer)",
+      "enunciado": "When designing a flow, how do you reference data from a record within that flow?",
+      "alternativas": ["Drag the table icon onto the flow definition", "Use the condition builder to specify the desired values", "Specify the source table on the data pill related list", "Drag the data pill onto the flow definition"],
+      "resposta_correta": [3]
+    },
+    {
+      "id": "sim2_q29",
+      "materia": "CSA - ServiceNow",
+      "tema": "Reporting",
+      "enunciado": "On the Reports page, which sections allow you to see which reports are visible to different audiences? (Choose four)",
+      "alternativas": ["Group", "Department", "My reports", "Team", "Dashboards", "Global", "Admin", "Analytics", "All"],
+      "resposta_correta": [0, 2, 5, 8]
+    },
+    {
+      "id": "sim2_q30",
+      "materia": "CSA - ServiceNow",
+      "tema": "Data Management (Import Sets)",
+      "enunciado": "Which tool is used to define relationships between fields in an Import Set Table and a Target Table?",
+      "alternativas": ["Transform Schema", "Schema Map", "Dictionary Map", "Transform Map"],
+      "resposta_correta": [3]
+    },
+    {
+      "id": "sim2_q31",
+      "materia": "CSA - ServiceNow",
+      "tema": "Virtual Agent",
+      "enunciado": "Which ServiceNow feature provides assistance to help users obtain information and perform common tasks via a messaging interface?",
+      "alternativas": ["Agent Workspace", "Chat bot", "Virtual Agent", "Knowledge Chat"],
+      "resposta_correta": [2]
+    },
+    {
+      "id": "sim2_q32",
+      "materia": "CSA - ServiceNow",
+      "tema": "Integrations (Flow Designer)",
+      "enunciado": "Which feature allows you to automate business logic for a specific application or process, such as approvals and notifications?",
+      "alternativas": ["Flows", "Action Sequences", "Action Sets", "Task Flows"],
+      "resposta_correta": [0]
+    },
+    {
+      "id": "sim2_q33",
+      "materia": "CSA - ServiceNow",
+      "tema": "UI Fundamentals",
+      "enunciado": "From a form, what would you click to add additional fields to the form? (Choose two)",
+      "alternativas": ["Context Menu > Form > Layout", "Context Menu > Configure > Form Layout", "Context Menu > Configure > Form Design", "Right click on header > Add > Field"],
+      "resposta_correta": [1, 2]
+    },
+    {
+      "id": "sim2_q34",
+      "materia": "CSA - ServiceNow",
+      "tema": "Database/Tables",
+      "enunciado": "What is the name of the table relationship where two or more tables are related in a bi-directional relationship?",
+      "alternativas": ["Database View", "Many to Many", "One to Many", "Extended"],
+      "resposta_correta": [1]
+    },
+    {
+      "id": "sim2_q35",
+      "materia": "CSA - ServiceNow",
+      "tema": "UI Fundamentals",
+      "enunciado": "In a form header, what is the three-bar icon called?",
+      "alternativas": ["Pancake icon", "Additional Actions or Context Menu", "Hamburger icon", "Cake icon"],
+      "resposta_correta": [1]
+    },
+    {
+      "id": "sim2_q36",
+      "materia": "CSA - ServiceNow",
+      "tema": "Database/Tables",
+      "enunciado": "Group records are stored in which table?",
+      "alternativas": ["sn_user_group", "sys_user_group", "s_sys_group", "u_sys_group"],
+      "resposta_correta": [1]
+    },
+    {
+      "id": "sim2_q37",
+      "materia": "CSA - ServiceNow",
+      "tema": "UI Fundamentals",
+      "enunciado": "Which function do you use to add buttons, links, and context menu items on forms and lists?",
+      "alternativas": ["UI Policies", "UI Settings", "UI Actions", "UI Config"],
+      "resposta_correta": [2]
+    },
+    {
+      "id": "sim2_q38",
+      "materia": "CSA - ServiceNow",
+      "tema": "Scripting/Client Development",
+      "enunciado": "In a Business Rule, the \"When\" setting determines at what point the rule executes. What are the options?",
+      "alternativas": ["Before, After, Async, Display", "Prior to, Synchronous, on Update", "Insert, Update, Delete, Query", "Before, Synchronous, Scheduled Job, View"],
+      "resposta_correta": [0]
+    },
+    {
+      "id": "sim2_q39",
+      "materia": "CSA - ServiceNow",
+      "tema": "Data Management (Import Sets)",
+      "enunciado": "Which of the following are valid Data Sources that can be imported into ServiceNow? (Choose four)",
+      "alternativas": ["Local Sources (i.e. XML, CSV, Excel)", "Implementation Spoke", "DataHub", "JDBC Connection", "Network Server", "LDAP Connection"],
+      "resposta_correta": [0, 3, 5],
+      "nota": "Gabarito original listou apenas A, D, F (3 itens) mesmo a questão pedindo 'Choose four' — conferir com o professor/material original."
+    },
+    {
+      "id": "sim2_q40",
+      "materia": "CSA - ServiceNow",
+      "tema": "Application Scope",
+      "enunciado": "What is the term for a unique set of records, policies, and logic that are separated from other applications on the platform?",
+      "alternativas": ["Application Scope", "Global Scope", "System Partition", "Tenant Domain"],
+      "resposta_correta": [0]
+    },
+    {
+      "id": "sim2_q41",
+      "materia": "CSA - ServiceNow",
+      "tema": "Update Sets",
+      "enunciado": "Which functionality allows you to capture a group of related changes that can be moved from one instance to another?",
+      "alternativas": ["Update Set", "Change Set", "Import Set", "Transfer Set"],
+      "resposta_correta": [0]
+    },
+    {
+      "id": "sim2_q42",
+      "materia": "CSA - ServiceNow",
+      "tema": "Integrations (Flow Designer)",
+      "enunciado": "Which component allows you to define the sequence of activities for a process?",
+      "alternativas": ["Process Flow", "Workflow / Flow Designer", "Execution Plan", "Sequence Map"],
+      "resposta_correta": [1]
+    },
+    {
+      "id": "sim2_q43",
+      "materia": "CSA - ServiceNow",
+      "tema": "Service Catalog",
+      "enunciado": "What is the name of the interface used to browse and select service catalog items?",
+      "alternativas": ["Service Portal", "Catalog Browser", "Item Navigator", "Request Console"],
+      "resposta_correta": [0]
+    },
+    {
+      "id": "sim2_q44",
+      "materia": "CSA - ServiceNow",
+      "tema": "Database/Tables",
+      "enunciado": "Which table stores the basic details of every user in the system?",
+      "alternativas": ["sys_user", "user_details", "sn_users", "core_user"],
+      "resposta_correta": [0]
+    },
+    {
+      "id": "sim2_q45",
+      "materia": "CSA - ServiceNow",
+      "tema": "UI Fundamentals",
+      "enunciado": "Which search feature allows you to find records across multiple tables from the top of the interface?",
+      "alternativas": ["Lists Search", "Global Search", "Universal Search", "Contextual Search"],
+      "resposta_correta": [1]
+    },
+    {
+      "id": "sim2_q46",
+      "materia": "CSA - ServiceNow",
+      "tema": "Service Catalog",
+      "enunciado": "Which of the following is NOT a type of Service Catalog item?",
+      "alternativas": ["Record Producer", "Content Item", "Order Guide", "Ticket Producer"],
+      "resposta_correta": [3]
+    },
+    {
+      "id": "sim2_q47",
+      "materia": "CSA - ServiceNow",
+      "tema": "Data Management (Import Sets)",
+      "enunciado": "When a transform map is executed, which field is used to determine if a record should be updated or inserted?",
+      "alternativas": ["Match Field", "Key Field", "Coalesce Field", "Primary Field"],
+      "resposta_correta": [2]
+    },
+    {
+      "id": "sim2_q48",
+      "materia": "CSA - ServiceNow",
+      "tema": "UI Fundamentals",
+      "enunciado": "Where can you view the history of all activities and updates made to a record?",
+      "alternativas": ["The \"History\" related list", "The Activity Stream", "The Audit Log", "The Transaction Log"],
+      "resposta_correta": [1]
+    },
+    {
+      "id": "sim2_q49",
+      "materia": "CSA - ServiceNow",
+      "tema": "Reporting",
+      "enunciado": "Which role is required to create and manage Reports in ServiceNow?",
+      "alternativas": ["report_admin", "report_user", "report_publisher", "itil_report"],
+      "resposta_correta": [0],
+      "nota": "Gabarito original ambíguo entre report_admin e report_user — usei report_admin (gerenciamento amplo), mas vale confirmar com o professor."
+    },
+    {
+      "id": "sim2_q50",
+      "materia": "CSA - ServiceNow",
+      "tema": "Security/ACL",
+      "enunciado": "What is the best practice for applying the same security rule to multiple fields in a table?",
+      "alternativas": ["Create a separate ACL for each field", "Use a wildcard (*) ACL for the table", "Use a client script", "Create a Business Rule"],
+      "resposta_correta": [1]
+    }
+  ]
+}

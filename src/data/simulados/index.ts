@@ -1,0 +1,21 @@
+import simulado1 from './simulado_1_csa.json';
+import simulado2 from './simulado_2_csa.json';
+
+export interface QuestaoJSON {
+  id: string;
+  materia: string;
+  tema: string;
+  enunciado: string;
+  alternativas: string[];
+  resposta_correta: number[];
+  nota?: string;
+}
+
+export interface SimuladoJSON {
+  simulado: string;
+  questoes: QuestaoJSON[];
+}
+
+// Each JSON file is one independent simulado — never merged or deduped
+// against another file, even when questions look similar across them.
+export const BUNDLED_SIMULADOS: SimuladoJSON[] = [simulado1, simulado2];

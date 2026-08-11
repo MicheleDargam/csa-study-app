@@ -1,0 +1,525 @@
+{
+  "simulado": "Simulado 1 - CSA ServiceNow",
+  "questoes": [
+    {
+      "id": "sim1_q01",
+      "materia": "CSA - ServiceNow",
+      "tema": "Data Management (Import Sets)",
+      "enunciado": "What is the primary application used to load data into ServiceNow from external files (such as CSV or Excel)?",
+      "alternativas": [
+        "Service Level Management",
+        "Configuration",
+        "System Import Sets",
+        "System Update Sets"
+      ],
+      "resposta_correta": [2]
+    },
+    {
+      "id": "sim1_q02",
+      "materia": "CSA - ServiceNow",
+      "tema": "Data Management (Import Sets)",
+      "enunciado": "Which of the following steps represents the correct process to import new data from a spreadsheet?",
+      "alternativas": [
+        "Select Data Source, Schedule Transform",
+        "Load Data, Create Transform Map, Run Transform",
+        "Define Data Source, Select Transform Map, Run Transform",
+        "Select Import Set, Select Transform Map, Run Transform"
+      ],
+      "resposta_correta": [1]
+    },
+    {
+      "id": "sim1_q03",
+      "materia": "CSA - ServiceNow",
+      "tema": "CMDB",
+      "enunciado": "Which tool is used for creating dependencies (relationships) between configuration items in the CMDB?",
+      "alternativas": [
+        "CI Relationship Editor",
+        "CMDB Builder",
+        "CI Service Manager",
+        "CI Class Manager"
+      ],
+      "resposta_correta": [0]
+    },
+    {
+      "id": "sim1_q04",
+      "materia": "CSA - ServiceNow",
+      "tema": "Scripting/Client Development",
+      "enunciado": "What is the main difference between a UI Policy and a Data Policy?",
+      "alternativas": [
+        "Data Policies run only on Web Services; UI Policies run on the database",
+        "Data Policies convert data; UI Policies validate data",
+        "Data Policies run on the server (regardless of source); UI Policies run on the browser (form interactions)",
+        "Data Policies run only after UI Policies execute successfully"
+      ],
+      "resposta_correta": [2]
+    },
+    {
+      "id": "sim1_q05",
+      "materia": "CSA - ServiceNow",
+      "tema": "Update Sets",
+      "enunciado": "Which of the following lists correctly identifies items that are captured in an Update Set?",
+      "alternativas": [
+        "Tables, forms, homepages, and user data",
+        "Tables, forms, Business Rules, and field definitions",
+        "Incidents, Users, Groups, and Configuration Items",
+        "Dashboards, Scheduled Jobs, and Tasks"
+      ],
+      "resposta_correta": [1]
+    },
+    {
+      "id": "sim1_q06",
+      "materia": "CSA - ServiceNow",
+      "tema": "Update Sets",
+      "enunciado": "What are the correct steps to retrieve an Update Set from another instance?",
+      "alternativas": [
+        "Verify Update Set is Complete, Retrieve, Preview, Apply",
+        "Verify Update Set is Complete, Test Connection, Apply",
+        "Verify Update Set is Complete, Retrieve, Preview, Commit",
+        "Verify Update Set is Complete, Test Connection, Commit"
+      ],
+      "resposta_correta": [2]
+    },
+    {
+      "id": "sim1_q07",
+      "materia": "CSA - ServiceNow",
+      "tema": "Integrations (Flow Designer)",
+      "enunciado": "IntegrationHub enables the execution of third-party APIs as a part of a flow. What are these packaged integrations called?",
+      "alternativas": [
+        "Actions",
+        "Spokes",
+        "Connections",
+        "Integration Steps"
+      ],
+      "resposta_correta": [1]
+    },
+    {
+      "id": "sim1_q08",
+      "materia": "CSA - ServiceNow",
+      "tema": "Application Scope",
+      "enunciado": "Which feature protects applications by identifying and restricting access to available files and data (isolation)?",
+      "alternativas": [
+        "Application Configuration",
+        "Verbose Log",
+        "Access Control Rules",
+        "Application Scope"
+      ],
+      "resposta_correta": [3]
+    },
+    {
+      "id": "sim1_q09",
+      "materia": "CSA - ServiceNow",
+      "tema": "Security/ACL",
+      "enunciado": "Which statement correctly describes the evaluation of an Access Control (ACL) rule?",
+      "alternativas": [
+        "Table rules are evaluated from general to specific",
+        "The oldest rule wins",
+        "If a row rule permits access, the field rule is ignored",
+        "The user must satisfy both Table AND Field permissions to access a specific field"
+      ],
+      "resposta_correta": [3]
+    },
+    {
+      "id": "sim1_q10",
+      "materia": "CSA - ServiceNow",
+      "tema": "Security/ACL",
+      "enunciado": "Which role allows a user to elevate privileges to create and modify Access Control Rules (ACLs)?",
+      "alternativas": [
+        "admin",
+        "security_admin",
+        "acl_admin",
+        "sys_admin"
+      ],
+      "resposta_correta": [1]
+    },
+    {
+      "id": "sim1_q11",
+      "materia": "CSA - ServiceNow",
+      "tema": "Knowledge Management",
+      "enunciado": "On the Knowledge Base record, which tab would you use to define which users are NOT able to write/create articles?",
+      "alternativas": [
+        "Can Contribute (Users not listed here cannot write)",
+        "Cannot Author",
+        "Can Read",
+        "Can Write"
+      ],
+      "resposta_correta": [0]
+    },
+    {
+      "id": "sim1_q12",
+      "materia": "CSA - ServiceNow",
+      "tema": "Virtual Agent",
+      "enunciado": "Which ServiceNow feature provides automated chat assistance to help users obtain information or submit requests?",
+      "alternativas": [
+        "Knowledge Chat",
+        "Virtual Agent",
+        "Connect Chat",
+        "Guided Tour"
+      ],
+      "resposta_correta": [1]
+    },
+    {
+      "id": "sim1_q13",
+      "materia": "CSA - ServiceNow",
+      "tema": "Service Catalog",
+      "enunciado": "Which feature do you use to specify which users are able to access a Service Catalog Item?",
+      "alternativas": [
+        "Can Read Role",
+        "Catalog User Role",
+        "Can Order Tab",
+        "User Criteria"
+      ],
+      "resposta_correta": [3]
+    },
+    {
+      "id": "sim1_q14",
+      "materia": "CSA - ServiceNow",
+      "tema": "Service Catalog",
+      "enunciado": "To create an option in the Service Catalog that creates an Incident record directly (instead of a Request), what would you use?",
+      "alternativas": [
+        "Record Producer",
+        "Catalog Item",
+        "Order Guide",
+        "Content Item"
+      ],
+      "resposta_correta": [0]
+    },
+    {
+      "id": "sim1_q15",
+      "materia": "CSA - ServiceNow",
+      "tema": "Scripting/Client Development",
+      "enunciado": "What is the primary difference between a Client Script and a Business Rule?",
+      "alternativas": [
+        "Client Script runs on the database; Business Rule runs on the client",
+        "Client Script runs on the browser (client); Business Rule runs on the server (database)",
+        "Client Script is used only for security; Business Rule for layout",
+        "There is no difference, both use JavaScript on the server"
+      ],
+      "resposta_correta": [1]
+    },
+    {
+      "id": "sim1_q16",
+      "materia": "CSA - ServiceNow",
+      "tema": "UI Fundamentals",
+      "enunciado": "What allows a user to save a complex filter query on a list for quick access later?",
+      "alternativas": [
+        "Breadcrumbs",
+        "Quick Filter",
+        "Favorites (or Saved Filters)",
+        "Shortcuts"
+      ],
+      "resposta_correta": [2]
+    },
+    {
+      "id": "sim1_q17",
+      "materia": "CSA - ServiceNow",
+      "tema": "System Administration",
+      "enunciado": "Where would a System Administrator navigate to update the company logo and the browser tab title?",
+      "alternativas": [
+        "System Definition > Branding",
+        "System Properties > My Company",
+        "System UI > Images",
+        "Self-Service > My Profile"
+      ],
+      "resposta_correta": [1]
+    },
+    {
+      "id": "sim1_q18",
+      "materia": "CSA - ServiceNow",
+      "tema": "Data Management (Import Sets)",
+      "enunciado": "Which field setting on a Transform Map ensures that existing records are updated instead of duplicated during an import?",
+      "alternativas": [
+        "Mandatory",
+        "Unique",
+        "Coalesce",
+        "Key"
+      ],
+      "resposta_correta": [2]
+    },
+    {
+      "id": "sim1_q19",
+      "materia": "CSA - ServiceNow",
+      "tema": "CMDB",
+      "enunciado": "What are the two base tables for the Configuration Management Database (CMDB)?",
+      "alternativas": [
+        "cmdb and cmdb_rel_ci",
+        "cmdb and cmdb_ci",
+        "cmdb_ci and cmdb_rel_ci",
+        "configuration_item and configuration_relationship"
+      ],
+      "resposta_correta": [1]
+    },
+    {
+      "id": "sim1_q20",
+      "materia": "CSA - ServiceNow",
+      "tema": "UI Fundamentals",
+      "enunciado": "What term describes the process of navigating from a record to a related record to access its fields (e.g., incident.caller_id.email)?",
+      "alternativas": [
+        "Field hopping",
+        "Reference jumping",
+        "Dot-walking",
+        "Table walking"
+      ],
+      "resposta_correta": [2]
+    },
+    {
+      "id": "sim1_q21",
+      "materia": "CSA - ServiceNow",
+      "tema": "UI Fundamentals",
+      "enunciado": "Which action allows a System Administrator to modify the column layout of a list for ALL users?",
+      "alternativas": [
+        "Click the gear icon (Personalize List)",
+        "Right-click header > Configure > List Layout",
+        "Right-click header > Personalize > List Layout",
+        "Right-click header > Configure > List Control"
+      ],
+      "resposta_correta": [1]
+    },
+    {
+      "id": "sim1_q22",
+      "materia": "CSA - ServiceNow",
+      "tema": "UI Fundamentals",
+      "enunciado": "What allows you to display the same record with different form layouts for different users or purposes (e.g., Default vs. Self-Service)?",
+      "alternativas": [
+        "Perspectives",
+        "Layouts",
+        "Views",
+        "Forms"
+      ],
+      "resposta_correta": [2]
+    },
+    {
+      "id": "sim1_q23",
+      "materia": "CSA - ServiceNow",
+      "tema": "Scripting/Client Development",
+      "enunciado": "How do you limit the choices in a Choice List based on the value selected in another field (e.g., Subcategory depends on Category)?",
+      "alternativas": [
+        "UI Policy",
+        "Client Script",
+        "Make the field a Dependent Field",
+        "Data Policy"
+      ],
+      "resposta_correta": [2]
+    },
+    {
+      "id": "sim1_q24",
+      "materia": "CSA - ServiceNow",
+      "tema": "Notifications",
+      "enunciado": "Which syntax is used to insert dynamic data from a record (such as the incident number) into an email subject line?",
+      "alternativas": [
+        "[number]",
+        "${number}",
+        "{number}",
+        "#number"
+      ],
+      "resposta_correta": [1]
+    },
+    {
+      "id": "sim1_q25",
+      "materia": "CSA - ServiceNow",
+      "tema": "Reporting",
+      "enunciado": "Which section of the Report Designer is used to adjust the look of the report (colors, titles, legends)?",
+      "alternativas": [
+        "Layout",
+        "Format",
+        "Configure",
+        "Style"
+      ],
+      "resposta_correta": [3]
+    },
+    {
+      "id": "sim1_q26",
+      "materia": "CSA - ServiceNow",
+      "tema": "Task Management",
+      "enunciado": "Which types of entities can receive Task Assignments? (Choose two)",
+      "alternativas": [
+        "Users",
+        "Departments",
+        "Groups",
+        "Teams"
+      ],
+      "resposta_correta": [0, 2]
+    },
+    {
+      "id": "sim1_q27",
+      "materia": "CSA - ServiceNow",
+      "tema": "Security/ACL",
+      "enunciado": "Which role allows a user to act as another user for testing purposes?",
+      "alternativas": [
+        "admin",
+        "impersonator",
+        "view_as_user",
+        "proxy_user"
+      ],
+      "resposta_correta": [1]
+    },
+    {
+      "id": "sim1_q28",
+      "materia": "CSA - ServiceNow",
+      "tema": "UI Fundamentals",
+      "enunciado": "On a form header, what is the difference between the \"Save\" and \"Submit\" buttons?",
+      "alternativas": [
+        "Save saves and stays on the form; Submit saves and returns to the list",
+        "Save saves and returns to the list; Submit saves and stays on the form",
+        "There is no difference",
+        "Save creates a new record; Submit updates an existing one"
+      ],
+      "resposta_correta": [0]
+    },
+    {
+      "id": "sim1_q29",
+      "materia": "CSA - ServiceNow",
+      "tema": "Task Management",
+      "enunciado": "Which field on a Task record is used for internal technical communication and is NOT visible to the end user?",
+      "alternativas": [
+        "Additional comments",
+        "Work notes",
+        "Activity Stream",
+        "Internal notes"
+      ],
+      "resposta_correta": [1]
+    },
+    {
+      "id": "sim1_q30",
+      "materia": "CSA - ServiceNow",
+      "tema": "System Administration",
+      "enunciado": "Which table stores the system properties that control the behavior of the platform?",
+      "alternativas": [
+        "sys_config",
+        "sys_properties",
+        "system_props",
+        "config_properties"
+      ],
+      "resposta_correta": [1]
+    },
+    {
+      "id": "sim1_q31",
+      "materia": "CSA - ServiceNow",
+      "tema": "Database/Tables",
+      "enunciado": "What type of field stores a unique system identifier (sys_id) of a record on another table?",
+      "alternativas": [
+        "Choice",
+        "Reference",
+        "String",
+        "Document ID"
+      ],
+      "resposta_correta": [1]
+    },
+    {
+      "id": "sim1_q32",
+      "materia": "CSA - ServiceNow",
+      "tema": "Database/Tables",
+      "enunciado": "When a new table extends another table (e.g., Incident extends Task), what happens to the fields from the parent table?",
+      "alternativas": [
+        "They are copied once",
+        "They are inherited (Table Extension)",
+        "They must be recreated manually",
+        "They are not accessible"
+      ],
+      "resposta_correta": [1]
+    },
+    {
+      "id": "sim1_q33",
+      "materia": "CSA - ServiceNow",
+      "tema": "Security/ACL",
+      "enunciado": "What is the best practice for assigning roles to users?",
+      "alternativas": [
+        "Assign roles directly to users",
+        "Assign roles to groups, then add users to groups",
+        "Assign roles to departments",
+        "Create a new role for every user"
+      ],
+      "resposta_correta": [1]
+    },
+    {
+      "id": "sim1_q34",
+      "materia": "CSA - ServiceNow",
+      "tema": "Database/Tables",
+      "enunciado": "Which field is automatically generated by the system and acts as a unique 32-character global identifier (GUID)?",
+      "alternativas": [
+        "sys_id",
+        "key_id",
+        "uid",
+        "global_uid"
+      ],
+      "resposta_correta": [0]
+    },
+    {
+      "id": "sim1_q35",
+      "materia": "CSA - ServiceNow",
+      "tema": "Service Catalog",
+      "enunciado": "Which Service Catalog feature allows you to group multiple items into a single guided request process?",
+      "alternativas": [
+        "Record Producer",
+        "Order Guide",
+        "Content Item",
+        "Variable Set"
+      ],
+      "resposta_correta": [1]
+    },
+    {
+      "id": "sim1_q36",
+      "materia": "CSA - ServiceNow",
+      "tema": "Integrations (Flow Designer)",
+      "enunciado": "What is a \"Spoke\" in Flow Designer?",
+      "alternativas": [
+        "A type of trigger",
+        "A logical connector for integrations with external systems (IntegrationHub)",
+        "A script variable",
+        "A type of report"
+      ],
+      "resposta_correta": [1]
+    },
+    {
+      "id": "sim1_q37",
+      "materia": "CSA - ServiceNow",
+      "tema": "UI Fundamentals",
+      "enunciado": "Which interface is designed specifically for Tier 1 agents to prioritize and resolve work efficiently?",
+      "alternativas": [
+        "Service Portal",
+        "Employee Center",
+        "Service Operations Workspace",
+        "Classic UI"
+      ],
+      "resposta_correta": [2]
+    },
+    {
+      "id": "sim1_q38",
+      "materia": "CSA - ServiceNow",
+      "tema": "Notifications",
+      "enunciado": "Which variable in an email notification creates a link to the record, displaying the record number as the link text?",
+      "alternativas": [
+        "${URI}",
+        "${URI_REF}",
+        "${LINK}",
+        "${RECORD_LINK}"
+      ],
+      "resposta_correta": [1]
+    },
+    {
+      "id": "sim1_q39",
+      "materia": "CSA - ServiceNow",
+      "tema": "Service Catalog",
+      "enunciado": "Which feature allows you to group a common set of variables (e.g., size and color) to be reused across multiple catalog items?",
+      "alternativas": [
+        "Variable Set",
+        "Catalog Group",
+        "Item Collection",
+        "Choice List"
+      ],
+      "resposta_correta": [0]
+    },
+    {
+      "id": "sim1_q40",
+      "materia": "CSA - ServiceNow",
+      "tema": "Database/Tables",
+      "enunciado": "What is the parent table from which Incident, Problem, and Change are extended?",
+      "alternativas": [
+        "cmdb_ci",
+        "task",
+        "ticket",
+        "service_request"
+      ],
+      "resposta_correta": [1]
+    }
+  ]
+}
