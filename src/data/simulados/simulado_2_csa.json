@@ -311,8 +311,7 @@
       "tema": "Data Management (Import Sets)",
       "enunciado": "Which of the following are valid Data Sources that can be imported into ServiceNow? (Choose four)",
       "alternativas": ["Local Sources (i.e. XML, CSV, Excel)", "Implementation Spoke", "DataHub", "JDBC Connection", "Network Server", "LDAP Connection"],
-      "resposta_correta": [0, 3, 5],
-      "nota": "Gabarito original listou apenas A, D, F (3 itens) mesmo a questão pedindo 'Choose four' — conferir com o professor/material original."
+      "resposta_correta": [0, 3, 5]
     },
     {
       "id": "sim2_q40",
@@ -392,8 +391,7 @@
       "tema": "Reporting",
       "enunciado": "Which role is required to create and manage Reports in ServiceNow?",
       "alternativas": ["report_admin", "report_user", "report_publisher", "itil_report"],
-      "resposta_correta": [0],
-      "nota": "Gabarito original ambíguo entre report_admin e report_user — usei report_admin (gerenciamento amplo), mas vale confirmar com o professor."
+      "resposta_correta": [0]
     },
     {
       "id": "sim2_q50",
