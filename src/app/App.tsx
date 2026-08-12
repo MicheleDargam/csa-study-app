@@ -15,7 +15,13 @@ import { BancoQuestoesPage } from '../features/banco-questoes/BancoQuestoesPage'
 import { TemaPracticaPage } from '../features/banco-questoes/TemaPracticaPage';
 import { ResultadoPraticaPage } from '../features/banco-questoes/ResultadoPraticaPage';
 import { HistoricoPraticaPage } from '../features/banco-questoes/HistoricoPraticaPage';
-import { seedDefaultMaterias, seedSimulados, seedAvulsas, seedLembretePadrao } from '../db/seed';
+import {
+  seedDefaultMaterias,
+  seedSimulados,
+  seedAvulsas,
+  seedLembretePadrao,
+  migrateMateriasParaTemas,
+} from '../db/seed';
 
 // recharts pulls in a sizeable chunk — only fetch it when Progresso is visited
 const ProgressoPage = lazy(() =>
@@ -27,6 +33,7 @@ export function App() {
   // batches once, regardless of which route loads first
   useEffect(() => {
     seedDefaultMaterias();
+    migrateMateriasParaTemas();
     seedSimulados();
     seedAvulsas();
     seedLembretePadrao();

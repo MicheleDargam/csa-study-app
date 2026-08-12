@@ -11,15 +11,28 @@ export const MATERIA_COLORS = [
   { name: 'Índigo', value: '#6366f1' },
 ] as const;
 
-// Domínios de conteúdo típicos da certificação CSA — pré-cadastrados no
-// primeiro uso, mas totalmente editáveis/removíveis pelo usuário depois.
+// Pré-cadastrados no primeiro uso, mas totalmente editáveis/removíveis pelo
+// usuário depois. Os nomes são exatamente os mesmos "temas" usados para
+// marcar as questões no Banco de Questões (ver src/data/simulados e
+// src/data/avulsas) — assim "Horas por matéria" (Timer/Progresso) e
+// "Desempenho por tema" (Banco de Questões/Progresso) falam a mesma língua
+// em vez de serem duas taxonomias soltas. Ver migrateMateriasParaTemas em
+// src/db/seed.ts para quem já tinha a lista antiga.
 export const DEFAULT_MATERIAS = [
-  { name: 'Now Platform', color: '#6366f1' },
-  { name: 'User Interface', color: '#3b82f6' },
-  { name: 'System Administration', color: '#ef4444' },
-  { name: 'Service Portal', color: '#f97316' },
-  { name: 'Flow Designer & Automação', color: '#06b6d4' },
-  { name: 'Reporting & Performance Analytics', color: '#22c55e' },
-  { name: 'App Engine Studio', color: '#eab308' },
-  { name: 'Integrações', color: '#ec4899' },
+  { name: 'Application Scope', color: '#3b82f6' },
+  { name: 'CMDB', color: '#8b5cf6' },
+  { name: 'Data Management (Import Sets)', color: '#ec4899' },
+  { name: 'Database/Tables', color: '#ef4444' },
+  { name: 'Integrations (Flow Designer)', color: '#f97316' },
+  { name: 'Knowledge Management', color: '#eab308' },
+  { name: 'Notifications', color: '#22c55e' },
+  { name: 'Reporting', color: '#14b8a6' },
+  { name: 'Scripting/Client Development', color: '#06b6d4' },
+  { name: 'Security/ACL', color: '#6366f1' },
+  { name: 'Service Catalog', color: '#3b82f6' },
+  { name: 'System Administration', color: '#8b5cf6' },
+  { name: 'Task Management', color: '#ec4899' },
+  { name: 'UI Fundamentals', color: '#ef4444' },
+  { name: 'Update Sets', color: '#f97316' },
+  { name: 'Virtual Agent', color: '#eab308' },
 ];

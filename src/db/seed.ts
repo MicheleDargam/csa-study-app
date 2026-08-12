@@ -21,6 +21,53 @@ export async function seedDefaultMaterias(): Promise<void> {
   });
 }
 
+// Old default subject names (pre-unification) mapped to the tema name they
+// conceptually correspond to. Renaming (not delete+recreate) keeps the
+// subjectId stable, so any tasks/sessions already linked to it stay intact.
+const MATERIA_RENAMES: Record<string, string> = {
+  'Integrações': 'Integrations (Flow Designer)',
+  'Reporting & Performance Analytics': 'Reporting',
+  'User Interface': 'UI Fundamentals',
+};
+
+const MATERIAS_TEMAS_MIGRATION_FLAG = 'csa-materias-temas-migration-v1';
+
+/**
+ * One-time migration that aligns the "Matérias" list (Timer/Tarefas) with
+ * the "temas" taxonomy used to tag questions in the Banco de Questões, so
+ * hours studied and question performance can be compared for the same
+ * topic instead of living on two disconnected lists. Renames subjects that
+ * map 1:1 onto a tema (see MATERIA_RENAMES) and adds any tema not yet
+ * represented as a new subject. Never deletes a subject — a few old
+ * defaults (Now Platform, Service Portal, App Engine Studio) have no
+ * matching tema and are left for the user to remove manually if unused.
+ * Guarded by a localStorage flag so it only runs once per browser; safe to
+ * call multiple times regardless (idempotent, and DB writes are wrapped in
+ * one transaction so StrictMode's double-invoked effects can't race).
+ */
+export async function migrateMateriasParaTemas(): Promise<void> {
+  if (localStorage.getItem(MATERIAS_TEMAS_MIGRATION_FLAG)) return;
+
+  await db.transaction('rw', db.subjects, async () => {
+    const subjects = await db.subjects.toArray();
+
+    for (const [oldName, newName] of Object.entries(MATERIA_RENAMES)) {
+      const match = subjects.find((s) => s.name === oldName);
+      if (match?.id) {
+        await db.subjects.update(match.id, { name: newName });
+      }
+    }
+
+    const currentNames = new Set((await db.subjects.toArray()).map((s) => s.name));
+    const missing = DEFAULT_MATERIAS.filter((m) => !currentNames.has(m.name));
+    if (missing.length > 0) {
+      await db.subjects.bulkAdd(missing.map((m) => ({ ...m, createdAt: new Date() })));
+    }
+  });
+
+  localStorage.setItem(MATERIAS_TEMAS_MIGRATION_FLAG, '1');
+}
+
 type UpsertResult = 'inserted' | 'updated' | 'unchanged';
 
 /**
