@@ -311,7 +311,7 @@
       "tema": "Data Management (Import Sets)",
       "enunciado": "Which of the following are valid Data Sources that can be imported into ServiceNow? (Choose four)",
       "alternativas": ["Local Sources (i.e. XML, CSV, Excel)", "Implementation Spoke", "DataHub", "JDBC Connection", "Network Server", "LDAP Connection"],
-      "resposta_correta": [0, 3, 5]
+      "resposta_correta": [0, 3, 4, 5]
     },
     {
       "id": "sim2_q40",
