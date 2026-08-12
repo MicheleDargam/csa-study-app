@@ -68,6 +68,8 @@ export interface Questao {
   respostaCorreta: number[]; // indices into alternativas; length > 1 = multi-select
   nota?: string; // optional caveat about the answer key, shown during review
   ordem: number; // preserves original question order within the simulado
+  enunciadoPt?: string; // PT-BR translation, shown alongside the English text when toggled
+  alternativasPt?: string[]; // same order/length as `alternativas`
 }
 
 export interface TentativaErro {

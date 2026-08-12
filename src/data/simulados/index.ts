@@ -9,6 +9,8 @@ export interface QuestaoJSON {
   alternativas: string[];
   resposta_correta: number[];
   nota?: string;
+  enunciado_pt?: string;
+  alternativas_pt?: string[];
 }
 
 export interface SimuladoJSON {

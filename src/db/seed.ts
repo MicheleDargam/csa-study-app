@@ -43,6 +43,8 @@ async function upsertQuestao(q: QuestaoJSON, ordem: number, simuladoId?: number)
     alternativas: q.alternativas,
     respostaCorreta: q.resposta_correta,
     nota: q.nota,
+    enunciadoPt: q.enunciado_pt,
+    alternativasPt: q.alternativas_pt,
   };
 
   if (!existing) {
@@ -55,8 +57,10 @@ async function upsertQuestao(q: QuestaoJSON, ordem: number, simuladoId?: number)
     existing.tema !== fields.tema ||
     existing.enunciado !== fields.enunciado ||
     existing.nota !== fields.nota ||
+    existing.enunciadoPt !== fields.enunciadoPt ||
     JSON.stringify(existing.alternativas) !== JSON.stringify(fields.alternativas) ||
-    JSON.stringify(existing.respostaCorreta) !== JSON.stringify(fields.respostaCorreta);
+    JSON.stringify(existing.respostaCorreta) !== JSON.stringify(fields.respostaCorreta) ||
+    JSON.stringify(existing.alternativasPt) !== JSON.stringify(fields.alternativasPt);
 
   if (changed) {
     await db.questoes.update(existing.id!, fields);

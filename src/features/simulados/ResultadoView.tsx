@@ -1,8 +1,10 @@
+import { useState } from 'react';
 import { useLiveQuery } from 'dexie-react-hooks';
-import { ArrowLeft, CheckCircle2, XCircle, Info } from 'lucide-react';
+import { ArrowLeft, CheckCircle2, XCircle, Info, Languages } from 'lucide-react';
 import { db } from '../../db/database';
 import { formatDuration } from '../timer/timerUtils';
 import { formatPercent } from './simuladoUtils';
+import { TranslationPanel } from './TranslationPanel';
 import type { Questao, TentativaErro } from '../../types';
 
 interface ResultadoViewProps {
@@ -58,37 +60,7 @@ export function ResultadoView({ title, acertos, total, duracaoSegundos, erros, o
         <div className="resultado-review">
           <h2 className="task-group-title">Questões para revisar</h2>
           {errorQuestoes.map(({ erro, questao }) => (
-            <div key={questao.id} className="review-card">
-              <span className="question-card-tema">{questao.tema}</span>
-              <p className="question-card-enunciado">{questao.enunciado}</p>
-
-              <div className="question-card-options">
-                {questao.alternativas.map((alt, i) => {
-                  const isCorrect = questao.respostaCorreta.includes(i);
-                  const wasSelected = erro.selecionadas.includes(i);
-                  const state = isCorrect
-                    ? 'review-option--correct'
-                    : wasSelected
-                      ? 'review-option--wrong'
-                      : '';
-                  return (
-                    <div key={i} className={`question-option review-option ${state}`}>
-                      <span className="question-option-mark">
-                        {isCorrect && <CheckCircle2 size={14} />}
-                        {!isCorrect && wasSelected && <XCircle size={14} />}
-                      </span>
-                      <span className="question-option-text">{alt}</span>
-                    </div>
-                  );
-                })}
-              </div>
-
-              {questao.nota && (
-                <p className="review-nota">
-                  <Info size={14} /> {questao.nota}
-                </p>
-              )}
-            </div>
+            <ReviewCard key={questao.id} erro={erro} questao={questao} />
           ))}
         </div>
       ) : (
@@ -96,6 +68,64 @@ export function ResultadoView({ title, acertos, total, duracaoSegundos, erros, o
           <CheckCircle2 size={32} className="history-empty-icon" />
           <p>Você acertou todas as questões! 🎉</p>
         </div>
+      )}
+    </div>
+  );
+}
+
+interface ReviewCardProps {
+  erro: TentativaErro;
+  questao: Questao;
+}
+
+function ReviewCard({ erro, questao }: ReviewCardProps) {
+  const [showTranslation, setShowTranslation] = useState(false);
+
+  return (
+    <div className="review-card">
+      <div className="question-card-header">
+        <span className="question-card-tema">{questao.tema}</span>
+        {questao.enunciadoPt && (
+          <button
+            type="button"
+            className={`translate-toggle ${showTranslation ? 'translate-toggle--active' : ''}`}
+            onClick={() => setShowTranslation((s) => !s)}
+            title="Ver tradução em português"
+          >
+            <Languages size={13} /> PT
+          </button>
+        )}
+      </div>
+
+      <p className="question-card-enunciado">{questao.enunciado}</p>
+
+      {showTranslation && <TranslationPanel questao={questao} />}
+
+      <div className="question-card-options">
+        {questao.alternativas.map((alt, i) => {
+          const isCorrect = questao.respostaCorreta.includes(i);
+          const wasSelected = erro.selecionadas.includes(i);
+          const state = isCorrect
+            ? 'review-option--correct'
+            : wasSelected
+              ? 'review-option--wrong'
+              : '';
+          return (
+            <div key={i} className={`question-option review-option ${state}`}>
+              <span className="question-option-mark">
+                {isCorrect && <CheckCircle2 size={14} />}
+                {!isCorrect && wasSelected && <XCircle size={14} />}
+              </span>
+              <span className="question-option-text">{alt}</span>
+            </div>
+          );
+        })}
+      </div>
+
+      {questao.nota && (
+        <p className="review-nota">
+          <Info size={14} /> {questao.nota}
+        </p>
       )}
     </div>
   );

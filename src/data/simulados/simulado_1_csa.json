@@ -12,7 +12,14 @@
         "System Import Sets",
         "System Update Sets"
       ],
-      "resposta_correta": [2]
+      "resposta_correta": [2],
+      "enunciado_pt": "Qual é a principal aplicação usada para carregar dados no ServiceNow a partir de arquivos externos (como CSV ou Excel)?",
+      "alternativas_pt": [
+        "Service Level Management",
+        "Configuration",
+        "System Import Sets",
+        "System Update Sets"
+      ]
     },
     {
       "id": "sim1_q02",
@@ -25,7 +32,14 @@
         "Define Data Source, Select Transform Map, Run Transform",
         "Select Import Set, Select Transform Map, Run Transform"
       ],
-      "resposta_correta": [1]
+      "resposta_correta": [1],
+      "enunciado_pt": "Qual das seguintes etapas representa o processo correto para importar novos dados de uma planilha?",
+      "alternativas_pt": [
+        "Selecionar Data Source, Agendar Transform",
+        "Carregar dados (Load Data), Criar Transform Map, Executar Transform",
+        "Definir Data Source, Selecionar Transform Map, Executar Transform",
+        "Selecionar Import Set, Selecionar Transform Map, Executar Transform"
+      ]
     },
     {
       "id": "sim1_q03",
@@ -38,7 +52,14 @@
         "CI Service Manager",
         "CI Class Manager"
       ],
-      "resposta_correta": [0]
+      "resposta_correta": [0],
+      "enunciado_pt": "Qual ferramenta é usada para criar dependências (relacionamentos) entre itens de configuração (CIs) no CMDB?",
+      "alternativas_pt": [
+        "CI Relationship Editor",
+        "CMDB Builder",
+        "CI Service Manager",
+        "CI Class Manager"
+      ]
     },
     {
       "id": "sim1_q04",
@@ -51,7 +72,14 @@
         "Data Policies run on the server (regardless of source); UI Policies run on the browser (form interactions)",
         "Data Policies run only after UI Policies execute successfully"
       ],
-      "resposta_correta": [2]
+      "resposta_correta": [2],
+      "enunciado_pt": "Qual é a principal diferença entre uma UI Policy e uma Data Policy?",
+      "alternativas_pt": [
+        "Data Policies rodam apenas em Web Services; UI Policies rodam no banco de dados",
+        "Data Policies convertem dados; UI Policies validam dados",
+        "Data Policies rodam no servidor (independente da origem); UI Policies rodam no navegador (interações de formulário)",
+        "Data Policies só rodam depois que as UI Policies executam com sucesso"
+      ]
     },
     {
       "id": "sim1_q05",
@@ -64,7 +92,14 @@
         "Incidents, Users, Groups, and Configuration Items",
         "Dashboards, Scheduled Jobs, and Tasks"
       ],
-      "resposta_correta": [1]
+      "resposta_correta": [1],
+      "enunciado_pt": "Qual das seguintes listas identifica corretamente os itens capturados em um Update Set?",
+      "alternativas_pt": [
+        "Tabelas, formulários, homepages e dados de usuário",
+        "Tabelas, formulários, Business Rules e definições de campo",
+        "Incidents, Users, Groups e Configuration Items",
+        "Dashboards, Scheduled Jobs e Tasks"
+      ]
     },
     {
       "id": "sim1_q06",
@@ -77,7 +112,14 @@
         "Verify Update Set is Complete, Retrieve, Preview, Commit",
         "Verify Update Set is Complete, Test Connection, Commit"
       ],
-      "resposta_correta": [2]
+      "resposta_correta": [2],
+      "enunciado_pt": "Quais são as etapas corretas para recuperar (retrieve) um Update Set de outra instância?",
+      "alternativas_pt": [
+        "Verificar se o Update Set está Completo, Retrieve, Preview, Apply",
+        "Verificar se o Update Set está Completo, Test Connection, Apply",
+        "Verificar se o Update Set está Completo, Retrieve, Preview, Commit",
+        "Verificar se o Update Set está Completo, Test Connection, Commit"
+      ]
     },
     {
       "id": "sim1_q07",
@@ -90,7 +132,14 @@
         "Connections",
         "Integration Steps"
       ],
-      "resposta_correta": [1]
+      "resposta_correta": [1],
+      "enunciado_pt": "O IntegrationHub permite a execução de APIs de terceiros como parte de um flow. Como são chamadas essas integrações empacotadas?",
+      "alternativas_pt": [
+        "Actions",
+        "Spokes",
+        "Connections",
+        "Integration Steps"
+      ]
     },
     {
       "id": "sim1_q08",
@@ -103,7 +152,14 @@
         "Access Control Rules",
         "Application Scope"
       ],
-      "resposta_correta": [3]
+      "resposta_correta": [3],
+      "enunciado_pt": "Qual recurso protege as aplicações identificando e restringindo o acesso a arquivos e dados disponíveis (isolamento)?",
+      "alternativas_pt": [
+        "Application Configuration",
+        "Verbose Log",
+        "Access Control Rules",
+        "Application Scope"
+      ]
     },
     {
       "id": "sim1_q09",
@@ -116,7 +172,14 @@
         "If a row rule permits access, the field rule is ignored",
         "The user must satisfy both Table AND Field permissions to access a specific field"
       ],
-      "resposta_correta": [3]
+      "resposta_correta": [3],
+      "enunciado_pt": "Qual afirmação descreve corretamente a avaliação de uma regra de Access Control (ACL)?",
+      "alternativas_pt": [
+        "As regras de tabela são avaliadas do geral para o específico",
+        "A regra mais antiga prevalece",
+        "Se uma regra de linha (row) permite acesso, a regra de campo é ignorada",
+        "O usuário precisa satisfazer as permissões de Tabela E de Campo para acessar um campo específico"
+      ]
     },
     {
       "id": "sim1_q10",
@@ -129,7 +192,14 @@
         "acl_admin",
         "sys_admin"
       ],
-      "resposta_correta": [1]
+      "resposta_correta": [1],
+      "enunciado_pt": "Qual role permite que um usuário eleve privilégios para criar e modificar Access Control Rules (ACLs)?",
+      "alternativas_pt": [
+        "admin",
+        "security_admin",
+        "acl_admin",
+        "sys_admin"
+      ]
     },
     {
       "id": "sim1_q11",
@@ -142,7 +212,14 @@
         "Can Read",
         "Can Write"
       ],
-      "resposta_correta": [0]
+      "resposta_correta": [0],
+      "enunciado_pt": "No registro da Knowledge Base, qual aba você usaria para definir quais usuários NÃO podem escrever/criar artigos?",
+      "alternativas_pt": [
+        "Can Contribute (usuários não listados aqui não podem escrever)",
+        "Cannot Author",
+        "Can Read",
+        "Can Write"
+      ]
     },
     {
       "id": "sim1_q12",
@@ -155,7 +232,14 @@
         "Connect Chat",
         "Guided Tour"
       ],
-      "resposta_correta": [1]
+      "resposta_correta": [1],
+      "enunciado_pt": "Qual recurso do ServiceNow fornece assistência automatizada por chat para ajudar usuários a obter informações ou enviar solicitações?",
+      "alternativas_pt": [
+        "Knowledge Chat",
+        "Virtual Agent",
+        "Connect Chat",
+        "Guided Tour"
+      ]
     },
     {
       "id": "sim1_q13",
@@ -168,7 +252,14 @@
         "Can Order Tab",
         "User Criteria"
       ],
-      "resposta_correta": [3]
+      "resposta_correta": [3],
+      "enunciado_pt": "Qual recurso você usa para especificar quais usuários podem acessar um Service Catalog Item?",
+      "alternativas_pt": [
+        "Can Read Role",
+        "Catalog User Role",
+        "Can Order Tab",
+        "User Criteria"
+      ]
     },
     {
       "id": "sim1_q14",
@@ -181,7 +272,14 @@
         "Order Guide",
         "Content Item"
       ],
-      "resposta_correta": [0]
+      "resposta_correta": [0],
+      "enunciado_pt": "Para criar uma opção no Service Catalog que cria um registro de Incident diretamente (em vez de um Request), o que você usaria?",
+      "alternativas_pt": [
+        "Record Producer",
+        "Catalog Item",
+        "Order Guide",
+        "Content Item"
+      ]
     },
     {
       "id": "sim1_q15",
@@ -194,7 +292,14 @@
         "Client Script is used only for security; Business Rule for layout",
         "There is no difference, both use JavaScript on the server"
       ],
-      "resposta_correta": [1]
+      "resposta_correta": [1],
+      "enunciado_pt": "Qual é a principal diferença entre um Client Script e uma Business Rule?",
+      "alternativas_pt": [
+        "Client Script roda no banco de dados; Business Rule roda no cliente",
+        "Client Script roda no navegador (cliente); Business Rule roda no servidor (banco de dados)",
+        "Client Script é usado só para segurança; Business Rule para layout",
+        "Não há diferença, ambos usam JavaScript no servidor"
+      ]
     },
     {
       "id": "sim1_q16",
@@ -207,7 +312,14 @@
         "Favorites (or Saved Filters)",
         "Shortcuts"
       ],
-      "resposta_correta": [2]
+      "resposta_correta": [2],
+      "enunciado_pt": "O que permite que um usuário salve uma consulta de filtro complexa em uma lista para acesso rápido depois?",
+      "alternativas_pt": [
+        "Breadcrumbs",
+        "Quick Filter",
+        "Favorites (ou Saved Filters)",
+        "Shortcuts"
+      ]
     },
     {
       "id": "sim1_q17",
@@ -220,7 +332,14 @@
         "System UI > Images",
         "Self-Service > My Profile"
       ],
-      "resposta_correta": [1]
+      "resposta_correta": [1],
+      "enunciado_pt": "Para onde um System Administrator navegaria para atualizar o logo da empresa e o título da aba do navegador?",
+      "alternativas_pt": [
+        "System Definition > Branding",
+        "System Properties > My Company",
+        "System UI > Images",
+        "Self-Service > My Profile"
+      ]
     },
     {
       "id": "sim1_q18",
@@ -233,7 +352,14 @@
         "Coalesce",
         "Key"
       ],
-      "resposta_correta": [2]
+      "resposta_correta": [2],
+      "enunciado_pt": "Qual configuração de campo em um Transform Map garante que registros existentes sejam atualizados em vez de duplicados durante uma importação?",
+      "alternativas_pt": [
+        "Mandatory",
+        "Unique",
+        "Coalesce",
+        "Key"
+      ]
     },
     {
       "id": "sim1_q19",
@@ -246,7 +372,14 @@
         "cmdb_ci and cmdb_rel_ci",
         "configuration_item and configuration_relationship"
       ],
-      "resposta_correta": [1]
+      "resposta_correta": [1],
+      "enunciado_pt": "Quais são as duas tabelas base do Configuration Management Database (CMDB)?",
+      "alternativas_pt": [
+        "cmdb e cmdb_rel_ci",
+        "cmdb e cmdb_ci",
+        "cmdb_ci e cmdb_rel_ci",
+        "configuration_item e configuration_relationship"
+      ]
     },
     {
       "id": "sim1_q20",
@@ -259,7 +392,14 @@
         "Dot-walking",
         "Table walking"
       ],
-      "resposta_correta": [2]
+      "resposta_correta": [2],
+      "enunciado_pt": "Que termo descreve o processo de navegar de um registro para um registro relacionado para acessar seus campos (ex: incident.caller_id.email)?",
+      "alternativas_pt": [
+        "Field hopping",
+        "Reference jumping",
+        "Dot-walking",
+        "Table walking"
+      ]
     },
     {
       "id": "sim1_q21",
@@ -272,7 +412,14 @@
         "Right-click header > Personalize > List Layout",
         "Right-click header > Configure > List Control"
       ],
-      "resposta_correta": [1]
+      "resposta_correta": [1],
+      "enunciado_pt": "Qual ação permite que um System Administrator modifique o layout de colunas de uma lista para TODOS os usuários?",
+      "alternativas_pt": [
+        "Clicar no ícone de engrenagem (Personalize List)",
+        "Clique direito no cabeçalho > Configure > List Layout",
+        "Clique direito no cabeçalho > Personalize > List Layout",
+        "Clique direito no cabeçalho > Configure > List Control"
+      ]
     },
     {
       "id": "sim1_q22",
@@ -285,7 +432,14 @@
         "Views",
         "Forms"
       ],
-      "resposta_correta": [2]
+      "resposta_correta": [2],
+      "enunciado_pt": "O que permite exibir o mesmo registro com diferentes layouts de formulário para diferentes usuários ou finalidades (ex: Default vs. Self-Service)?",
+      "alternativas_pt": [
+        "Perspectives",
+        "Layouts",
+        "Views",
+        "Forms"
+      ]
     },
     {
       "id": "sim1_q23",
@@ -298,7 +452,14 @@
         "Make the field a Dependent Field",
         "Data Policy"
       ],
-      "resposta_correta": [2]
+      "resposta_correta": [2],
+      "enunciado_pt": "Como você limita as opções em uma Choice List com base no valor selecionado em outro campo (ex: Subcategory depende de Category)?",
+      "alternativas_pt": [
+        "UI Policy",
+        "Client Script",
+        "Transformar o campo em um Dependent Field",
+        "Data Policy"
+      ]
     },
     {
       "id": "sim1_q24",
@@ -311,7 +472,14 @@
         "{number}",
         "#number"
       ],
-      "resposta_correta": [1]
+      "resposta_correta": [1],
+      "enunciado_pt": "Qual sintaxe é usada para inserir dados dinâmicos de um registro (como o número do incident) na linha de assunto de um e-mail?",
+      "alternativas_pt": [
+        "[number]",
+        "${number}",
+        "{number}",
+        "#number"
+      ]
     },
     {
       "id": "sim1_q25",
@@ -324,7 +492,14 @@
         "Configure",
         "Style"
       ],
-      "resposta_correta": [3]
+      "resposta_correta": [3],
+      "enunciado_pt": "Qual seção do Report Designer é usada para ajustar a aparência do relatório (cores, títulos, legendas)?",
+      "alternativas_pt": [
+        "Layout",
+        "Format",
+        "Configure",
+        "Style"
+      ]
     },
     {
       "id": "sim1_q26",
@@ -337,7 +512,14 @@
         "Groups",
         "Teams"
       ],
-      "resposta_correta": [0, 2]
+      "resposta_correta": [0, 2],
+      "enunciado_pt": "Quais tipos de entidades podem receber Task Assignments? (Escolha duas)",
+      "alternativas_pt": [
+        "Usuários",
+        "Departamentos",
+        "Grupos",
+        "Equipes"
+      ]
     },
     {
       "id": "sim1_q27",
@@ -350,7 +532,14 @@
         "view_as_user",
         "proxy_user"
       ],
-      "resposta_correta": [1]
+      "resposta_correta": [1],
+      "enunciado_pt": "Qual role permite que um usuário aja como outro usuário para fins de teste?",
+      "alternativas_pt": [
+        "admin",
+        "impersonator",
+        "view_as_user",
+        "proxy_user"
+      ]
     },
     {
       "id": "sim1_q28",
@@ -363,7 +552,14 @@
         "There is no difference",
         "Save creates a new record; Submit updates an existing one"
       ],
-      "resposta_correta": [0]
+      "resposta_correta": [0],
+      "enunciado_pt": "No cabeçalho de um formulário, qual é a diferença entre os botões \"Save\" e \"Submit\"?",
+      "alternativas_pt": [
+        "Save salva e permanece no formulário; Submit salva e volta para a lista",
+        "Save salva e volta para a lista; Submit salva e permanece no formulário",
+        "Não há diferença",
+        "Save cria um novo registro; Submit atualiza um existente"
+      ]
     },
     {
       "id": "sim1_q29",
@@ -376,7 +572,14 @@
         "Activity Stream",
         "Internal notes"
       ],
-      "resposta_correta": [1]
+      "resposta_correta": [1],
+      "enunciado_pt": "Qual campo em um registro de Task é usado para comunicação técnica interna e NÃO é visível para o usuário final?",
+      "alternativas_pt": [
+        "Additional comments",
+        "Work notes",
+        "Activity Stream",
+        "Internal notes"
+      ]
     },
     {
       "id": "sim1_q30",
@@ -389,7 +592,14 @@
         "system_props",
         "config_properties"
       ],
-      "resposta_correta": [1]
+      "resposta_correta": [1],
+      "enunciado_pt": "Qual tabela armazena as system properties que controlam o comportamento da plataforma?",
+      "alternativas_pt": [
+        "sys_config",
+        "sys_properties",
+        "system_props",
+        "config_properties"
+      ]
     },
     {
       "id": "sim1_q31",
@@ -402,7 +612,14 @@
         "String",
         "Document ID"
       ],
-      "resposta_correta": [1]
+      "resposta_correta": [1],
+      "enunciado_pt": "Que tipo de campo armazena um identificador de sistema único (sys_id) de um registro em outra tabela?",
+      "alternativas_pt": [
+        "Choice",
+        "Reference",
+        "String",
+        "Document ID"
+      ]
     },
     {
       "id": "sim1_q32",
@@ -415,7 +632,14 @@
         "They must be recreated manually",
         "They are not accessible"
       ],
-      "resposta_correta": [1]
+      "resposta_correta": [1],
+      "enunciado_pt": "Quando uma nova tabela estende outra tabela (ex: Incident estende Task), o que acontece com os campos da tabela pai?",
+      "alternativas_pt": [
+        "Eles são copiados uma vez",
+        "Eles são herdados (Table Extension)",
+        "Eles precisam ser recriados manualmente",
+        "Eles não ficam acessíveis"
+      ]
     },
     {
       "id": "sim1_q33",
@@ -428,7 +652,14 @@
         "Assign roles to departments",
         "Create a new role for every user"
       ],
-      "resposta_correta": [1]
+      "resposta_correta": [1],
+      "enunciado_pt": "Qual é a melhor prática para atribuir roles a usuários?",
+      "alternativas_pt": [
+        "Atribuir roles diretamente aos usuários",
+        "Atribuir roles a grupos, depois adicionar usuários aos grupos",
+        "Atribuir roles a departamentos",
+        "Criar uma nova role para cada usuário"
+      ]
     },
     {
       "id": "sim1_q34",
@@ -441,7 +672,14 @@
         "uid",
         "global_uid"
       ],
-      "resposta_correta": [0]
+      "resposta_correta": [0],
+      "enunciado_pt": "Qual campo é gerado automaticamente pelo sistema e funciona como um identificador global único de 32 caracteres (GUID)?",
+      "alternativas_pt": [
+        "sys_id",
+        "key_id",
+        "uid",
+        "global_uid"
+      ]
     },
     {
       "id": "sim1_q35",
@@ -454,7 +692,14 @@
         "Content Item",
         "Variable Set"
       ],
-      "resposta_correta": [1]
+      "resposta_correta": [1],
+      "enunciado_pt": "Qual recurso do Service Catalog permite agrupar múltiplos itens em um único processo de solicitação guiado?",
+      "alternativas_pt": [
+        "Record Producer",
+        "Order Guide",
+        "Content Item",
+        "Variable Set"
+      ]
     },
     {
       "id": "sim1_q36",
@@ -467,7 +712,14 @@
         "A script variable",
         "A type of report"
       ],
-      "resposta_correta": [1]
+      "resposta_correta": [1],
+      "enunciado_pt": "O que é um \"Spoke\" no Flow Designer?",
+      "alternativas_pt": [
+        "Um tipo de trigger",
+        "Um conector lógico para integrações com sistemas externos (IntegrationHub)",
+        "Uma variável de script",
+        "Um tipo de relatório"
+      ]
     },
     {
       "id": "sim1_q37",
@@ -480,7 +732,14 @@
         "Service Operations Workspace",
         "Classic UI"
       ],
-      "resposta_correta": [2]
+      "resposta_correta": [2],
+      "enunciado_pt": "Qual interface é projetada especificamente para agentes de Tier 1 priorizarem e resolverem trabalho com eficiência?",
+      "alternativas_pt": [
+        "Service Portal",
+        "Employee Center",
+        "Service Operations Workspace",
+        "Classic UI"
+      ]
     },
     {
       "id": "sim1_q38",
@@ -493,7 +752,14 @@
         "${LINK}",
         "${RECORD_LINK}"
       ],
-      "resposta_correta": [1]
+      "resposta_correta": [1],
+      "enunciado_pt": "Qual variável em uma notificação por e-mail cria um link para o registro, exibindo o número do registro como texto do link?",
+      "alternativas_pt": [
+        "${URI}",
+        "${URI_REF}",
+        "${LINK}",
+        "${RECORD_LINK}"
+      ]
     },
     {
       "id": "sim1_q39",
@@ -506,7 +772,14 @@
         "Item Collection",
         "Choice List"
       ],
-      "resposta_correta": [0]
+      "resposta_correta": [0],
+      "enunciado_pt": "Qual recurso permite agrupar um conjunto comum de variáveis (ex: tamanho e cor) para serem reutilizadas em múltiplos catalog items?",
+      "alternativas_pt": [
+        "Variable Set",
+        "Catalog Group",
+        "Item Collection",
+        "Choice List"
+      ]
     },
     {
       "id": "sim1_q40",
@@ -519,7 +792,14 @@
         "ticket",
         "service_request"
       ],
-      "resposta_correta": [1]
+      "resposta_correta": [1],
+      "enunciado_pt": "Qual é a tabela pai da qual Incident, Problem e Change são estendidas?",
+      "alternativas_pt": [
+        "cmdb_ci",
+        "task",
+        "ticket",
+        "service_request"
+      ]
     }
   ]
 }

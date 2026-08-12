@@ -128,6 +128,7 @@ export function QuizRunner({ title, questoes, introHint, onBack, onFinish }: Qui
       </div>
 
       <QuestionCard
+        key={currentQuestao.id}
         questao={currentQuestao}
         index={currentIndex}
         total={total}
