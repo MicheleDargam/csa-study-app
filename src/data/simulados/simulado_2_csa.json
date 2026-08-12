@@ -7,7 +7,9 @@
       "tema": "Data Management (Import Sets)",
       "enunciado": "What is the primary application used to load data into ServiceNow?",
       "alternativas": ["Service Level Management", "Configuration", "System Import Sets", "System Update Sets"],
-      "resposta_correta": [2]
+      "resposta_correta": [2],
+      "enunciado_pt": "Qual é a principal aplicação usada para carregar dados no ServiceNow?",
+      "alternativas_pt": ["Service Level Management", "Configuration", "System Import Sets", "System Update Sets"]
     },
     {
       "id": "sim2_q02",
@@ -15,7 +17,9 @@
       "tema": "Data Management (Import Sets)",
       "enunciado": "Which of the following steps can be used to import new data into ServiceNow from a spreadsheet?",
       "alternativas": ["Select Data Source, Schedule Transform", "Load Data, Create Transform Map, Run Transform", "Define Data Source, Select Transform Map, Run Transform", "Select Import Set, Select Transform Map, Run Transform"],
-      "resposta_correta": [1]
+      "resposta_correta": [1],
+      "enunciado_pt": "Quais das seguintes etapas podem ser usadas para importar novos dados para o ServiceNow a partir de uma planilha?",
+      "alternativas_pt": ["Selecionar Data Source, Agendar Transform", "Carregar dados (Load Data), Criar Transform Map, Executar Transform", "Definir Data Source, Selecionar Transform Map, Executar Transform", "Selecionar Import Set, Selecionar Transform Map, Executar Transform"]
     },
     {
       "id": "sim2_q03",
@@ -23,7 +27,9 @@
       "tema": "CMDB",
       "enunciado": "Which tool is used for creating dependencies between configuration items in the CMDB?",
       "alternativas": ["CI Relationship Editor", "CMDB Builder", "CI Service Manager", "CI Class Manager"],
-      "resposta_correta": [0]
+      "resposta_correta": [0],
+      "enunciado_pt": "Qual ferramenta é usada para criar dependências entre itens de configuração no CMDB?",
+      "alternativas_pt": ["CI Relationship Editor", "CMDB Builder", "CI Service Manager", "CI Class Manager"]
     },
     {
       "id": "sim2_q04",
@@ -31,7 +37,9 @@
       "tema": "Scripting/Client Development",
       "enunciado": "What is the difference between a UI Policy and Data Policy?",
       "alternativas": ["Data Policies run when data is entered through the form, Import Sets, or web services, while UI Policies are set only by web services.", "Data Policies run regardless of how data is entered into ServiceNow, while UI Policies are used for form interactions.", "Data Policies can be converted into UI Policies, but UI Policies cannot be converted into Data Policies.", "Data Policies run only after UI Policies have executed successfully."],
-      "resposta_correta": [1]
+      "resposta_correta": [1],
+      "enunciado_pt": "Qual é a diferença entre uma UI Policy e uma Data Policy?",
+      "alternativas_pt": ["Data Policies rodam quando os dados são inseridos pelo formulário, por Import Sets, ou por web services, enquanto UI Policies são definidas apenas por web services.", "Data Policies rodam independentemente de como os dados são inseridos no ServiceNow, enquanto UI Policies são usadas para interações de formulário.", "Data Policies podem ser convertidas em UI Policies, mas UI Policies não podem ser convertidas em Data Policies.", "Data Policies só rodam depois que as UI Policies executaram com sucesso."]
     },
     {
       "id": "sim2_q05",
@@ -39,7 +47,9 @@
       "tema": "Update Sets",
       "enunciado": "Which of the following is an accurate list of changes that are captured in an Update Set?",
       "alternativas": ["Changes made to: tables, forms, schedules, and client scripts", "Changes made to: tables, forms, Business Rules, and data records", "Changes made to: tables, forms, groups, and configuration items (CIs)", "Changes made to: tables, forms, views, and fields"],
-      "resposta_correta": [3]
+      "resposta_correta": [3],
+      "enunciado_pt": "Qual das seguintes é uma lista precisa de alterações que são capturadas em um Update Set?",
+      "alternativas_pt": ["Alterações feitas em: tabelas, formulários, schedules e client scripts", "Alterações feitas em: tabelas, formulários, Business Rules e registros de dados", "Alterações feitas em: tabelas, formulários, grupos e itens de configuração (CIs)", "Alterações feitas em: tabelas, formulários, views e campos"]
     },
     {
       "id": "sim2_q06",
@@ -47,7 +57,9 @@
       "tema": "Update Sets",
       "enunciado": "What are the steps to retrieve an Update Set?",
       "alternativas": ["Verify Update Set is Complete, Retrieve, Preview, Apply", "Verify Update Set is Complete, Test Connection, Apply", "Verify Update Set is Complete, Test Connection, Commit", "Verify Update Set is Complete, Retrieve, Preview, Commit"],
-      "resposta_correta": [3]
+      "resposta_correta": [3],
+      "enunciado_pt": "Quais são as etapas para recuperar (retrieve) um Update Set?",
+      "alternativas_pt": ["Verificar se o Update Set está Completo, Retrieve, Preview, Apply", "Verificar se o Update Set está Completo, Test Connection, Apply", "Verificar se o Update Set está Completo, Test Connection, Commit", "Verificar se o Update Set está Completo, Retrieve, Preview, Commit"]
     },
     {
       "id": "sim2_q07",
@@ -55,7 +67,9 @@
       "tema": "Integrations (Flow Designer)",
       "enunciado": "IntegrationHub allows for the execution of third-party APIs as a part of a flow. These integrations are referred to as:",
       "alternativas": ["An action", "A spoke", "A connection", "An integration step"],
-      "resposta_correta": [1]
+      "resposta_correta": [1],
+      "enunciado_pt": "O IntegrationHub permite a execução de APIs de terceiros como parte de um flow. Essas integrações são chamadas de:",
+      "alternativas_pt": ["Uma action", "Um spoke", "Uma connection", "Um integration step"]
     },
     {
       "id": "sim2_q08",
@@ -63,7 +77,9 @@
       "tema": "Application Scope",
       "enunciado": "Which of the following protects applications by identifying and restricting access to available files and data?",
       "alternativas": ["Application Configuration", "Verbose Log", "Access Control Rules", "Application Scope"],
-      "resposta_correta": [3]
+      "resposta_correta": [3],
+      "enunciado_pt": "Qual das seguintes opções protege as aplicações identificando e restringindo o acesso a arquivos e dados disponíveis?",
+      "alternativas_pt": ["Application Configuration", "Verbose Log", "Access Control Rules", "Application Scope"]
     },
     {
       "id": "sim2_q09",
@@ -71,7 +87,9 @@
       "tema": "Security/ACL",
       "enunciado": "Which statement correctly describes the evaluation of Access Control rules?",
       "alternativas": ["Table access rules are evaluated from the general to the specific.", "If more than one rule applies to a record, the older rule is evaluated first.", "If a row level rule and a field level rule exist, both rules must be true before an operation is allowed.", "The role with the most permissions evaluates the rules first."],
-      "resposta_correta": [2]
+      "resposta_correta": [2],
+      "enunciado_pt": "Qual afirmação descreve corretamente a avaliação das regras de Access Control?",
+      "alternativas_pt": ["As regras de acesso de tabela são avaliadas do geral para o específico.", "Se mais de uma regra se aplica a um registro, a regra mais antiga é avaliada primeiro.", "Se existir uma regra de nível de linha e uma regra de nível de campo, ambas precisam ser verdadeiras antes que a operação seja permitida.", "A role com mais permissões avalia as regras primeiro."]
     },
     {
       "id": "sim2_q10",
@@ -79,7 +97,9 @@
       "tema": "CMDB",
       "enunciado": "ServiceNow contains a resource that provides a standard and shared set of service-related definitions and a CMDB framework. What resource do these statements describe?",
       "alternativas": ["Common Services Data Model (CSDM)", "Information Technology Service Management (ITSM)", "Configuration Management Database (CMDB)", "Information Technology Infrastructure Library (ITIL)"],
-      "resposta_correta": [0]
+      "resposta_correta": [0],
+      "enunciado_pt": "O ServiceNow contém um recurso que fornece um conjunto padrão e compartilhado de definições relacionadas a serviço e uma estrutura de CMDB. Qual recurso essas afirmações descrevem?",
+      "alternativas_pt": ["Common Services Data Model (CSDM)", "Information Technology Service Management (ITSM)", "Configuration Management Database (CMDB)", "Information Technology Infrastructure Library (ITIL)"]
     },
     {
       "id": "sim2_q11",
@@ -87,7 +107,9 @@
       "tema": "Task Management",
       "enunciado": "An IT manager is responsible for the Network and Hardware assignment groups, but cannot see tasks in the \"My Groups Work\" list. What explains this?",
       "alternativas": ["The list shows active tasks not yet assigned.", "The manager does not have the itil role.", "The manager is not a member of the Service Desk group.", "The manager is not a member of the Network and Hardware groups."],
-      "resposta_correta": [3]
+      "resposta_correta": [3],
+      "enunciado_pt": "Um gerente de TI é responsável pelos assignment groups de Network e Hardware, mas não consegue ver tarefas na lista \"My Groups Work\". O que explica isso?",
+      "alternativas_pt": ["A lista mostra tarefas ativas ainda não atribuídas.", "O gerente não tem a role itil.", "O gerente não é membro do grupo Service Desk.", "O gerente não é membro dos grupos Network e Hardware."]
     },
     {
       "id": "sim2_q12",
@@ -95,7 +117,9 @@
       "tema": "Integrations (Flow Designer)",
       "enunciado": "What do you need to do before you can use an application-based trigger in your flow?",
       "alternativas": ["Activate application trigger spoke", "Activate trigger security rules", "Activate application spoke, and plug-ins as needed", "Assign Application trigger role to SME"],
-      "resposta_correta": [2]
+      "resposta_correta": [2],
+      "enunciado_pt": "O que você precisa fazer antes de poder usar um trigger baseado em aplicativo no seu flow?",
+      "alternativas_pt": ["Ativar o spoke de trigger da aplicação", "Ativar as regras de segurança do trigger", "Ativar o spoke da aplicação e os plugins necessários", "Atribuir a role de trigger da aplicação ao SME"]
     },
     {
       "id": "sim2_q13",
@@ -103,7 +127,9 @@
       "tema": "UI Fundamentals",
       "enunciado": "The ServiceNow platform includes which types of interfaces? (Choose three)",
       "alternativas": ["Now Mobile Apps", "Agent Control Center", "Back Office Dashboard", "Service Portals", "Now Platform User Interfaces"],
-      "resposta_correta": [0, 3, 4]
+      "resposta_correta": [0, 3, 4],
+      "enunciado_pt": "A plataforma ServiceNow inclui quais tipos de interface? (Escolha três)",
+      "alternativas_pt": ["Now Mobile Apps", "Agent Control Center", "Back Office Dashboard", "Service Portals", "Now Platform User Interfaces"]
     },
     {
       "id": "sim2_q14",
@@ -111,7 +137,9 @@
       "tema": "Update Sets",
       "enunciado": "Which of the following are NOT included in an Update Set by default? (Choose four)",
       "alternativas": ["Homepages", "Data (records)", "Published Workflows", "Business Rules", "Schedules", "Database changes", "Related Lists", "Report Definitions", "Scheduled Jobs"],
-      "resposta_correta": [0, 1, 4, 8]
+      "resposta_correta": [0, 1, 4, 8],
+      "enunciado_pt": "Quais dos seguintes NÃO estão incluídos em um Update Set por padrão? (Escolha quatro)",
+      "alternativas_pt": ["Homepages", "Dados (registros)", "Published Workflows", "Business Rules", "Schedules", "Alterações de banco de dados", "Related Lists", "Definições de relatório", "Scheduled Jobs"]
     },
     {
       "id": "sim2_q15",
@@ -119,7 +147,9 @@
       "tema": "UI Fundamentals",
       "enunciado": "You are showing a customer a new form and they would like to add a field to it. Where could you do that? (Choose two)",
       "alternativas": ["Select Fields and Columns module", "Right click on form header, select Configure > Form Layout", "Click on context menu, select Configure > Form Designer", "Select Field Class Manager module"],
-      "resposta_correta": [1, 2]
+      "resposta_correta": [1, 2],
+      "enunciado_pt": "Você está mostrando um novo formulário para um cliente e ele gostaria de adicionar um campo a ele. Onde você poderia fazer isso? (Escolha duas)",
+      "alternativas_pt": ["Selecionar o módulo Fields and Columns", "Clicar com o botão direito no cabeçalho do formulário, selecionar Configure > Form Layout", "Clicar no menu de contexto, selecionar Configure > Form Designer", "Selecionar o módulo Field Class Manager"]
     },
     {
       "id": "sim2_q16",
@@ -127,7 +157,9 @@
       "tema": "CMDB",
       "enunciado": "Which ServiceNow feature is a framework that ensures the data your application requires is strictly mapped to the appropriate CMDB tables?",
       "alternativas": ["Common Service Data Model (CSDM)", "Service Mapping Utility (SMU)", "Service Schema Map (SSM)", "CMDB Class Manager (CMDBCM)"],
-      "resposta_correta": [0]
+      "resposta_correta": [0],
+      "enunciado_pt": "Qual recurso do ServiceNow é uma estrutura que garante que os dados que sua aplicação requer sejam mapeados corretamente para as tabelas apropriadas do CMDB?",
+      "alternativas_pt": ["Common Service Data Model (CSDM)", "Service Mapping Utility (SMU)", "Service Schema Map (SSM)", "CMDB Class Manager (CMDBCM)"]
     },
     {
       "id": "sim2_q17",
@@ -135,7 +167,9 @@
       "tema": "System Administration",
       "enunciado": "What do you activate when you want to add applications or functionality within your development instance?",
       "alternativas": ["App Package", "Updated Pack", "Patch", "Plugin"],
-      "resposta_correta": [3]
+      "resposta_correta": [3],
+      "enunciado_pt": "O que você ativa quando quer adicionar aplicações ou funcionalidades na sua instância de desenvolvimento?",
+      "alternativas_pt": ["App Package", "Updated Pack", "Patch", "Plugin"]
     },
     {
       "id": "sim2_q18",
@@ -143,7 +177,9 @@
       "tema": "Database/Tables",
       "enunciado": "Which field contains the 32-character unique identifier of a record?",
       "alternativas": ["sn_rec_id", "rec_id", "u_id", "sys_id"],
-      "resposta_correta": [3]
+      "resposta_correta": [3],
+      "enunciado_pt": "Qual campo contém o identificador único de 32 caracteres de um registro?",
+      "alternativas_pt": ["sn_rec_id", "rec_id", "u_id", "sys_id"]
     },
     {
       "id": "sim2_q19",
@@ -151,7 +187,9 @@
       "tema": "Service Catalog",
       "enunciado": "How would you ensure that only the First Line employees (not managers) could submit a specific catalogue order?",
       "alternativas": ["Create Record Producer and use the Available For list to specify First Line role", "Create Catalog Item and use the Not Available list to specify the Manager Group", "Create Catalog Item and use the Available For list to specify ITIL role", "Create Order Guide and use the User Criteria list to specify First Line role"],
-      "resposta_correta": [1]
+      "resposta_correta": [1],
+      "enunciado_pt": "Como você garantiria que apenas os funcionários de First Line (não gestores) pudessem enviar um pedido de catálogo específico?",
+      "alternativas_pt": ["Criar um Record Producer e usar a lista Available For para especificar a role First Line", "Criar um Catalog Item e usar a lista Not Available para especificar o Manager Group", "Criar um Catalog Item e usar a lista Available For para especificar a role ITIL", "Criar um Order Guide e usar a lista User Criteria para especificar a role First Line"]
     },
     {
       "id": "sim2_q20",
@@ -159,7 +197,9 @@
       "tema": "Update Sets",
       "enunciado": "What is frequently used to move customizations from one instance to another?",
       "alternativas": ["Update Sets", "Code Sets", "Update Packs", "Configuration Logs"],
-      "resposta_correta": [0]
+      "resposta_correta": [0],
+      "enunciado_pt": "O que é frequentemente usado para mover customizações de uma instância para outra?",
+      "alternativas_pt": ["Update Sets", "Code Sets", "Update Packs", "Configuration Logs"]
     },
     {
       "id": "sim2_q21",
@@ -167,7 +207,9 @@
       "tema": "CMDB",
       "enunciado": "Which database provides a logical model of your company infrastructure by identifying, controlling, maintaining, and verifying existing CIs?",
       "alternativas": ["IMDB", "ITSM", "CSDM", "CMDB"],
-      "resposta_correta": [3]
+      "resposta_correta": [3],
+      "enunciado_pt": "Qual banco de dados fornece um modelo lógico da infraestrutura da sua empresa identificando, controlando, mantendo e verificando os CIs existentes?",
+      "alternativas_pt": ["IMDB", "ITSM", "CSDM", "CMDB"]
     },
     {
       "id": "sim2_q22",
@@ -175,7 +217,9 @@
       "tema": "Data Management (Import Sets)",
       "enunciado": "Which module is used as the first step for importing data?",
       "alternativas": ["Coalesce Data", "Transform Data", "Import Data", "Load Data"],
-      "resposta_correta": [3]
+      "resposta_correta": [3],
+      "enunciado_pt": "Qual módulo é usado como a primeira etapa para importar dados?",
+      "alternativas_pt": ["Coalesce Data", "Transform Data", "Import Data", "Load Data"]
     },
     {
       "id": "sim2_q23",
@@ -183,7 +227,9 @@
       "tema": "Integrations (Flow Designer)",
       "enunciado": "When you need to orchestrate business processes across services with little technical user knowledge, which utility would you use?",
       "alternativas": ["Flow Manager", "Flow Designer", "Flow Editor", "Workflow Editor"],
-      "resposta_correta": [1]
+      "resposta_correta": [1],
+      "enunciado_pt": "Quando você precisa orquestrar processos de negócio entre serviços com pouco conhecimento técnico do usuário, qual utilitário você usaria?",
+      "alternativas_pt": ["Flow Manager", "Flow Designer", "Flow Editor", "Workflow Editor"]
     },
     {
       "id": "sim2_q24",
@@ -191,7 +237,9 @@
       "tema": "Security/ACL",
       "enunciado": "When a user reports that they cannot see modules in the application navigator, what can you do to see exactly what modules are visible to them?",
       "alternativas": ["Look up their password", "Initiate a Connect Chat session", "Install the Bomgar plug-in", "Impersonate the user"],
-      "resposta_correta": [3]
+      "resposta_correta": [3],
+      "enunciado_pt": "Quando um usuário relata que não consegue ver módulos no application navigator, o que você pode fazer para ver exatamente quais módulos estão visíveis para ele?",
+      "alternativas_pt": ["Consultar a senha dele", "Iniciar uma sessão de Connect Chat", "Instalar o plugin Bomgar", "Fazer impersonate do usuário"]
     },
     {
       "id": "sim2_q25",
@@ -199,7 +247,9 @@
       "tema": "Reporting",
       "enunciado": "What is the main difference between Reporting and Performance Analytics?",
       "alternativas": ["Performance Analytics contains snapshots of data taken over time; Reporting shows only the data as it is.", "Performance Analytics can show trends; Reports cannot.", "Reports can be run on a scheduled basis; Performance Analytics cannot.", "Performance Analytics data can be published to Dashboards; Reports cannot."],
-      "resposta_correta": [0]
+      "resposta_correta": [0],
+      "enunciado_pt": "Qual é a principal diferença entre Reporting e Performance Analytics?",
+      "alternativas_pt": ["Performance Analytics contém snapshots de dados capturados ao longo do tempo; Reporting mostra apenas os dados como estão no momento.", "Performance Analytics pode mostrar tendências; Reports não conseguem.", "Reports podem ser executados de forma agendada; Performance Analytics não pode.", "Dados de Performance Analytics podem ser publicados em Dashboards; Reports não podem."]
     },
     {
       "id": "sim2_q26",
@@ -207,7 +257,9 @@
       "tema": "UI Fundamentals",
       "enunciado": "To change the Priority values to display P1, P2, P3, P4 consistently across all Tasks, you would right-click on Priority and select what?",
       "alternativas": ["Configure Lists", "Show Options", "Configure Task", "Show Choices", "Configure Choices"],
-      "resposta_correta": [4]
+      "resposta_correta": [4],
+      "enunciado_pt": "Para alterar os valores de Priority para exibir P1, P2, P3, P4 de forma consistente em todas as Tasks, você clicaria com o botão direito em Priority e selecionaria o quê?",
+      "alternativas_pt": ["Configure Lists", "Show Options", "Configure Task", "Show Choices", "Configure Choices"]
     },
     {
       "id": "sim2_q27",
@@ -215,7 +267,9 @@
       "tema": "Notifications",
       "enunciado": "Which module would you use to create a new email notification?",
       "alternativas": ["System Notification > Email > Notifications", "Administration > Notification Overview", "System Properties > Email > Settings", "User Preferences > Email > Notifications"],
-      "resposta_correta": [0]
+      "resposta_correta": [0],
+      "enunciado_pt": "Qual módulo você usaria para criar uma nova notificação por e-mail?",
+      "alternativas_pt": ["System Notification > Email > Notifications", "Administration > Notification Overview", "System Properties > Email > Settings", "User Preferences > Email > Notifications"]
     },
     {
       "id": "sim2_q28",
@@ -223,7 +277,9 @@
       "tema": "Integrations (Flow Designer)",
       "enunciado": "When designing a flow, how do you reference data from a record within that flow?",
       "alternativas": ["Drag the table icon onto the flow definition", "Use the condition builder to specify the desired values", "Specify the source table on the data pill related list", "Drag the data pill onto the flow definition"],
-      "resposta_correta": [3]
+      "resposta_correta": [3],
+      "enunciado_pt": "Ao projetar um flow, como você referencia dados de um registro dentro desse flow?",
+      "alternativas_pt": ["Arrastar o ícone da tabela para a definição do flow", "Usar o condition builder para especificar os valores desejados", "Especificar a tabela de origem na related list de data pill", "Arrastar o data pill para a definição do flow"]
     },
     {
       "id": "sim2_q29",
@@ -231,7 +287,9 @@
       "tema": "Reporting",
       "enunciado": "On the Reports page, which sections allow you to see which reports are visible to different audiences? (Choose four)",
       "alternativas": ["Group", "Department", "My reports", "Team", "Dashboards", "Global", "Admin", "Analytics", "All"],
-      "resposta_correta": [0, 2, 5, 8]
+      "resposta_correta": [0, 2, 5, 8],
+      "enunciado_pt": "Na página de Reports, quais seções permitem ver quais relatórios estão visíveis para diferentes públicos? (Escolha quatro)",
+      "alternativas_pt": ["Group", "Department", "My reports", "Team", "Dashboards", "Global", "Admin", "Analytics", "All"]
     },
     {
       "id": "sim2_q30",
@@ -239,7 +297,9 @@
       "tema": "Data Management (Import Sets)",
       "enunciado": "Which tool is used to define relationships between fields in an Import Set Table and a Target Table?",
       "alternativas": ["Transform Schema", "Schema Map", "Dictionary Map", "Transform Map"],
-      "resposta_correta": [3]
+      "resposta_correta": [3],
+      "enunciado_pt": "Qual ferramenta é usada para definir relacionamentos entre campos em uma Import Set Table e uma Target Table?",
+      "alternativas_pt": ["Transform Schema", "Schema Map", "Dictionary Map", "Transform Map"]
     },
     {
       "id": "sim2_q31",
@@ -247,7 +307,9 @@
       "tema": "Virtual Agent",
       "enunciado": "Which ServiceNow feature provides assistance to help users obtain information and perform common tasks via a messaging interface?",
       "alternativas": ["Agent Workspace", "Chat bot", "Virtual Agent", "Knowledge Chat"],
-      "resposta_correta": [2]
+      "resposta_correta": [2],
+      "enunciado_pt": "Qual recurso do ServiceNow fornece assistência para ajudar usuários a obter informações e realizar tarefas comuns por meio de uma interface de mensagens?",
+      "alternativas_pt": ["Agent Workspace", "Chat bot", "Virtual Agent", "Knowledge Chat"]
     },
     {
       "id": "sim2_q32",
@@ -255,7 +317,9 @@
       "tema": "Integrations (Flow Designer)",
       "enunciado": "Which feature allows you to automate business logic for a specific application or process, such as approvals and notifications?",
       "alternativas": ["Flows", "Action Sequences", "Action Sets", "Task Flows"],
-      "resposta_correta": [0]
+      "resposta_correta": [0],
+      "enunciado_pt": "Qual recurso permite automatizar a lógica de negócio para uma aplicação ou processo específico, como aprovações e notificações?",
+      "alternativas_pt": ["Flows", "Action Sequences", "Action Sets", "Task Flows"]
     },
     {
       "id": "sim2_q33",
@@ -263,7 +327,9 @@
       "tema": "UI Fundamentals",
       "enunciado": "From a form, what would you click to add additional fields to the form? (Choose two)",
       "alternativas": ["Context Menu > Form > Layout", "Context Menu > Configure > Form Layout", "Context Menu > Configure > Form Design", "Right click on header > Add > Field"],
-      "resposta_correta": [1, 2]
+      "resposta_correta": [1, 2],
+      "enunciado_pt": "A partir de um formulário, no que você clicaria para adicionar campos adicionais ao formulário? (Escolha duas)",
+      "alternativas_pt": ["Context Menu > Form > Layout", "Context Menu > Configure > Form Layout", "Context Menu > Configure > Form Design", "Right click on header > Add > Field"]
     },
     {
       "id": "sim2_q34",
@@ -271,7 +337,9 @@
       "tema": "Database/Tables",
       "enunciado": "What is the name of the table relationship where two or more tables are related in a bi-directional relationship?",
       "alternativas": ["Database View", "Many to Many", "One to Many", "Extended"],
-      "resposta_correta": [1]
+      "resposta_correta": [1],
+      "enunciado_pt": "Qual é o nome do relacionamento de tabela onde duas ou mais tabelas são relacionadas em um relacionamento bidirecional?",
+      "alternativas_pt": ["Database View", "Many to Many", "One to Many", "Extended"]
     },
     {
       "id": "sim2_q35",
@@ -279,7 +347,9 @@
       "tema": "UI Fundamentals",
       "enunciado": "In a form header, what is the three-bar icon called?",
       "alternativas": ["Pancake icon", "Additional Actions or Context Menu", "Hamburger icon", "Cake icon"],
-      "resposta_correta": [1]
+      "resposta_correta": [1],
+      "enunciado_pt": "No cabeçalho de um formulário, como é chamado o ícone de três barras?",
+      "alternativas_pt": ["Pancake icon", "Additional Actions or Context Menu", "Hamburger icon", "Cake icon"]
     },
     {
       "id": "sim2_q36",
@@ -287,7 +357,9 @@
       "tema": "Database/Tables",
       "enunciado": "Group records are stored in which table?",
       "alternativas": ["sn_user_group", "sys_user_group", "s_sys_group", "u_sys_group"],
-      "resposta_correta": [1]
+      "resposta_correta": [1],
+      "enunciado_pt": "Os registros de grupo são armazenados em qual tabela?",
+      "alternativas_pt": ["sn_user_group", "sys_user_group", "s_sys_group", "u_sys_group"]
     },
     {
       "id": "sim2_q37",
@@ -295,7 +367,9 @@
       "tema": "UI Fundamentals",
       "enunciado": "Which function do you use to add buttons, links, and context menu items on forms and lists?",
       "alternativas": ["UI Policies", "UI Settings", "UI Actions", "UI Config"],
-      "resposta_correta": [2]
+      "resposta_correta": [2],
+      "enunciado_pt": "Qual função você usa para adicionar botões, links e itens de menu de contexto em formulários e listas?",
+      "alternativas_pt": ["UI Policies", "UI Settings", "UI Actions", "UI Config"]
     },
     {
       "id": "sim2_q38",
@@ -303,7 +377,9 @@
       "tema": "Scripting/Client Development",
       "enunciado": "In a Business Rule, the \"When\" setting determines at what point the rule executes. What are the options?",
       "alternativas": ["Before, After, Async, Display", "Prior to, Synchronous, on Update", "Insert, Update, Delete, Query", "Before, Synchronous, Scheduled Job, View"],
-      "resposta_correta": [0]
+      "resposta_correta": [0],
+      "enunciado_pt": "Em uma Business Rule, a configuração \"When\" determina em que ponto a regra é executada. Quais são as opções?",
+      "alternativas_pt": ["Before, After, Async, Display", "Prior to, Synchronous, on Update", "Insert, Update, Delete, Query", "Before, Synchronous, Scheduled Job, View"]
     },
     {
       "id": "sim2_q39",
@@ -311,7 +387,9 @@
       "tema": "Data Management (Import Sets)",
       "enunciado": "Which of the following are valid Data Sources that can be imported into ServiceNow? (Choose four)",
       "alternativas": ["Local Sources (i.e. XML, CSV, Excel)", "Implementation Spoke", "DataHub", "JDBC Connection", "Network Server", "LDAP Connection"],
-      "resposta_correta": [0, 3, 4, 5]
+      "resposta_correta": [0, 3, 4, 5],
+      "enunciado_pt": "Quais das seguintes são Data Sources válidas que podem ser importadas para o ServiceNow? (Escolha quatro)",
+      "alternativas_pt": ["Fontes locais (ex: XML, CSV, Excel)", "Implementation Spoke", "DataHub", "JDBC Connection", "Network Server", "LDAP Connection"]
     },
     {
       "id": "sim2_q40",
@@ -319,7 +397,9 @@
       "tema": "Application Scope",
       "enunciado": "What is the term for a unique set of records, policies, and logic that are separated from other applications on the platform?",
       "alternativas": ["Application Scope", "Global Scope", "System Partition", "Tenant Domain"],
-      "resposta_correta": [0]
+      "resposta_correta": [0],
+      "enunciado_pt": "Qual é o termo para um conjunto único de registros, políticas e lógica que são separados de outras aplicações na plataforma?",
+      "alternativas_pt": ["Application Scope", "Global Scope", "System Partition", "Tenant Domain"]
     },
     {
       "id": "sim2_q41",
@@ -327,7 +407,9 @@
       "tema": "Update Sets",
       "enunciado": "Which functionality allows you to capture a group of related changes that can be moved from one instance to another?",
       "alternativas": ["Update Set", "Change Set", "Import Set", "Transfer Set"],
-      "resposta_correta": [0]
+      "resposta_correta": [0],
+      "enunciado_pt": "Qual funcionalidade permite capturar um grupo de alterações relacionadas que podem ser movidas de uma instância para outra?",
+      "alternativas_pt": ["Update Set", "Change Set", "Import Set", "Transfer Set"]
     },
     {
       "id": "sim2_q42",
@@ -335,7 +417,9 @@
       "tema": "Integrations (Flow Designer)",
       "enunciado": "Which component allows you to define the sequence of activities for a process?",
       "alternativas": ["Process Flow", "Workflow / Flow Designer", "Execution Plan", "Sequence Map"],
-      "resposta_correta": [1]
+      "resposta_correta": [1],
+      "enunciado_pt": "Qual componente permite definir a sequência de atividades de um processo?",
+      "alternativas_pt": ["Process Flow", "Workflow / Flow Designer", "Execution Plan", "Sequence Map"]
     },
     {
       "id": "sim2_q43",
@@ -343,7 +427,9 @@
       "tema": "Service Catalog",
       "enunciado": "What is the name of the interface used to browse and select service catalog items?",
       "alternativas": ["Service Portal", "Catalog Browser", "Item Navigator", "Request Console"],
-      "resposta_correta": [0]
+      "resposta_correta": [0],
+      "enunciado_pt": "Qual é o nome da interface usada para navegar e selecionar itens do service catalog?",
+      "alternativas_pt": ["Service Portal", "Catalog Browser", "Item Navigator", "Request Console"]
     },
     {
       "id": "sim2_q44",
@@ -351,7 +437,9 @@
       "tema": "Database/Tables",
       "enunciado": "Which table stores the basic details of every user in the system?",
       "alternativas": ["sys_user", "user_details", "sn_users", "core_user"],
-      "resposta_correta": [0]
+      "resposta_correta": [0],
+      "enunciado_pt": "Qual tabela armazena os detalhes básicos de cada usuário no sistema?",
+      "alternativas_pt": ["sys_user", "user_details", "sn_users", "core_user"]
     },
     {
       "id": "sim2_q45",
@@ -359,7 +447,9 @@
       "tema": "UI Fundamentals",
       "enunciado": "Which search feature allows you to find records across multiple tables from the top of the interface?",
       "alternativas": ["Lists Search", "Global Search", "Universal Search", "Contextual Search"],
-      "resposta_correta": [1]
+      "resposta_correta": [1],
+      "enunciado_pt": "Qual recurso de busca permite encontrar registros em múltiplas tabelas a partir do topo da interface?",
+      "alternativas_pt": ["Lists Search", "Global Search", "Universal Search", "Contextual Search"]
     },
     {
       "id": "sim2_q46",
@@ -367,7 +457,9 @@
       "tema": "Service Catalog",
       "enunciado": "Which of the following is NOT a type of Service Catalog item?",
       "alternativas": ["Record Producer", "Content Item", "Order Guide", "Ticket Producer"],
-      "resposta_correta": [3]
+      "resposta_correta": [3],
+      "enunciado_pt": "Qual das seguintes NÃO é um tipo de item do Service Catalog?",
+      "alternativas_pt": ["Record Producer", "Content Item", "Order Guide", "Ticket Producer"]
     },
     {
       "id": "sim2_q47",
@@ -375,7 +467,9 @@
       "tema": "Data Management (Import Sets)",
       "enunciado": "When a transform map is executed, which field is used to determine if a record should be updated or inserted?",
       "alternativas": ["Match Field", "Key Field", "Coalesce Field", "Primary Field"],
-      "resposta_correta": [2]
+      "resposta_correta": [2],
+      "enunciado_pt": "Quando um transform map é executado, qual campo é usado para determinar se um registro deve ser atualizado ou inserido?",
+      "alternativas_pt": ["Match Field", "Key Field", "Coalesce Field", "Primary Field"]
     },
     {
       "id": "sim2_q48",
@@ -383,7 +477,9 @@
       "tema": "UI Fundamentals",
       "enunciado": "Where can you view the history of all activities and updates made to a record?",
       "alternativas": ["The \"History\" related list", "The Activity Stream", "The Audit Log", "The Transaction Log"],
-      "resposta_correta": [1]
+      "resposta_correta": [1],
+      "enunciado_pt": "Onde você pode ver o histórico de todas as atividades e atualizações feitas em um registro?",
+      "alternativas_pt": ["A related list \"History\"", "O Activity Stream", "O Audit Log", "O Transaction Log"]
     },
     {
       "id": "sim2_q49",
@@ -391,7 +487,9 @@
       "tema": "Reporting",
       "enunciado": "Which role is required to create and manage Reports in ServiceNow?",
       "alternativas": ["report_admin", "report_user", "report_publisher", "itil_report"],
-      "resposta_correta": [0]
+      "resposta_correta": [0],
+      "enunciado_pt": "Qual role é necessária para criar e gerenciar Reports no ServiceNow?",
+      "alternativas_pt": ["report_admin", "report_user", "report_publisher", "itil_report"]
     },
     {
       "id": "sim2_q50",
@@ -399,7 +497,9 @@
       "tema": "Security/ACL",
       "enunciado": "What is the best practice for applying the same security rule to multiple fields in a table?",
       "alternativas": ["Create a separate ACL for each field", "Use a wildcard (*) ACL for the table", "Use a client script", "Create a Business Rule"],
-      "resposta_correta": [1]
+      "resposta_correta": [1],
+      "enunciado_pt": "Qual é a melhor prática para aplicar a mesma regra de segurança a múltiplos campos em uma tabela?",
+      "alternativas_pt": ["Criar uma ACL separada para cada campo", "Usar uma ACL com wildcard (*) para a tabela", "Usar um client script", "Criar uma Business Rule"]
     }
   ]
 }
