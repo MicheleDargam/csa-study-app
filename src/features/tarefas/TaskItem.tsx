@@ -1,5 +1,7 @@
-import { Check } from 'lucide-react';
-import { toggleTaskStatus, formatDayMonth, parseDateKey } from './taskUtils';
+import { useState } from 'react';
+import { Check, Trash2 } from 'lucide-react';
+import { toggleTaskStatus, deleteTask, formatDayMonth, parseDateKey } from './taskUtils';
+import { ConfirmDialog } from '../../components/ConfirmDialog';
 import type { Subject, Task } from '../../types';
 
 interface TaskItemProps {
@@ -9,6 +11,7 @@ interface TaskItemProps {
 }
 
 export function TaskItem({ task, subject, showDate }: TaskItemProps) {
+  const [confirmDelete, setConfirmDelete] = useState(false);
   const isDone = task.status === 'done';
   const color = subject?.color ?? '#6366f1';
 
@@ -38,6 +41,29 @@ export function TaskItem({ task, subject, showDate }: TaskItemProps) {
           )}
         </span>
       </div>
+
+      <button
+        type="button"
+        className="task-item-delete"
+        onClick={() => setConfirmDelete(true)}
+        title="Excluir tarefa"
+      >
+        <Trash2 size={16} />
+      </button>
+
+      {confirmDelete && (
+        <ConfirmDialog
+          title="Excluir tarefa"
+          message={`Deseja excluir a tarefa "${task.title}"?`}
+          confirmLabel="Excluir"
+          danger
+          onConfirm={() => {
+            if (task.id) void deleteTask(task.id);
+            setConfirmDelete(false);
+          }}
+          onCancel={() => setConfirmDelete(false)}
+        />
+      )}
     </div>
   );
 }

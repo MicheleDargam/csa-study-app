@@ -56,3 +56,7 @@ export async function toggleTaskStatus(task: Task): Promise<void> {
 export async function completeTask(taskId: number): Promise<void> {
   await db.tasks.update(taskId, { status: 'done', completedAt: new Date() });
 }
+
+export async function deleteTask(taskId: number): Promise<void> {
+  await db.tasks.delete(taskId);
+}
