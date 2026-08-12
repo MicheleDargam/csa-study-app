@@ -4,6 +4,7 @@ import { StatTiles } from './StatTiles';
 import { HorasPorMateriaChart } from './HorasPorMateriaChart';
 import { SimuladoEvolucaoChart } from './SimuladoEvolucaoChart';
 import { TemaDesempenhoChart } from './TemaDesempenhoChart';
+import { TemaDesempenhoMensal } from './TemaDesempenhoMensal';
 
 export function ProgressoPage() {
   const visaoGeral = useLiveQuery(() => getVisaoGeral(), []);
@@ -22,6 +23,7 @@ export function ProgressoPage() {
       <HorasPorMateriaChart />
       <SimuladoEvolucaoChart />
       <TemaDesempenhoChart />
+      <TemaDesempenhoMensal />
     </div>
   );
 }

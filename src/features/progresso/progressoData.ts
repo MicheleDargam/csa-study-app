@@ -1,5 +1,6 @@
 import { db } from '../../db/database';
 import { getCurrentWeekDates, toDateKey } from '../tarefas/taskUtils';
+import type { SessaoPratica } from '../../types';
 
 /**
  * Centralized read layer for the Progresso module. Every function here only
@@ -176,4 +177,75 @@ export async function getDesempenhoPorTema(): Promise<TemaDesempenho[]> {
       percent: v.total > 0 ? Math.round((v.acertos / v.total) * 100) : 0,
     }))
     .sort((a, b) => a.percent - b.percent); // weakest topics first
+}
+
+// ---- Comparação mensal por tema (mês atual vs mês passado) ----
+//
+// This is a pure aggregation over the same `praticas` rows already used by
+// getDesempenhoPorTema — nothing is ever snapshotted, reset, or archived.
+// "Virar o mês" naturally happens because every SessaoPratica already
+// carries its own completedAt: querying by calendar-month range IS the
+// monthly cycle, so redoing a tema's questions next month automatically
+// shows up as a new data point to compare against.
+
+export interface TemaComparativoMensal {
+  tema: string;
+  percentAtual: number | null; // null = no practice this month yet
+  totalAtual: number;
+  percentAnterior: number | null; // null = wasn't practiced last month
+  totalAnterior: number;
+}
+
+function getMonthBounds(monthsAgo: number, from = new Date()): { start: Date; end: Date } {
+  const start = new Date(from.getFullYear(), from.getMonth() - monthsAgo, 1);
+  const end = new Date(from.getFullYear(), from.getMonth() - monthsAgo + 1, 1);
+  return { start, end };
+}
+
+function aggregateTemaInRange(
+  praticas: SessaoPratica[],
+  start: Date,
+  end: Date,
+): Map<string, { acertos: number; total: number }> {
+  const map = new Map<string, { acertos: number; total: number }>();
+  for (const p of praticas) {
+    if (p.completedAt >= start && p.completedAt < end) {
+      const existing = map.get(p.tema) ?? { acertos: 0, total: 0 };
+      existing.acertos += p.acertos;
+      existing.total += p.total;
+      map.set(p.tema, existing);
+    }
+  }
+  return map;
+}
+
+export async function getDesempenhoPorTemaComparativoMensal(): Promise<TemaComparativoMensal[]> {
+  const praticas = await db.praticas.toArray();
+  const atual = getMonthBounds(0);
+  const anterior = getMonthBounds(1);
+
+  const mapAtual = aggregateTemaInRange(praticas, atual.start, atual.end);
+  const mapAnterior = aggregateTemaInRange(praticas, anterior.start, anterior.end);
+
+  const temas = new Set([...mapAtual.keys(), ...mapAnterior.keys()]);
+
+  return Array.from(temas)
+    .map((tema) => {
+      const a = mapAtual.get(tema);
+      const p = mapAnterior.get(tema);
+      return {
+        tema,
+        totalAtual: a?.total ?? 0,
+        percentAtual: a && a.total > 0 ? Math.round((a.acertos / a.total) * 100) : null,
+        totalAnterior: p?.total ?? 0,
+        percentAnterior: p && p.total > 0 ? Math.round((p.acertos / p.total) * 100) : null,
+      };
+    })
+    .sort((a, b) => {
+      // Weakest current-month performance first; not-yet-practiced-this-month sorts last
+      if (a.percentAtual === null && b.percentAtual === null) return 0;
+      if (a.percentAtual === null) return 1;
+      if (b.percentAtual === null) return -1;
+      return a.percentAtual - b.percentAtual;
+    });
 }

@@ -2089,3 +2089,125 @@ body::before {
   color: var(--color-accent);
 }
 
+/* ========================================
+   DUMBBELL — monthly before/after comparison
+   (1 hue, 2 shades: lighter = mês passado, full = mês atual)
+   ======================================== */
+.dumbbell-legend {
+  display: flex;
+  gap: 16px;
+  margin-top: -4px;
+}
+
+.dumbbell-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.72rem;
+  color: var(--color-text-muted);
+}
+
+.dumbbell-legend-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.dumbbell-legend-dot--previous {
+  background: rgba(99, 102, 241, 0.35);
+}
+
+.dumbbell-legend-dot--current {
+  background: var(--color-accent);
+  box-shadow: 0 0 6px var(--color-accent-glow);
+}
+
+.dumbbell-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.dumbbell-row {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.dumbbell-row-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.dumbbell-tema-name {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.dumbbell-trend {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.68rem;
+  font-weight: 600;
+  font-family: var(--font-mono);
+  white-space: nowrap;
+  color: var(--color-text-muted);
+}
+
+.dumbbell-trend--up {
+  color: #0ca30c;
+}
+
+.dumbbell-trend--down {
+  color: #fab219;
+}
+
+.dumbbell-track {
+  position: relative;
+  height: 4px;
+  border-radius: 2px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.dumbbell-connector {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  border-radius: 2px;
+  background: rgba(99, 102, 241, 0.35);
+}
+
+.dumbbell-dot {
+  position: absolute;
+  top: 50%;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  border: 2px solid var(--color-bg-secondary);
+}
+
+.dumbbell-dot--previous {
+  background: rgba(99, 102, 241, 0.55);
+  z-index: 1;
+}
+
+.dumbbell-dot--current {
+  background: var(--color-accent);
+  box-shadow: 0 0 8px var(--color-accent-glow);
+  z-index: 2;
+}
+
+.dumbbell-values {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.7rem;
+  color: var(--color-text-muted);
+  font-family: var(--font-mono);
+}
+
