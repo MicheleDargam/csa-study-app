@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useTimer } from './useTimer';
+import { useTimerContext } from './timerContextValue';
 import { TimerDisplay } from './TimerDisplay';
 import { TimerControls } from './TimerControls';
 import { TimerSettings } from './TimerSettings';
@@ -12,7 +12,7 @@ import { completeTask } from '../tarefas/taskUtils';
 import { Settings } from 'lucide-react';
 
 export function TimerPage() {
-  const timer = useTimer();
+  const timer = useTimerContext();
   const [showSettings, setShowSettings] = useState(false);
   const [showMateriaForm, setShowMateriaForm] = useState(false);
 

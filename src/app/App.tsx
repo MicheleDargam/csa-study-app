@@ -2,6 +2,7 @@ import { useEffect, lazy, Suspense } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Layout } from './Layout';
 import { TimerPage } from '../features/timer/TimerPage';
+import { TimerProvider } from '../features/timer/TimerContext';
 import { TarefasPage } from '../features/tarefas/TarefasPage';
 import { MateriasPage } from '../features/materias/MateriasPage';
 import { LembretesPage } from '../features/lembretes/LembretesPage';
@@ -36,30 +37,32 @@ export function App() {
 
   return (
     <BrowserRouter basename={import.meta.env.BASE_URL}>
-      <Routes>
-        <Route element={<Layout />}>
-          <Route path="/" element={<TimerPage />} />
-          <Route path="/tarefas" element={<TarefasPage />} />
-          <Route path="/tarefas/materias" element={<MateriasPage />} />
-          <Route path="/tarefas/lembretes" element={<LembretesPage />} />
-          <Route path="/simulados" element={<SimuladosPage />} />
-          <Route path="/simulados/historico" element={<HistoricoPage />} />
-          <Route path="/simulados/resultado/:tentativaId" element={<ResultadoPage />} />
-          <Route path="/simulados/banco" element={<BancoQuestoesPage />} />
-          <Route path="/simulados/banco/tema" element={<TemaPracticaPage />} />
-          <Route path="/simulados/banco/historico" element={<HistoricoPraticaPage />} />
-          <Route path="/simulados/banco/resultado/:praticaId" element={<ResultadoPraticaPage />} />
-          <Route path="/simulados/:simuladoId" element={<SimuladoRunnerPage />} />
-          <Route
-            path="/progresso"
-            element={
-              <Suspense fallback={<div className="progresso-page" />}>
-                <ProgressoPage />
-              </Suspense>
-            }
-          />
-        </Route>
-      </Routes>
+      <TimerProvider>
+        <Routes>
+          <Route element={<Layout />}>
+            <Route path="/" element={<TimerPage />} />
+            <Route path="/tarefas" element={<TarefasPage />} />
+            <Route path="/tarefas/materias" element={<MateriasPage />} />
+            <Route path="/tarefas/lembretes" element={<LembretesPage />} />
+            <Route path="/simulados" element={<SimuladosPage />} />
+            <Route path="/simulados/historico" element={<HistoricoPage />} />
+            <Route path="/simulados/resultado/:tentativaId" element={<ResultadoPage />} />
+            <Route path="/simulados/banco" element={<BancoQuestoesPage />} />
+            <Route path="/simulados/banco/tema" element={<TemaPracticaPage />} />
+            <Route path="/simulados/banco/historico" element={<HistoricoPraticaPage />} />
+            <Route path="/simulados/banco/resultado/:praticaId" element={<ResultadoPraticaPage />} />
+            <Route path="/simulados/:simuladoId" element={<SimuladoRunnerPage />} />
+            <Route
+              path="/progresso"
+              element={
+                <Suspense fallback={<div className="progresso-page" />}>
+                  <ProgressoPage />
+                </Suspense>
+              }
+            />
+          </Route>
+        </Routes>
+      </TimerProvider>
     </BrowserRouter>
   );
 }
