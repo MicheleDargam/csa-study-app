@@ -198,12 +198,21 @@ export function useTimer() {
 
   const reset = useCallback(() => {
     clearTimer();
+    // Resetting mid-study used to silently discard the elapsed time — save
+    // it as a partial session first, same as Skip already does, so minutes
+    // already studied aren't lost just because the cycle wasn't finished.
+    if (phase === 'study' && sessionStartRef.current && selectedSubject) {
+      const elapsed = totalTime - timeRemaining;
+      if (elapsed > 0) {
+        saveSession('study', elapsed);
+      }
+    }
     setPhase('idle');
     setStatus('stopped');
     setTimeRemaining(0);
     setTotalTime(0);
     setCycleCount(0);
-  }, [clearTimer]);
+  }, [clearTimer, phase, totalTime, timeRemaining, selectedSubject, saveSession]);
 
   // Changing the subject invalidates the previously picked task (it belonged
   // to the old subject's list), so clear it to avoid a stale/mismatched link.
