@@ -36,6 +36,13 @@ export function useTimer() {
 
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const sessionStartRef = useRef<Date | null>(null);
+  // React 18 StrictMode (dev only) invokes a functional setState updater
+  // twice to help surface impurities — and the "cycle just finished" branch
+  // below has side effects (saving the session, notifying) inside exactly
+  // such an updater. Without this guard, every natural completion would
+  // double-save. Reset to false whenever a fresh interval starts; flips to
+  // true the first time that interval's completion branch runs.
+  const completionHandledRef = useRef(false);
 
   // Clean up interval on unmount
   useEffect(() => {
@@ -107,11 +114,14 @@ export function useTimer() {
     setTimeRemaining(breakSeconds);
     setTotalTime(breakSeconds);
     sessionStartRef.current = new Date();
+    completionHandledRef.current = false;
     persistSnapshot('break', 'running', breakSeconds, breakSeconds, cycleCount);
 
     intervalRef.current = setInterval(() => {
       setTimeRemaining((prev) => {
         if (prev <= 1) {
+          if (completionHandledRef.current) return 0;
+          completionHandledRef.current = true;
           clearTimer();
           // Break completed
           playNotificationSound();
@@ -139,11 +149,14 @@ export function useTimer() {
     setTimeRemaining(studySeconds);
     setTotalTime(studySeconds);
     sessionStartRef.current = new Date();
+    completionHandledRef.current = false;
     persistSnapshot('study', 'running', studySeconds, studySeconds, cycleCount);
 
     intervalRef.current = setInterval(() => {
       setTimeRemaining((prev) => {
         if (prev <= 1) {
+          if (completionHandledRef.current) return 0;
+          completionHandledRef.current = true;
           clearTimer();
           // Study cycle completed
           playNotificationSound();
@@ -178,11 +191,14 @@ export function useTimer() {
   const resume = useCallback(() => {
     if (status !== 'paused') return;
     setStatus('running');
+    completionHandledRef.current = false;
     persistSnapshot(phase === 'break' ? 'break' : 'study', 'running', totalTime, timeRemaining, cycleCount);
 
     intervalRef.current = setInterval(() => {
       setTimeRemaining((prev) => {
         if (prev <= 1) {
+          if (completionHandledRef.current) return 0;
+          completionHandledRef.current = true;
           clearTimer();
           if (phase === 'study') {
             playNotificationSound();
@@ -299,10 +315,13 @@ export function useTimer() {
         setTotalTime(snap.totalTime);
         setTimeRemaining(recoveredRemaining);
         setCycleCount(snap.cycleCount);
+        completionHandledRef.current = false;
 
         intervalRef.current = setInterval(() => {
           setTimeRemaining((prev) => {
             if (prev <= 1) {
+              if (completionHandledRef.current) return 0;
+              completionHandledRef.current = true;
               clearTimer();
               playNotificationSound();
               if (snap.phase === 'study') {

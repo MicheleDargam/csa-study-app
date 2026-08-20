@@ -93,12 +93,23 @@ export function sendNotification(title: string, body: string, tag: string = 'csa
   if (!('Notification' in window)) return;
   if (Notification.permission !== 'granted') return;
 
-  new Notification(title, {
-    body,
-    icon: '/pwa-192x192.png',
-    badge: '/pwa-192x192.png',
-    tag,
-  });
+  try {
+    // Some mobile browsers (notably Android Chrome, once a service worker
+    // is registered — which this PWA always has) throw on the plain
+    // Notification() constructor and require
+    // ServiceWorkerRegistration.showNotification() instead. This call runs
+    // inside a setInterval/setState tick with no error boundary around it,
+    // so an uncaught throw here used to crash the whole app to a blank
+    // (black, given the dark theme) screen right as a study cycle ended.
+    new Notification(title, {
+      body,
+      icon: '/pwa-192x192.png',
+      badge: '/pwa-192x192.png',
+      tag,
+    });
+  } catch {
+    // Notification failed to display — not worth crashing the app over.
+  }
 }
 
 /**
