@@ -1,9 +1,10 @@
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import { useLiveQuery } from 'dexie-react-hooks';
 import { ArrowLeft, ListChecks, Minus, Plus, Shuffle } from 'lucide-react';
 import { db } from '../../db/database';
 import { QuizRunner, type QuizResult } from '../simulados/QuizRunner';
+import { peekDraftQuestionIds } from '../simulados/quizDraft';
 import { sampleRandom } from './practiceUtils';
 import type { Questao } from '../../types';
 
@@ -26,7 +27,32 @@ export function TemaPracticaPage() {
   const [quantidade, setQuantidade] = useState(10);
   const [run, setRun] = useState<{ questoes: Questao[]; modo: Modo } | null>(null);
 
+  const draftKey = `banco-${tema}-${materia}`;
   const total = questoesDoTema?.length ?? 0;
+
+  // A locked screen or the OS reclaiming the tab mid-practice would
+  // otherwise strand the draft here: `run` itself lives only in this
+  // component's state, so a killed/reloaded tab lands back on this
+  // tema-selection screen with no quiz mounted for QuizRunner's own
+  // draft-resume logic to kick in. Detect a pending draft and reconstruct
+  // the exact same sampled question set before rendering QuizRunner, so
+  // the resume can actually happen.
+  const resumeAttempted = useRef(false);
+  useEffect(() => {
+    if (resumeAttempted.current || run || !questoesDoTema) return;
+    resumeAttempted.current = true;
+
+    const draftIds = peekDraftQuestionIds(draftKey);
+    if (!draftIds || draftIds.length === 0) return;
+
+    (async () => {
+      const fetched = await db.questoes.bulkGet(draftIds);
+      const valid = fetched.filter((q): q is Questao => !!q);
+      if (valid.length === 0) return;
+      const modo: Modo = valid.length === questoesDoTema.length ? 'todas' : 'quantidade';
+      setRun({ questoes: valid, modo });
+    })();
+  }, [draftKey, run, questoesDoTema]);
 
   const handleFinish = async (result: QuizResult) => {
     if (!run) return;
@@ -44,6 +70,7 @@ export function TemaPracticaPage() {
       <QuizRunner
         title={tema}
         questoes={run.questoes}
+        draftKey={draftKey}
         onBack={() => setRun(null)}
         onFinish={handleFinish}
       />

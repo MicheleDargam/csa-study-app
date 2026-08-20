@@ -1,8 +1,9 @@
-import { useState } from 'react';
-import { ArrowLeft, ArrowRight, Play } from 'lucide-react';
+import { useEffect, useState } from 'react';
+import { ArrowLeft, ArrowRight, Play, X } from 'lucide-react';
 import { QuestionCard } from './QuestionCard';
 import { ConfirmDialog } from '../../components/ConfirmDialog';
 import { sameAnswerSet } from './simuladoUtils';
+import { loadMatchingDraft, saveDraft, clearDraft } from './quizDraft';
 import type { Questao, TentativaErro } from '../../types';
 
 export interface QuizResult {
@@ -19,6 +20,12 @@ interface QuizRunnerProps {
   title: string;
   questoes: Questao[];
   introHint?: string;
+  /**
+   * Stable identifier for this quiz's autosave draft (e.g. `simulado-3` or
+   * `banco-CMDB-CSA - ServiceNow`). Must uniquely identify the exact
+   * question set — the draft is discarded if it doesn't match `questoes`.
+   */
+  draftKey: string;
   onBack: () => void;
   onFinish: (result: QuizResult) => void;
 }
@@ -30,22 +37,56 @@ type Phase = 'intro' | 'running';
  * navigation, scoring and the "unanswered questions" confirm dialog.
  * Feature-agnostic — Simulados and Banco de Questões both drive it with
  * their own question list and decide what to do with the result.
+ *
+ * Every answer/navigation is autosaved to localStorage (see quizDraft.ts),
+ * so a locked screen, a backgrounded tab getting reclaimed by the OS, or an
+ * accidental reload resumes exactly where it left off instead of losing the
+ * attempt — this only clears once the quiz is actually submitted.
  */
-export function QuizRunner({ title, questoes, introHint, onBack, onFinish }: QuizRunnerProps) {
-  const [phase, setPhase] = useState<Phase>('intro');
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [answers, setAnswers] = useState<Record<number, number[]>>({});
-  const [startedAt, setStartedAt] = useState<Date | null>(null);
+export function QuizRunner({ title, questoes, introHint, draftKey, onBack, onFinish }: QuizRunnerProps) {
+  const questaoIds = questoes.map((q) => q.id!);
+  // Computed once, at mount — later prop updates (e.g. a live query
+  // re-firing) shouldn't retrigger draft detection.
+  const [initialDraft] = useState(() => loadMatchingDraft(draftKey, questaoIds));
+
+  const [phase, setPhase] = useState<Phase>(initialDraft ? 'running' : 'intro');
+  const [currentIndex, setCurrentIndex] = useState(initialDraft?.currentIndex ?? 0);
+  const [answers, setAnswers] = useState<Record<number, number[]>>(initialDraft?.answers ?? {});
+  const [startedAt, setStartedAt] = useState<Date | null>(
+    initialDraft ? new Date(initialDraft.startedAt) : null,
+  );
   const [confirmFinish, setConfirmFinish] = useState(false);
+  const [showResumedBanner, setShowResumedBanner] = useState(!!initialDraft);
 
   const total = questoes.length;
   const currentQuestao = questoes[currentIndex];
   const answeredCount = Object.values(answers).filter((a) => a.length > 0).length;
   const isLast = currentIndex === total - 1;
 
+  // Keep the draft in sync with every answer/navigation while the quiz is
+  // running, so there's never more than one question's worth of progress
+  // at risk if the app dies mid-session.
+  useEffect(() => {
+    if (phase !== 'running' || !startedAt) return;
+    saveDraft(draftKey, {
+      questaoIds: questoes.map((q) => q.id!),
+      currentIndex,
+      answers,
+      startedAt: startedAt.toISOString(),
+    });
+  }, [phase, draftKey, questoes, currentIndex, answers, startedAt]);
+
   const handleStart = () => {
     setStartedAt(new Date());
     setPhase('running');
+  };
+
+  const handleRestartFromScratch = () => {
+    clearDraft(draftKey);
+    setAnswers({});
+    setCurrentIndex(0);
+    setStartedAt(new Date());
+    setShowResumedBanner(false);
   };
 
   const handleAnswerChange = (selected: number[]) => {
@@ -69,6 +110,7 @@ export function QuizRunner({ title, questoes, introHint, onBack, onFinish }: Qui
     }
 
     const completedAt = new Date();
+    clearDraft(draftKey);
     onFinish({
       acertos,
       total,
@@ -120,6 +162,23 @@ export function QuizRunner({ title, questoes, introHint, onBack, onFinish }: Qui
 
   return (
     <div className="simulados-page">
+      {showResumedBanner && (
+        <div className="recovery-banner">
+          <span>Retomando de onde você parou.</span>
+          <button type="button" onClick={handleRestartFromScratch}>
+            Começar do zero
+          </button>
+          <button
+            type="button"
+            className="recovery-banner-close"
+            onClick={() => setShowResumedBanner(false)}
+            title="Dispensar"
+          >
+            <X size={14} />
+          </button>
+        </div>
+      )}
+
       <div className="quiz-progress-bar">
         <div
           className="quiz-progress-fill"

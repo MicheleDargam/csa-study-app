@@ -6,6 +6,7 @@ import {
   sendNotification,
   requestNotificationPermission,
 } from './timerUtils';
+import { saveActiveSnapshot, loadActiveSnapshot, clearActiveSnapshot } from './timerSessionStorage';
 
 const SETTINGS_KEY = 'csa-timer-settings';
 
@@ -31,6 +32,7 @@ export function useTimer() {
   const [taskToConfirm, setTaskToConfirm] = useState<Task | null>(null);
   const [settings, setSettingsState] = useState<TimerSettings>(loadSettings);
   const [cycleCount, setCycleCount] = useState(0);
+  const [recoveredNotice, setRecoveredNotice] = useState<string | null>(null);
 
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const sessionStartRef = useRef<Date | null>(null);
@@ -75,6 +77,28 @@ export function useTimer() {
     [selectedSubject, selectedTask],
   );
 
+  // Keeps the wall-clock snapshot in localStorage fresh so a locked screen,
+  // a backgrounded tab reclaimed by the OS, or a hard reload can recover
+  // the in-progress phase (see the boot-time recovery effect below) instead
+  // of silently losing already-studied minutes.
+  const persistSnapshot = useCallback(
+    (phaseType: 'study' | 'break', snapStatus: 'running' | 'paused', total: number, remaining: number, cycles: number) => {
+      if (!selectedSubject?.id || !sessionStartRef.current) return;
+      saveActiveSnapshot({
+        subjectId: selectedSubject.id,
+        taskId: selectedTask?.id,
+        phase: phaseType,
+        status: snapStatus,
+        totalTime: total,
+        remaining,
+        savedAt: Date.now(),
+        phaseStartedAt: sessionStartRef.current.getTime(),
+        cycleCount: cycles,
+      });
+    },
+    [selectedSubject, selectedTask],
+  );
+
   const startBreak = useCallback(() => {
     clearTimer();
     const breakSeconds = settings.breakDuration * 60;
@@ -83,6 +107,7 @@ export function useTimer() {
     setTimeRemaining(breakSeconds);
     setTotalTime(breakSeconds);
     sessionStartRef.current = new Date();
+    persistSnapshot('break', 'running', breakSeconds, breakSeconds, cycleCount);
 
     intervalRef.current = setInterval(() => {
       setTimeRemaining((prev) => {
@@ -95,14 +120,16 @@ export function useTimer() {
             'Hora de voltar aos estudos.',
           );
           saveSession('break', breakSeconds);
+          clearActiveSnapshot();
           setPhase('idle');
           setStatus('stopped');
           return 0;
         }
+        persistSnapshot('break', 'running', breakSeconds, prev - 1, cycleCount);
         return prev - 1;
       });
     }, 1000);
-  }, [settings.breakDuration, clearTimer, saveSession]);
+  }, [settings.breakDuration, clearTimer, saveSession, persistSnapshot, cycleCount]);
 
   const startStudy = useCallback(() => {
     clearTimer();
@@ -112,6 +139,7 @@ export function useTimer() {
     setTimeRemaining(studySeconds);
     setTotalTime(studySeconds);
     sessionStartRef.current = new Date();
+    persistSnapshot('study', 'running', studySeconds, studySeconds, cycleCount);
 
     intervalRef.current = setInterval(() => {
       setTimeRemaining((prev) => {
@@ -129,10 +157,11 @@ export function useTimer() {
           setTimeout(() => startBreak(), 500);
           return 0;
         }
+        persistSnapshot('study', 'running', studySeconds, prev - 1, cycleCount);
         return prev - 1;
       });
     }, 1000);
-  }, [settings.studyDuration, clearTimer, saveSession, startBreak]);
+  }, [settings.studyDuration, clearTimer, saveSession, startBreak, persistSnapshot, cycleCount]);
 
   const start = useCallback(() => {
     if (!selectedSubject) return;
@@ -143,11 +172,13 @@ export function useTimer() {
   const pause = useCallback(() => {
     clearTimer();
     setStatus('paused');
-  }, [clearTimer]);
+    persistSnapshot(phase === 'break' ? 'break' : 'study', 'paused', totalTime, timeRemaining, cycleCount);
+  }, [clearTimer, persistSnapshot, phase, totalTime, timeRemaining, cycleCount]);
 
   const resume = useCallback(() => {
     if (status !== 'paused') return;
     setStatus('running');
+    persistSnapshot(phase === 'break' ? 'break' : 'study', 'running', totalTime, timeRemaining, cycleCount);
 
     intervalRef.current = setInterval(() => {
       setTimeRemaining((prev) => {
@@ -168,15 +199,17 @@ export function useTimer() {
             sendNotification('Pausa finalizada! ☕', 'Hora de voltar aos estudos.');
             const breakSeconds = settings.breakDuration * 60;
             saveSession('break', breakSeconds);
+            clearActiveSnapshot();
             setPhase('idle');
             setStatus('stopped');
           }
           return 0;
         }
+        persistSnapshot(phase === 'break' ? 'break' : 'study', 'running', totalTime, prev - 1, cycleCount);
         return prev - 1;
       });
     }, 1000);
-  }, [status, phase, settings, clearTimer, saveSession, startBreak]);
+  }, [status, phase, settings, clearTimer, saveSession, startBreak, persistSnapshot, totalTime, timeRemaining, cycleCount]);
 
   const skip = useCallback(() => {
     clearTimer();
@@ -190,6 +223,7 @@ export function useTimer() {
       }
       startBreak();
     } else if (phase === 'break') {
+      clearActiveSnapshot();
       setPhase('idle');
       setStatus('stopped');
       setTimeRemaining(0);
@@ -207,12 +241,123 @@ export function useTimer() {
         saveSession('study', elapsed);
       }
     }
+    clearActiveSnapshot();
     setPhase('idle');
     setStatus('stopped');
     setTimeRemaining(0);
     setTotalTime(0);
     setCycleCount(0);
   }, [clearTimer, phase, totalTime, timeRemaining, selectedSubject, saveSession]);
+
+  // Recover a phase that was running/paused before the app disappeared —
+  // a locked screen for long enough, the OS reclaiming a backgrounded tab,
+  // or any hard reload all kill the setInterval and every bit of React
+  // state with it. Runs once at boot (this hook is only ever mounted once,
+  // at the app root — see TimerContext.tsx).
+  useEffect(() => {
+    const snap = loadActiveSnapshot();
+    if (!snap) return;
+    // Clear it synchronously, before any `await` — React StrictMode
+    // double-invokes mount effects in dev, and both invocations run this
+    // synchronous portion before either reaches an awaited call. Clearing
+    // here means the second invocation's `loadActiveSnapshot()` finds
+    // nothing and no-ops, instead of both recovering (and double-saving)
+    // the same finished cycle.
+    clearActiveSnapshot();
+
+    (async () => {
+      const subjectRecord = await db.subjects.get(snap.subjectId);
+      if (!subjectRecord) {
+        // Subject no longer exists — nothing sane to recover into.
+        return;
+      }
+      const taskRecord = snap.taskId ? await db.tasks.get(snap.taskId) : undefined;
+
+      setSelectedSubject(subjectRecord);
+      setSelectedTask(taskRecord ?? null);
+      sessionStartRef.current = new Date(snap.phaseStartedAt);
+
+      if (snap.status === 'paused') {
+        setPhase(snap.phase);
+        setStatus('paused');
+        setTotalTime(snap.totalTime);
+        setTimeRemaining(snap.remaining);
+        setCycleCount(snap.cycleCount);
+        return;
+      }
+
+      // Was running — ticks stop entirely while the tab/process is dead, so
+      // recompute from wall-clock time instead of trusting `remaining`.
+      const elapsedSinceSave = Math.floor((Date.now() - snap.savedAt) / 1000);
+      const recoveredRemaining = snap.remaining - elapsedSinceSave;
+
+      if (recoveredRemaining > 0) {
+        // Still mid-cycle — resume seamlessly from where the clock says we
+        // should be.
+        setPhase(snap.phase);
+        setStatus('running');
+        setTotalTime(snap.totalTime);
+        setTimeRemaining(recoveredRemaining);
+        setCycleCount(snap.cycleCount);
+
+        intervalRef.current = setInterval(() => {
+          setTimeRemaining((prev) => {
+            if (prev <= 1) {
+              clearTimer();
+              playNotificationSound();
+              if (snap.phase === 'study') {
+                sendNotification('Ciclo concluído! 🎉', `Você completou ${Math.round(snap.totalTime / 60)} minutos de estudo.`);
+                saveSession('study', snap.totalTime);
+                setCycleCount((c) => c + 1);
+                setTimeout(() => startBreak(), 500);
+              } else {
+                sendNotification('Pausa finalizada! ☕', 'Hora de voltar aos estudos.');
+                saveSession('break', snap.totalTime);
+                setPhase('idle');
+                setStatus('stopped');
+              }
+              return 0;
+            }
+            persistSnapshot(snap.phase, 'running', snap.totalTime, prev - 1, snap.cycleCount);
+            return prev - 1;
+          });
+        }, 1000);
+        return;
+      }
+
+      // The whole phase elapsed while the app was gone. If it was a study
+      // cycle, that time genuinely happened — count it — but don't guess
+      // how long ago it actually finished by auto-chaining into a break;
+      // land on idle and let the next action be explicit.
+      if (snap.phase === 'study') {
+        const session: StudySession = {
+          subjectId: subjectRecord.id!,
+          subjectName: subjectRecord.name,
+          subjectColor: subjectRecord.color,
+          taskId: taskRecord?.id,
+          taskTitle: taskRecord?.title,
+          type: 'study',
+          duration: snap.totalTime,
+          startedAt: new Date(snap.phaseStartedAt),
+          completedAt: new Date(snap.phaseStartedAt + snap.totalTime * 1000),
+        };
+        await db.sessions.add(session);
+        setCycleCount(snap.cycleCount + 1);
+        setRecoveredNotice(
+          `Notamos que um ciclo de ${Math.round(snap.totalTime / 60)} minutos de estudo terminou enquanto o app estava fechado — já contamos esse tempo!`,
+        );
+        if (taskRecord) setTaskToConfirm(taskRecord);
+      }
+      setPhase('idle');
+      setStatus('stopped');
+      setTimeRemaining(0);
+      setTotalTime(0);
+    })();
+    // Runs once at boot only — intentionally ignoring clearTimer/saveSession/
+    // startBreak/persistSnapshot so this doesn't re-fire (and re-recover a
+    // snapshot it just wrote itself) every time those get recreated.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   // Changing the subject invalidates the previously picked task (it belonged
   // to the old subject's list), so clear it to avoid a stale/mismatched link.
@@ -222,6 +367,7 @@ export function useTimer() {
   }, []);
 
   const clearTaskToConfirm = useCallback(() => setTaskToConfirm(null), []);
+  const dismissRecoveredNotice = useCallback(() => setRecoveredNotice(null), []);
 
   const updateSettings = useCallback(
     (newSettings: TimerSettings) => {
@@ -249,6 +395,7 @@ export function useTimer() {
     taskToConfirm,
     settings,
     cycleCount,
+    recoveredNotice,
     // Actions
     start,
     pause,
@@ -259,6 +406,7 @@ export function useTimer() {
     selectSubject,
     setSelectedTask,
     clearTaskToConfirm,
+    dismissRecoveredNotice,
     updateSettings,
   };
 }

@@ -31,6 +31,7 @@ export function SimuladoRunnerPage() {
     <QuizRunner
       title={simulado.nome}
       questoes={questoes}
+      draftKey={`simulado-${id}`}
       onBack={() => navigate('/simulados')}
       onFinish={handleFinish}
     />

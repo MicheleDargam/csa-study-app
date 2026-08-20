@@ -9,7 +9,7 @@ import { MateriaForm } from '../materias/MateriaForm';
 import { TaskPicker } from '../tarefas/TaskPicker';
 import { TaskCompletePrompt } from '../tarefas/TaskCompletePrompt';
 import { completeTask } from '../tarefas/taskUtils';
-import { Settings } from 'lucide-react';
+import { Settings, X } from 'lucide-react';
 
 export function TimerPage() {
   const timer = useTimerContext();
@@ -28,6 +28,15 @@ export function TimerPage() {
 
   return (
     <div className="timer-page">
+      {timer.recoveredNotice && (
+        <div className="recovery-banner">
+          <span>{timer.recoveredNotice}</span>
+          <button type="button" className="recovery-banner-close" onClick={timer.dismissRecoveredNotice} title="Dispensar">
+            <X size={14} />
+          </button>
+        </div>
+      )}
+
       {/* Header */}
       <div className="timer-page-header">
         <div>
