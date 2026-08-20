@@ -25,3 +25,7 @@ dist-ssr
 
 # Claude Code local settings (machine-specific, not shared)
 .claude/settings.local.json
+
+# Source material PDFs dropped in the project root while feeding in new
+# question batches — not part of the app, never meant to be committed.
+/*.pdf
