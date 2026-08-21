@@ -68,6 +68,50 @@ export async function migrateMateriasParaTemas(): Promise<void> {
   localStorage.setItem(MATERIAS_TEMAS_MIGRATION_FLAG, '1');
 }
 
+// Exact `nome` values of the 7 raw course-batch Simulados (3-9) that were
+// replaced by the deduplicated, topic-mixed "Curso Consolidado" set.
+const OLD_CURSO_SIMULADO_NOMES = [
+  'Simulado 3 - Curso (Questões 61-120)',
+  'Simulado 4 - Curso (Questões 121-180)',
+  'Simulado 5 - Curso (Questões 181-240)',
+  'Simulado 6 - Curso (Questões 241-300)',
+  'Simulado 7 - Curso (Questões 301-360)',
+  'Simulado 8 - Curso (Questões 1-60)',
+  'Simulado 9 - Curso (Questões 361-407)',
+];
+
+const CURSO_SIMULADOS_DEDUP_MIGRATION_FLAG = 'csa-curso-simulados-dedup-migration-v1';
+
+/**
+ * One-time migration that removes the 7 raw "Simulado N - Curso (Questões
+ * X-Y)" records (their questoes and attempt history included) once they've
+ * been replaced by the deduplicated "Curso Consolidado" set under the same
+ * Simulado 3-9 slots. Without this, a browser that already imported the old
+ * batches would keep their (sometimes duplicate) questoes rows around
+ * forever — seedSimulados() only ever adds/updates by nome, it never
+ * deletes, so the old rows would silently linger and keep showing up in
+ * Banco de Questões even after the new consolidated files are seeded.
+ * Simulados 1 and 2 are untouched. Guarded by a localStorage flag so it
+ * only runs once per browser; DB writes are wrapped in one transaction so
+ * StrictMode's double-invoked effects can't race.
+ */
+export async function migrateDedupCursoSimulados(): Promise<void> {
+  if (localStorage.getItem(CURSO_SIMULADOS_DEDUP_MIGRATION_FLAG)) return;
+
+  await db.transaction('rw', db.simulados, db.questoes, db.tentativas, async () => {
+    for (const nome of OLD_CURSO_SIMULADO_NOMES) {
+      const simulado = await db.simulados.where('nome').equals(nome).first();
+      if (!simulado?.id) continue;
+
+      await db.questoes.where('simuladoId').equals(simulado.id).delete();
+      await db.tentativas.where('simuladoId').equals(simulado.id).delete();
+      await db.simulados.delete(simulado.id);
+    }
+  });
+
+  localStorage.setItem(CURSO_SIMULADOS_DEDUP_MIGRATION_FLAG, '1');
+}
+
 type UpsertResult = 'inserted' | 'updated' | 'unchanged';
 
 /**

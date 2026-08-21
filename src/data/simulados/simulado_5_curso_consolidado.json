@@ -1,0 +1,1420 @@
+{
+  "simulado": "Simulado 5 - Curso Consolidado (3/7)",
+  "questoes": [
+    {
+      "id": "curso5_q01",
+      "materia": "CSA - ServiceNow",
+      "tema": "UI Fundamentals",
+      "enunciado": "What would NOT appear in the Application Navigator if `service` is typed into the filter field?",
+      "alternativas": [
+        "Configuration > Business Services",
+        "Self-Service > Knowledge",
+        "Service Portal > Widgets",
+        "Incident > Assigned to me"
+      ],
+      "resposta_correta": [
+        3
+      ],
+      "enunciado_pt": "O que NÃO apareceria no Application Navigator se `service` for digitado no campo de filtro?",
+      "alternativas_pt": [
+        "Configuration > Business Services",
+        "Self-Service > Knowledge",
+        "Service Portal > Widgets",
+        "Incident > Assigned to me"
+      ]
+    },
+    {
+      "id": "curso5_q02",
+      "materia": "CSA - ServiceNow",
+      "tema": "UI Fundamentals",
+      "enunciado": "A user wants to create a set of filter conditions, where they want to show records which satisfy two conditions: Incidents where the state is Closed; Incidents where Assignment Group is Network. After clicking the Funnel icon, what should the user do?",
+      "alternativas": [
+        "Define the first condition; click AND button; define second condition; click Run",
+        "Define the first condition; click AND button; define second condition; press enter",
+        "Define the first condition; click OR button; define second condition; press enter",
+        "Define the first condition; click > icon on breadcrumb, define second condition; click Run",
+        "Define the first condition; click > icon on breadcrumb, define second condition; press enter"
+      ],
+      "resposta_correta": [
+        0
+      ],
+      "enunciado_pt": "Um usuário quer criar um conjunto de condições de filtro, mostrando registros que satisfaçam duas condições: Incidents onde o state é Closed; Incidents onde o Assignment Group é Network. Depois de clicar no ícone de Funil, o que o usuário deve fazer?",
+      "alternativas_pt": [
+        "Definir a primeira condição; clicar no botão AND; definir a segunda condição; clicar em Run",
+        "Definir a primeira condição; clicar no botão AND; definir a segunda condição; pressionar enter",
+        "Definir a primeira condição; clicar no botão OR; definir a segunda condição; pressionar enter",
+        "Definir a primeira condição; clicar no ícone > do breadcrumb, definir a segunda condição; clicar em Run",
+        "Definir a primeira condição; clicar no ícone > do breadcrumb, definir a segunda condição; pressionar enter"
+      ]
+    },
+    {
+      "id": "curso5_q03",
+      "materia": "CSA - ServiceNow",
+      "tema": "UI Fundamentals",
+      "enunciado": "From a form, what would you click to add additional fields to the form? (Choose two.)",
+      "alternativas": [
+        "Context Menu > Form > Layout",
+        "Context Menu > Configure > Form Layout",
+        "Context Menu > Configure > Form Design",
+        "Right click on header > Add > Field",
+        "Context Menu > Form > Designer",
+        "Right click on header > Configure > UX Dashboard"
+      ],
+      "resposta_correta": [
+        1,
+        2
+      ],
+      "enunciado_pt": "A partir de um formulário, no que você clicaria para adicionar campos adicionais? (Escolha duas.)",
+      "alternativas_pt": [
+        "Context Menu > Form > Layout",
+        "Context Menu > Configure > Form Layout",
+        "Context Menu > Configure > Form Design",
+        "Right click on header > Add > Field",
+        "Context Menu > Form > Designer",
+        "Right click on header > Configure > UX Dashboard"
+      ]
+    },
+    {
+      "id": "curso5_q04",
+      "materia": "CSA - ServiceNow",
+      "tema": "UI Fundamentals",
+      "enunciado": "On the Form header, which icon do you use to access form templates?",
+      "alternativas": [
+        "Stamp",
+        "Pages",
+        "More Options (…)",
+        "Paperclip"
+      ],
+      "resposta_correta": [
+        0
+      ],
+      "enunciado_pt": "No cabeçalho do formulário, qual ícone você usa para acessar os templates de formulário?",
+      "alternativas_pt": [
+        "Carimbo (Stamp)",
+        "Páginas (Pages)",
+        "More Options (…)",
+        "Clipe de papel (Paperclip)"
+      ]
+    },
+    {
+      "id": "curso5_q05",
+      "materia": "CSA - ServiceNow",
+      "tema": "UI Fundamentals",
+      "enunciado": "What are examples of UI Actions, relating to Lists? (Choose four.)",
+      "alternativas": [
+        "List Links",
+        "List Choices",
+        "List Buttons",
+        "List Override",
+        "List Context Menu",
+        "List Control"
+      ],
+      "resposta_correta": [
+        0,
+        1,
+        2,
+        4
+      ],
+      "enunciado_pt": "Quais são exemplos de UI Actions relacionadas a Lists? (Escolha quatro.)",
+      "alternativas_pt": [
+        "List Links",
+        "List Choices",
+        "List Buttons",
+        "List Override",
+        "List Context Menu",
+        "List Control"
+      ]
+    },
+    {
+      "id": "curso5_q06",
+      "materia": "CSA - ServiceNow",
+      "tema": "UI Fundamentals",
+      "enunciado": "What section on the notes tab, shows the history of the work documented on the record?",
+      "alternativas": [
+        "Audit Log",
+        "Timeline",
+        "Journal",
+        "Diary",
+        "Activity"
+      ],
+      "resposta_correta": [
+        4
+      ],
+      "enunciado_pt": "Qual seção na aba de notes mostra o histórico do trabalho documentado no registro?",
+      "alternativas_pt": [
+        "Audit Log",
+        "Timeline",
+        "Journal",
+        "Diary",
+        "Activity"
+      ]
+    },
+    {
+      "id": "curso5_q07",
+      "materia": "CSA - ServiceNow",
+      "tema": "UI Fundamentals",
+      "enunciado": "The customer has asked that you change the default layout of the Task list. They would like these columns, in this order: Number; Task Type; Parent; Short Description; Assignment Group; Assignee; Updated. After navigating to the list, where would you click, to meet this requirement?",
+      "alternativas": [
+        "Click List Context Menu > Personalize List",
+        "Click List Context Menu > Configure > Columns",
+        "Right click List Gear icon > Configure > Columns",
+        "Right click on any column header, Context Menu > Configure > List Layout"
+      ],
+      "resposta_correta": [
+        3
+      ],
+      "enunciado_pt": "O cliente pediu para você alterar o layout padrão da lista de Task. Ele gostaria destas colunas, nesta ordem: Number; Task Type; Parent; Short Description; Assignment Group; Assignee; Updated. Depois de acessar a lista, onde você clicaria para atender a esse requisito?",
+      "alternativas_pt": [
+        "Clicar em List Context Menu > Personalize List",
+        "Clicar em List Context Menu > Configure > Columns",
+        "Clicar com o botão direito no ícone de engrenagem da lista > Configure > Columns",
+        "Clicar com o botão direito em qualquer cabeçalho de coluna, Context Menu > Configure > List Layout"
+      ]
+    },
+    {
+      "id": "curso5_q08",
+      "materia": "CSA - ServiceNow",
+      "tema": "UI Fundamentals",
+      "enunciado": "Which feature can be used to give users the choice to easily populate the most-used fields for a specific table?",
+      "alternativas": [
+        "Tags",
+        "Formatter",
+        "Template",
+        "Reference type fields"
+      ],
+      "resposta_correta": [
+        2
+      ],
+      "enunciado_pt": "Qual recurso pode ser usado para dar aos usuários a opção de preencher facilmente os campos mais usados de uma tabela específica?",
+      "alternativas_pt": [
+        "Tags",
+        "Formatter",
+        "Template",
+        "Reference type fields"
+      ]
+    },
+    {
+      "id": "curso5_q09",
+      "materia": "CSA - ServiceNow",
+      "tema": "UI Fundamentals",
+      "enunciado": "What is a formatter? Select one of the following.",
+      "alternativas": [
+        "A formatter allows you to configure applications on your instance",
+        "A formatter is a form element used to display information that is not a field in the record",
+        "A formatter allows you to populate fields automatically",
+        "A formatter is a set of conditions applied to a table to help find and work with data"
+      ],
+      "resposta_correta": [
+        1
+      ],
+      "enunciado_pt": "O que é um formatter? Selecione uma das opções a seguir.",
+      "alternativas_pt": [
+        "Um formatter permite configurar aplicações na sua instância",
+        "Um formatter é um elemento de formulário usado para exibir informação que não é um campo no registro",
+        "Um formatter permite popular campos automaticamente",
+        "Um formatter é um conjunto de condições aplicado a uma tabela para ajudar a encontrar e trabalhar com dados"
+      ]
+    },
+    {
+      "id": "curso5_q10",
+      "materia": "CSA - ServiceNow",
+      "tema": "UI Fundamentals",
+      "enunciado": "Which actions can you take to open the Context Menu on a list, form, or column? (Choose two.)",
+      "alternativas": [
+        "Select the Context Menu related link",
+        "Double-click on the list form or column heading",
+        "Right-click on the list, form or column heading",
+        "Use Ctrl+M command",
+        "Select the Context Menu icon"
+      ],
+      "resposta_correta": [
+        2
+      ],
+      "enunciado_pt": "Quais ações você pode realizar para abrir o Context Menu em uma lista, formulário, ou coluna? (Escolha duas.)",
+      "alternativas_pt": [
+        "Selecionar o related link Context Menu",
+        "Clicar duas vezes no cabeçalho da lista, formulário ou coluna",
+        "Clicar com o botão direito no cabeçalho da lista, formulário ou coluna",
+        "Usar o comando Ctrl+M",
+        "Selecionar o ícone Context Menu"
+      ]
+    },
+    {
+      "id": "curso5_q11",
+      "materia": "CSA - ServiceNow",
+      "tema": "UI Fundamentals",
+      "enunciado": "What is the role of form annotations within Table Builder?",
+      "alternativas": [
+        "To create new form views",
+        "To provide additional information on each field",
+        "To rearrange fields in a form",
+        "To add visual appeal with colors in the designer"
+      ],
+      "resposta_correta": [
+        1
+      ],
+      "enunciado_pt": "Qual é o papel das form annotations dentro do Table Builder?",
+      "alternativas_pt": [
+        "Criar novas form views",
+        "Fornecer informação adicional sobre cada campo",
+        "Reorganizar campos em um formulário",
+        "Adicionar apelo visual com cores no designer"
+      ]
+    },
+    {
+      "id": "curso5_q12",
+      "materia": "CSA - ServiceNow",
+      "tema": "Database/Tables",
+      "enunciado": "Which core table in the ServiceNow platform provides a series of standard fields used on each of the tables that extend it, such as the Incident [incident] and Problem [problem] tables?",
+      "alternativas": [
+        "Task [task]",
+        "Assignment [assignment]",
+        "Service [service]",
+        "Workflow [workflow]"
+      ],
+      "resposta_correta": [
+        0
+      ],
+      "enunciado_pt": "Qual core table da plataforma ServiceNow fornece uma série de campos padrão usados em todas as tabelas que a estendem, como as tabelas Incident [incident] e Problem [problem]?",
+      "alternativas_pt": [
+        "Task [task]",
+        "Assignment [assignment]",
+        "Service [service]",
+        "Workflow [workflow]"
+      ]
+    },
+    {
+      "id": "curso5_q13",
+      "materia": "CSA - ServiceNow",
+      "tema": "Database/Tables",
+      "enunciado": "What type of field is Boolean and appears as a check box?",
+      "alternativas": [
+        "Yes/No",
+        "True/False",
+        "On/Off",
+        "Binary",
+        "0/1"
+      ],
+      "resposta_correta": [
+        1
+      ],
+      "enunciado_pt": "Que tipo de campo é Boolean e aparece como uma caixa de seleção (check box)?",
+      "alternativas_pt": [
+        "Yes/No",
+        "True/False",
+        "On/Off",
+        "Binary",
+        "0/1"
+      ]
+    },
+    {
+      "id": "curso5_q14",
+      "materia": "CSA - ServiceNow",
+      "tema": "Database/Tables",
+      "enunciado": "What is the definition of a group?",
+      "alternativas": [
+        "A collection of subject matter experts",
+        "A team of users",
+        "An escalation pod",
+        "A collection of users",
+        "A department"
+      ],
+      "resposta_correta": [
+        3
+      ],
+      "enunciado_pt": "Qual é a definição de um grupo?",
+      "alternativas_pt": [
+        "Uma coleção de especialistas no assunto",
+        "Uma equipe de usuários",
+        "Um escalation pod",
+        "Uma coleção de usuários",
+        "Um departamento"
+      ]
+    },
+    {
+      "id": "curso5_q15",
+      "materia": "CSA - ServiceNow",
+      "tema": "Database/Tables",
+      "enunciado": "On a form, which type of field has this icon which can be clicked, to see a preview of the associated record?",
+      "alternativas": [
+        "Lookup",
+        "Preview",
+        "Reference",
+        "Snapshot",
+        "Quickview",
+        "Drilldown"
+      ],
+      "resposta_correta": [
+        2
+      ],
+      "enunciado_pt": "Em um formulário, qual tipo de campo tem esse ícone que pode ser clicado, para ver uma prévia do registro associado?",
+      "alternativas_pt": [
+        "Lookup",
+        "Preview",
+        "Reference",
+        "Snapshot",
+        "Quickview",
+        "Drilldown"
+      ]
+    },
+    {
+      "id": "curso5_q16",
+      "materia": "CSA - ServiceNow",
+      "tema": "Database/Tables",
+      "enunciado": "How would you describe the relationship between the Incident and Task table?",
+      "alternativas": [
+        "Incident table has a one to many relationship with the Task table",
+        "Incident table is extended from Task table",
+        "Incident table is related to the Task table via the INC number",
+        "Incident table has a many to many relationship with the Task table",
+        "Incident table is a database view of the Task table"
+      ],
+      "resposta_correta": [
+        1
+      ],
+      "enunciado_pt": "Como você descreveria o relacionamento entre a tabela Incident e a tabela Task?",
+      "alternativas_pt": [
+        "A tabela Incident tem um relacionamento one to many com a tabela Task",
+        "A tabela Incident é estendida da tabela Task",
+        "A tabela Incident é relacionada à tabela Task pelo número do INC",
+        "A tabela Incident tem um relacionamento many to many com a tabela Task",
+        "A tabela Incident é uma database view da tabela Task"
+      ]
+    },
+    {
+      "id": "curso5_q17",
+      "materia": "CSA - ServiceNow",
+      "tema": "Database/Tables",
+      "enunciado": "Which type of tables may be extended by other tables, but do not extend another table?",
+      "alternativas": [
+        "Base Tables",
+        "Core Tables",
+        "Extended Tables",
+        "Custom Tables"
+      ],
+      "resposta_correta": [
+        0
+      ],
+      "enunciado_pt": "Qual tipo de tabela pode ser estendida por outras tabelas, mas não estende outra tabela?",
+      "alternativas_pt": [
+        "Base Tables",
+        "Core Tables",
+        "Extended Tables",
+        "Custom Tables"
+      ]
+    },
+    {
+      "id": "curso5_q18",
+      "materia": "CSA - ServiceNow",
+      "tema": "Security/ACL",
+      "enunciado": "What is a role in ServiceNow?",
+      "alternativas": [
+        "A role is one record in the Role [user_sys_role] table",
+        "A role is a set of modules for a particular application",
+        "A role is one record in the Role [sys_user_role] table",
+        "A role is a persona used in Live Feed Chat"
+      ],
+      "resposta_correta": [
+        2
+      ],
+      "enunciado_pt": "O que é uma role no ServiceNow?",
+      "alternativas_pt": [
+        "Uma role é um registro na tabela Role [user_sys_role]",
+        "Uma role é um conjunto de módulos de uma aplicação específica",
+        "Uma role é um registro na tabela Role [sys_user_role]",
+        "Uma role é uma persona usada no Live Feed Chat"
+      ]
+    },
+    {
+      "id": "curso5_q19",
+      "materia": "CSA - ServiceNow",
+      "tema": "Security/ACL",
+      "enunciado": "After finishing your work on High Security Settings, what do you do to return to normal admin security levels?",
+      "alternativas": [
+        "Select Normal role",
+        "Log out and back in",
+        "Use System Administration > Normal Security module",
+        "Select Global Update Set",
+        "End Impersonation"
+      ],
+      "resposta_correta": [
+        1
+      ],
+      "enunciado_pt": "Depois de terminar seu trabalho em High Security Settings, o que você faz para voltar aos níveis normais de segurança de admin?",
+      "alternativas_pt": [
+        "Selecionar a role Normal",
+        "Fazer logout e login novamente",
+        "Usar o módulo System Administration > Normal Security",
+        "Selecionar Global Update Set",
+        "Encerrar Impersonation (End Impersonation)"
+      ]
+    },
+    {
+      "id": "curso5_q20",
+      "materia": "CSA - ServiceNow",
+      "tema": "Security/ACL",
+      "enunciado": "What is the most common role that has access to almost all platform features, functions, and data?",
+      "alternativas": [
+        "Security Admin [security_admin]",
+        "Sys Admin [sys_admin]",
+        "Admin [sn_admin]",
+        "System Administrator [admin]",
+        "Base Admin [base_admin]"
+      ],
+      "resposta_correta": [
+        3
+      ],
+      "enunciado_pt": "Qual é a role mais comum que tem acesso a quase todos os recursos, funções e dados da plataforma?",
+      "alternativas_pt": [
+        "Security Admin [security_admin]",
+        "Sys Admin [sys_admin]",
+        "Admin [sn_admin]",
+        "System Administrator [admin]",
+        "Base Admin [base_admin]"
+      ]
+    },
+    {
+      "id": "curso5_q21",
+      "materia": "CSA - ServiceNow",
+      "tema": "Security/ACL",
+      "enunciado": "When a custom table is created, which access control rules are automatically created? (Choose four.)",
+      "alternativas": [
+        "create",
+        "delete",
+        "execute",
+        "update",
+        "read",
+        "write"
+      ],
+      "resposta_correta": [
+        0,
+        1,
+        4,
+        5
+      ],
+      "enunciado_pt": "Quando uma tabela customizada é criada, quais regras de access control são criadas automaticamente? (Escolha quatro.)",
+      "alternativas_pt": [
+        "create",
+        "delete",
+        "execute",
+        "update",
+        "read",
+        "write"
+      ]
+    },
+    {
+      "id": "curso5_q22",
+      "materia": "CSA - ServiceNow",
+      "tema": "Security/ACL",
+      "enunciado": "A new employee joins the IT department and needs to perform work assigned to Network and Hardware groups. How would you set up their access? (Choose three.)",
+      "alternativas": [
+        "Add User Account to Hardware group",
+        "Add User Account to IT Knowledgebase",
+        "Create User Account",
+        "Add User Account to itil group",
+        "Add User Account to Network group",
+        "Add User Account to ACL"
+      ],
+      "resposta_correta": [
+        0,
+        2,
+        4
+      ],
+      "enunciado_pt": "Um novo funcionário entra no departamento de TI e precisa realizar trabalho atribuído aos grupos Network e Hardware. Como você configuraria o acesso dele? (Escolha três.)",
+      "alternativas_pt": [
+        "Adicionar a conta do usuário ao grupo Hardware",
+        "Adicionar a conta do usuário à IT Knowledgebase",
+        "Criar a conta do usuário",
+        "Adicionar a conta do usuário ao grupo itil",
+        "Adicionar a conta do usuário ao grupo Network",
+        "Adicionar a conta do usuário à ACL"
+      ]
+    },
+    {
+      "id": "curso5_q23",
+      "materia": "CSA - ServiceNow",
+      "tema": "Security/ACL",
+      "enunciado": "Which access control rule applies to every field in the incident table?",
+      "alternativas": [
+        "incident<=>*",
+        "incident.all",
+        "incident.*",
+        "incident||*"
+      ],
+      "resposta_correta": [
+        2
+      ],
+      "enunciado_pt": "Qual regra de access control se aplica a todos os campos da tabela incident?",
+      "alternativas_pt": [
+        "incident<=>*",
+        "incident.all",
+        "incident.*",
+        "incident||*"
+      ]
+    },
+    {
+      "id": "curso5_q24",
+      "materia": "CSA - ServiceNow",
+      "tema": "Security/ACL",
+      "enunciado": "Which feature helps to define the rules to restrict the permissions of users from viewing and interacting with data?",
+      "alternativas": [
+        "CRUD Rules",
+        "Access Control Rules",
+        "Role Assignment Rules",
+        "Scripted User Rules",
+        "User Authentication Rules"
+      ],
+      "resposta_correta": [
+        1
+      ],
+      "enunciado_pt": "Qual recurso ajuda a definir as regras para restringir as permissões dos usuários de visualizar e interagir com dados?",
+      "alternativas_pt": [
+        "CRUD Rules",
+        "Access Control Rules",
+        "Role Assignment Rules",
+        "Scripted User Rules",
+        "User Authentication Rules"
+      ]
+    },
+    {
+      "id": "curso5_q25",
+      "materia": "CSA - ServiceNow",
+      "tema": "Security/ACL",
+      "enunciado": "What encryption feature is included in ServiceNow by default?",
+      "alternativas": [
+        "Data in transit",
+        "Data at rest",
+        "Data in use"
+      ],
+      "resposta_correta": [
+        0
+      ],
+      "enunciado_pt": "Qual recurso de criptografia está incluído no ServiceNow por padrão?",
+      "alternativas_pt": [
+        "Data in transit",
+        "Data at rest",
+        "Data in use"
+      ]
+    },
+    {
+      "id": "curso5_q26",
+      "materia": "CSA - ServiceNow",
+      "tema": "Notifications",
+      "enunciado": "Which tool is used to have conversations with logged-in users in real-time?",
+      "alternativas": [
+        "Connect Chat",
+        "Now Messenger",
+        "User Presence",
+        "Comments"
+      ],
+      "resposta_correta": [
+        0
+      ],
+      "enunciado_pt": "Qual ferramenta é usada para ter conversas em tempo real com usuários logados?",
+      "alternativas_pt": [
+        "Connect Chat",
+        "Now Messenger",
+        "User Presence",
+        "Comments"
+      ]
+    },
+    {
+      "id": "curso5_q27",
+      "materia": "CSA - ServiceNow",
+      "tema": "Task Management",
+      "enunciado": "Which feature helps to automatically allocate a critical, high-priority, service request to the appropriate assignment group or team member?",
+      "alternativas": [
+        "Assignment Rule",
+        "User Policy",
+        "Predictive Intelligence",
+        "UI Policy"
+      ],
+      "resposta_correta": [
+        0
+      ],
+      "enunciado_pt": "Qual recurso ajuda a alocar automaticamente uma solicitação de serviço crítica e de alta prioridade para o assignment group ou membro de equipe apropriado?",
+      "alternativas_pt": [
+        "Assignment Rule",
+        "User Policy",
+        "Predictive Intelligence",
+        "UI Policy"
+      ]
+    },
+    {
+      "id": "curso5_q28",
+      "materia": "CSA - ServiceNow",
+      "tema": "Scripting/Client Development",
+      "enunciado": "A customer requests the following data quality measures be added: -> Incident numbers should be read only, on all lists and forms, for all users. -> Short Description field should be mandatory, on all records, across all applications, on Insert. Which type of policy would you use to meet this requirement?",
+      "alternativas": [
+        "Data Quality Policy",
+        "Dictionary Design Policy",
+        "UI Data Policy",
+        "UI Policy",
+        "Field Criteria Policy",
+        "Data Policy"
+      ],
+      "resposta_correta": [
+        5
+      ],
+      "enunciado_pt": "Um cliente pede que as seguintes medidas de qualidade de dados sejam adicionadas: -> Números de incident devem ser somente leitura, em todas as listas e formulários, para todos os usuários. -> O campo Short Description deve ser obrigatório, em todos os registros, em todas as aplicações, ao inserir (Insert). Qual tipo de policy você usaria para atender a esse requisito?",
+      "alternativas_pt": [
+        "Data Quality Policy",
+        "Dictionary Design Policy",
+        "UI Data Policy",
+        "UI Policy",
+        "Field Criteria Policy",
+        "Data Policy"
+      ]
+    },
+    {
+      "id": "curso5_q29",
+      "materia": "CSA - ServiceNow",
+      "tema": "Scripting/Client Development",
+      "enunciado": "A customer requests the following data quality measures be added: Incident numbers should be read only, on all lists and forms, for all users. Short Description field should be mandatory, on all records, across all applications, on Insert. Which type of policy would you use to meet this requirement?",
+      "alternativas": [
+        "Data Quality Policy",
+        "Dictionary Design Policy",
+        "Data Policy",
+        "Field Criteria Policy"
+      ],
+      "resposta_correta": [
+        2
+      ],
+      "enunciado_pt": "Um cliente pede que as seguintes medidas de qualidade de dados sejam adicionadas: números de incident devem ser somente leitura, em todas as listas e formulários, para todos os usuários. O campo Short Description deve ser obrigatório, em todos os registros, em todas as aplicações, ao inserir (Insert). Qual tipo de policy você usaria para atender a esse requisito?",
+      "alternativas_pt": [
+        "Data Quality Policy",
+        "Dictionary Design Policy",
+        "Data Policy",
+        "Field Criteria Policy"
+      ]
+    },
+    {
+      "id": "curso5_q30",
+      "materia": "CSA - ServiceNow",
+      "tema": "Scripting/Client Development",
+      "enunciado": "A customer wants to use a client script to validate things on a form in order to make sure the submission makes sense. What type of client script would you recommend to meet this requirement?",
+      "alternativas": [
+        "onSubmit()",
+        "onSubmission()",
+        "onUpdate()",
+        "onLoad()"
+      ],
+      "resposta_correta": [
+        0
+      ],
+      "enunciado_pt": "Um cliente quer usar um client script para validar informações em um formulário, garantindo que o envio faça sentido. Que tipo de client script você recomendaria para atender a esse requisito?",
+      "alternativas_pt": [
+        "onSubmit()",
+        "onSubmission()",
+        "onUpdate()",
+        "onLoad()"
+      ]
+    },
+    {
+      "id": "curso5_q31",
+      "materia": "CSA - ServiceNow",
+      "tema": "Scripting/Client Development",
+      "enunciado": "Which statement is true about business rules?",
+      "alternativas": [
+        "A business rule must run before a database action occurs",
+        "A business rule can be a piece of Javascript",
+        "A business rule must not run before a database action occurs",
+        "A business rule monitors fields on a form"
+      ],
+      "resposta_correta": [
+        1
+      ],
+      "enunciado_pt": "Qual afirmação é verdadeira sobre business rules?",
+      "alternativas_pt": [
+        "Uma business rule precisa rodar antes que uma ação no banco de dados ocorra",
+        "Uma business rule pode ser um trecho de Javascript",
+        "Uma business rule não pode rodar antes que uma ação no banco de dados ocorra",
+        "Uma business rule monitora campos em um formulário"
+      ]
+    },
+    {
+      "id": "curso5_q32",
+      "materia": "CSA - ServiceNow",
+      "tema": "Scripting/Client Development",
+      "enunciado": "Typically, based on Best Practice, which of the following interactions is used to make fields mandatory, read only, and/or hidden?",
+      "alternativas": [
+        "Client Scripts",
+        "Business Rules",
+        "UI Actions",
+        "UI Policies"
+      ],
+      "resposta_correta": [
+        3
+      ],
+      "enunciado_pt": "Tipicamente, com base em Best Practice, qual das seguintes interações é usada para tornar campos mandatory, read only, e/ou hidden?",
+      "alternativas_pt": [
+        "Client Scripts",
+        "Business Rules",
+        "UI Actions",
+        "UI Policies"
+      ]
+    },
+    {
+      "id": "curso5_q33",
+      "materia": "CSA - ServiceNow",
+      "tema": "Data Management (Import Sets)",
+      "enunciado": "When importing spreadsheet data into ServiceNow, in which step does the data get written to the receiving table?",
+      "alternativas": [
+        "Run Transform",
+        "Run Import",
+        "Import Dataset",
+        "Execute Transform",
+        "Schedule Transform"
+      ],
+      "resposta_correta": [
+        0
+      ],
+      "enunciado_pt": "Ao importar dados de planilha para o ServiceNow, em qual etapa os dados são gravados na tabela de destino?",
+      "alternativas_pt": [
+        "Run Transform",
+        "Run Import",
+        "Import Dataset",
+        "Execute Transform",
+        "Schedule Transform"
+      ]
+    },
+    {
+      "id": "curso5_q34",
+      "materia": "CSA - ServiceNow",
+      "tema": "Data Management (Import Sets)",
+      "enunciado": "What module enables an administrator to define destinations for imported data on any ServiceNow table?",
+      "alternativas": [
+        "Field Transform",
+        "Schema Map",
+        "Transform Map",
+        "Import Map"
+      ],
+      "resposta_correta": [
+        2
+      ],
+      "enunciado_pt": "Qual módulo permite que um administrador defina os destinos dos dados importados em qualquer tabela do ServiceNow?",
+      "alternativas_pt": [
+        "Field Transform",
+        "Schema Map",
+        "Transform Map",
+        "Import Map"
+      ]
+    },
+    {
+      "id": "curso5_q35",
+      "materia": "CSA - ServiceNow",
+      "tema": "Data Management (Import Sets)",
+      "enunciado": "What does ServiceNow recommend as a best practice regarding data imports?",
+      "alternativas": [
+        "Adjust your Transform maps, after the data is loaded into the target table.",
+        "Use extremely large Import Sets, instead of multiple large Import Sets.",
+        "Create a new Import set table for each new data load.",
+        "Plan time before your import to remove obsolete or inaccurate data.",
+        "Monitor data quality and clean imported data, using the Data Scrub Workspace."
+      ],
+      "resposta_correta": [
+        3
+      ],
+      "enunciado_pt": "O que o ServiceNow recomenda como boa prática em relação a importações de dados?",
+      "alternativas_pt": [
+        "Ajustar seus Transform maps, depois que os dados forem carregados na tabela de destino.",
+        "Usar Import Sets extremamente grandes, em vez de vários Import Sets grandes.",
+        "Criar uma nova tabela de import set para cada nova carga de dados.",
+        "Planejar um tempo antes da importação para remover dados obsoletos ou incorretos.",
+        "Monitorar a qualidade dos dados e limpar os dados importados, usando o Data Scrub Workspace."
+      ]
+    },
+    {
+      "id": "curso5_q36",
+      "materia": "CSA - ServiceNow",
+      "tema": "CMDB",
+      "enunciado": "Which ServiceNow resource is a framework that ensures the data your ServiceNow application requires maps correctly to the appropriate CMDB tables?",
+      "alternativas": [
+        "Common Service Data Model (CSDM)",
+        "Service Mapping Utility (SMU)",
+        "Service Schema Map (SSM)",
+        "CMDB Class Manager (CMDBCM)",
+        "CI Class Manager (CICM)"
+      ],
+      "resposta_correta": [
+        0
+      ],
+      "enunciado_pt": "Qual recurso do ServiceNow é uma estrutura que garante que os dados que sua aplicação ServiceNow requer sejam mapeados corretamente para as tabelas apropriadas do CMDB?",
+      "alternativas_pt": [
+        "Common Service Data Model (CSDM)",
+        "Service Mapping Utility (SMU)",
+        "Service Schema Map (SSM)",
+        "CMDB Class Manager (CMDBCM)",
+        "CI Class Manager (CICM)"
+      ]
+    },
+    {
+      "id": "curso5_q37",
+      "materia": "CSA - ServiceNow",
+      "tema": "CMDB",
+      "enunciado": "Which ServiceNow utility gives a Service Desk agent the ability to trace from a Service having an issue, to see which CIs supporting that service have active issues?",
+      "alternativas": [
+        "CI Dependency View",
+        "Event Management Homepage",
+        "Service Dashboard",
+        "CI Health Dashboard"
+      ],
+      "resposta_correta": [
+        0
+      ],
+      "enunciado_pt": "Qual utilitário do ServiceNow dá a um agente do Service Desk a capacidade de rastrear a partir de um Service com problema, para ver quais CIs que suportam esse serviço têm problemas ativos?",
+      "alternativas_pt": [
+        "CI Dependency View",
+        "Event Management Homepage",
+        "Service Dashboard",
+        "CI Health Dashboard"
+      ]
+    },
+    {
+      "id": "curso5_q38",
+      "materia": "CSA - ServiceNow",
+      "tema": "CMDB",
+      "enunciado": "Which one of the following statements describes the contents of the Configuration Management Database (CMDB)?",
+      "alternativas": [
+        "The CMDB contains data about tangible and intangible business assets",
+        "The CMDB contains the Business Rules that direct the intangible, configurable assets used by a company",
+        "The CMDB archives all Service Management PaaS equipment metadata and usage statistics",
+        "The CMDB contains ITIL process data pertaining to configuration items"
+      ],
+      "resposta_correta": [
+        0
+      ],
+      "enunciado_pt": "Qual das afirmações a seguir descreve o conteúdo do Configuration Management Database (CMDB)?",
+      "alternativas_pt": [
+        "O CMDB contém dados sobre ativos de negócio tangíveis e intangíveis",
+        "O CMDB contém as Business Rules que direcionam os ativos configuráveis intangíveis usados por uma empresa",
+        "O CMDB arquiva todos os metadados e estatísticas de uso de equipamentos de Service Management PaaS",
+        "O CMDB contém dados de processo ITIL relativos a configuration items"
+      ]
+    },
+    {
+      "id": "curso5_q39",
+      "materia": "CSA - ServiceNow",
+      "tema": "Update Sets",
+      "enunciado": "What are the steps to retrieve an Update Set?",
+      "alternativas": [
+        "Verify Update Set is Complete, Retrieve, Preview, Apply",
+        "Verify Update Set is Complete, Test Connection, Apply",
+        "Verify Update Set is Complete, Test Connection, Commit",
+        "Verify Update Set is Complete, Retrieve, Preview, Commit"
+      ],
+      "resposta_correta": [
+        3
+      ],
+      "enunciado_pt": "Quais são as etapas para recuperar (retrieve) um Update Set?",
+      "alternativas_pt": [
+        "Verificar se o Update Set está Completo, Retrieve, Preview, Apply",
+        "Verificar se o Update Set está Completo, Test Connection, Apply",
+        "Verificar se o Update Set está Completo, Test Connection, Commit",
+        "Verificar se o Update Set está Completo, Retrieve, Preview, Commit"
+      ]
+    },
+    {
+      "id": "curso5_q40",
+      "materia": "CSA - ServiceNow",
+      "tema": "Update Sets",
+      "enunciado": "What contains the configuration changes made in an instance (i.e. changes in a form) and helps to implement the changes from the Dev environment to another environment?",
+      "alternativas": [
+        "Transform maps",
+        "Update sets",
+        "Import sets",
+        "System dictionaries"
+      ],
+      "resposta_correta": [
+        1
+      ],
+      "enunciado_pt": "O que contém as alterações de configuração feitas em uma instância (ex: mudanças em um formulário) e ajuda a implementar essas mudanças do ambiente de Dev para outro ambiente?",
+      "alternativas_pt": [
+        "Transform maps",
+        "Update sets",
+        "Import sets",
+        "System dictionaries"
+      ]
+    },
+    {
+      "id": "curso5_q41",
+      "materia": "CSA - ServiceNow",
+      "tema": "Integrations (Flow Designer)",
+      "enunciado": "IntegrationHub enables execution of third-party APIs as a part of a flow. These integrations are referred to as:",
+      "alternativas": [
+        "an action",
+        "a spoke",
+        "a connection",
+        "an integration step"
+      ],
+      "resposta_correta": [
+        1
+      ],
+      "enunciado_pt": "O IntegrationHub permite a execução de APIs de terceiros como parte de um flow. Essas integrações são chamadas de:",
+      "alternativas_pt": [
+        "uma action",
+        "um spoke",
+        "uma connection",
+        "um integration step"
+      ]
+    },
+    {
+      "id": "curso5_q42",
+      "materia": "CSA - ServiceNow",
+      "tema": "Integrations (Flow Designer)",
+      "enunciado": "What are advantages of using Flow Designer? (Choose three.)",
+      "alternativas": [
+        "Supports advanced developers",
+        "Enables complicated scripting",
+        "Reduces technical debt",
+        "Less manual scripting",
+        "Smooth integration with 3rd party systems"
+      ],
+      "resposta_correta": [
+        2,
+        3,
+        4
+      ],
+      "enunciado_pt": "Quais são as vantagens de usar o Flow Designer? (Escolha três.)",
+      "alternativas_pt": [
+        "Suporta desenvolvedores avançados",
+        "Permite scripting complicado",
+        "Reduz débito técnico",
+        "Menos scripting manual",
+        "Integração tranquila com sistemas de terceiros"
+      ]
+    },
+    {
+      "id": "curso5_q43",
+      "materia": "CSA - ServiceNow",
+      "tema": "Integrations (Flow Designer)",
+      "enunciado": "In Flow Designer, where is the data from an action stored so it can be used in subsequent actions in the flow?",
+      "alternativas": [
+        "Data Pill",
+        "Data Element",
+        "Data Trigger",
+        "Field Value",
+        "Field Icon"
+      ],
+      "resposta_correta": [
+        0
+      ],
+      "enunciado_pt": "No Flow Designer, onde os dados de uma action ficam armazenados para poderem ser usados em actions subsequentes no flow?",
+      "alternativas_pt": [
+        "Data Pill",
+        "Data Element",
+        "Data Trigger",
+        "Field Value",
+        "Field Icon"
+      ]
+    },
+    {
+      "id": "curso5_q44",
+      "materia": "CSA - ServiceNow",
+      "tema": "System Administration",
+      "enunciado": "You have heard about a new application released by ServiceNow. You want to try it out, to see if it might be useful for your company's ServiceNow implementation. What would be the best way to get hands-on experience with the new application?",
+      "alternativas": [
+        "Search the wiki for the sales demo request form",
+        "Check the latest release notes at docs.servicenow.com",
+        "Activate the application plug in, on your personal dev instance",
+        "Activate the application plug in, on your company's production instance."
+      ],
+      "resposta_correta": [
+        2
+      ],
+      "enunciado_pt": "Você ouviu falar de uma nova aplicação lançada pelo ServiceNow. Você quer experimentá-la, para ver se ela pode ser útil para a implementação do ServiceNow da sua empresa. Qual seria a melhor forma de ter experiência prática com a nova aplicação?",
+      "alternativas_pt": [
+        "Procurar na wiki pelo formulário de solicitação de demo de vendas",
+        "Conferir as release notes mais recentes em docs.servicenow.com",
+        "Ativar o plugin da aplicação na sua instância de dev pessoal",
+        "Ativar o plugin da aplicação na instância de produção da sua empresa."
+      ]
+    },
+    {
+      "id": "curso5_q45",
+      "materia": "CSA - ServiceNow",
+      "tema": "Service Catalog",
+      "enunciado": "Tables may have a One to Many relationships. From the Service Catalog, what are examples of tables having a one to many relationships? (Choose three.)",
+      "alternativas": [
+        "One Approval can have many Requests",
+        "One Request can have many Requested Items",
+        "One Requested Item can have many Approvals",
+        "One Requested Item can have many Catalog Tasks",
+        "One Cart can have many Requests"
+      ],
+      "resposta_correta": [
+        1,
+        2,
+        3
+      ],
+      "enunciado_pt": "Tabelas podem ter relacionamentos One to Many. No Service Catalog, quais são exemplos de tabelas com relacionamento one to many? (Escolha três.)",
+      "alternativas_pt": [
+        "Uma Approval pode ter muitos Requests",
+        "Um Request pode ter muitos Requested Items",
+        "Um Requested Item pode ter muitas Approvals",
+        "Um Requested Item pode ter muitas Catalog Tasks",
+        "Um Cart pode ter muitos Requests"
+      ]
+    },
+    {
+      "id": "curso5_q46",
+      "materia": "CSA - ServiceNow",
+      "tema": "Service Catalog",
+      "enunciado": "What catalog tool would you use to create a catalog item or record producer?",
+      "alternativas": [
+        "Catalog Builder",
+        "Workflow Designer",
+        "Catalog Designer",
+        "Catalog Formatter"
+      ],
+      "resposta_correta": [
+        0
+      ],
+      "enunciado_pt": "Qual ferramenta de catálogo você usaria para criar um catalog item ou record producer?",
+      "alternativas_pt": [
+        "Catalog Builder",
+        "Workflow Designer",
+        "Catalog Designer",
+        "Catalog Formatter"
+      ]
+    },
+    {
+      "id": "curso5_q47",
+      "materia": "CSA - ServiceNow",
+      "tema": "Service Catalog",
+      "enunciado": "The display sequence is controlled in a Service Catalog Item using which of the following?",
+      "alternativas": [
+        "The Default Value field in the Catalog Item form",
+        "The Sequence field in the Catalog Item form",
+        "The Order field in the Variable form",
+        "The Choice field in the Variable form"
+      ],
+      "resposta_correta": [
+        2
+      ],
+      "enunciado_pt": "A sequência de exibição é controlada em um Service Catalog Item usando qual dos seguintes?",
+      "alternativas_pt": [
+        "O campo Default Value no formulário do Catalog Item",
+        "O campo Sequence no formulário do Catalog Item",
+        "O campo Order no formulário da Variable",
+        "O campo Choice no formulário da Variable"
+      ]
+    },
+    {
+      "id": "curso5_q48",
+      "materia": "CSA - ServiceNow",
+      "tema": "Service Catalog",
+      "enunciado": "What is a Record Producer?",
+      "alternativas": [
+        "A Record Producer is a type of Catalog Item that is used for Requests, not Services",
+        "A Record Producer creates user records",
+        "A Record Producer is a type of Catalog Item that provides easy ordering by bundling requests",
+        "A Record Producer is a type of a Catalog Item that allows users to create task-based records from the Service Catalog"
+      ],
+      "resposta_correta": [
+        3
+      ],
+      "enunciado_pt": "O que é um Record Producer?",
+      "alternativas_pt": [
+        "Um Record Producer é um tipo de Catalog Item usado para Requests, não Services",
+        "Um Record Producer cria registros de usuário",
+        "Um Record Producer é um tipo de Catalog Item que facilita pedidos agrupando requests",
+        "Um Record Producer é um tipo de Catalog Item que permite aos usuários criar registros baseados em task a partir do Service Catalog"
+      ]
+    },
+    {
+      "id": "curso5_q49",
+      "materia": "CSA - ServiceNow",
+      "tema": "Reporting",
+      "enunciado": "On the Reports page, what sections allow you to see which reports are visible to different audiences? (Choose four.)",
+      "alternativas": [
+        "Group",
+        "Department",
+        "My reports",
+        "Team",
+        "Dashboards",
+        "Global",
+        "Admin",
+        "Analytics",
+        "All",
+        "Company"
+      ],
+      "resposta_correta": [
+        0,
+        2,
+        5,
+        8
+      ],
+      "enunciado_pt": "Na página de Reports, quais seções permitem ver quais relatórios estão visíveis para diferentes públicos? (Escolha quatro.)",
+      "alternativas_pt": [
+        "Group",
+        "Department",
+        "My reports",
+        "Team",
+        "Dashboards",
+        "Global",
+        "Admin",
+        "Analytics",
+        "All",
+        "Company"
+      ]
+    },
+    {
+      "id": "curso5_q50",
+      "materia": "CSA - ServiceNow",
+      "tema": "Reporting",
+      "enunciado": "What do you click when you have made modifications to your report, and you want to see the results without saving?",
+      "alternativas": [
+        "Preview",
+        "Test",
+        "Run",
+        "Try It",
+        "Execute"
+      ],
+      "resposta_correta": [
+        2
+      ],
+      "enunciado_pt": "No que você clica quando fez modificações no seu relatório e quer ver os resultados sem salvar?",
+      "alternativas_pt": [
+        "Preview",
+        "Test",
+        "Run",
+        "Try It",
+        "Execute"
+      ]
+    },
+    {
+      "id": "curso5_q51",
+      "materia": "CSA - ServiceNow",
+      "tema": "Reporting",
+      "enunciado": "Which action can be selected to apply pre-defined or custom conditions to filter and generate specified data in the Visualization Designer?",
+      "alternativas": [
+        "Preview",
+        "Run",
+        "Execute",
+        "Try It"
+      ],
+      "resposta_correta": [
+        1
+      ],
+      "enunciado_pt": "Qual ação pode ser selecionada para aplicar condições pré-definidas ou customizadas para filtrar e gerar dados específicos no Visualization Designer?",
+      "alternativas_pt": [
+        "Preview",
+        "Run",
+        "Execute",
+        "Try It"
+      ]
+    },
+    {
+      "id": "curso5_q52",
+      "materia": "CSA - ServiceNow",
+      "tema": "Knowledge Management",
+      "enunciado": "Categories in the knowledge base, by default, can be created and edited by which knowledge workers? (Choose two.)",
+      "alternativas": [
+        "Knowledge Authors",
+        "Knowledge Contributors",
+        "Knowledge Controller",
+        "Knowledge Managers",
+        "Knowledge Category Managers",
+        "Knowledge Submitters",
+        "Knowledge Owners",
+        "Knowledge Taxonomy Owner"
+      ],
+      "resposta_correta": [
+        1,
+        3
+      ],
+      "enunciado_pt": "As categorias na knowledge base, por padrão, podem ser criadas e editadas por quais knowledge workers? (Escolha duas.)",
+      "alternativas_pt": [
+        "Knowledge Authors",
+        "Knowledge Contributors",
+        "Knowledge Controller",
+        "Knowledge Managers",
+        "Knowledge Category Managers",
+        "Knowledge Submitters",
+        "Knowledge Owners",
+        "Knowledge Taxonomy Owner"
+      ]
+    },
+    {
+      "id": "curso5_q53",
+      "materia": "CSA - ServiceNow",
+      "tema": "Knowledge Management",
+      "enunciado": "If a knowledge base has no access details specified, what users are able to read articles in that knowledge base?",
+      "alternativas": [
+        "itil users",
+        "Any user with an article's permalink",
+        "Any active user",
+        "No users",
+        "Users with kb_user role"
+      ],
+      "resposta_correta": [
+        2
+      ],
+      "enunciado_pt": "Se uma knowledge base não tem detalhes de acesso especificados, quais usuários conseguem ler artigos nessa knowledge base?",
+      "alternativas_pt": [
+        "Usuários com role itil",
+        "Qualquer usuário com o permalink de um artigo",
+        "Qualquer usuário ativo",
+        "Nenhum usuário",
+        "Usuários com a role kb_user"
+      ]
+    },
+    {
+      "id": "curso5_q54",
+      "materia": "CSA - ServiceNow",
+      "tema": "Knowledge Management",
+      "enunciado": "In a Knowledge Base record, where can an administrator find the User Criteria for who can read the articles?",
+      "alternativas": [
+        "From the Accessible to tab",
+        "From the Available to tab",
+        "From the Can Access tab",
+        "From the Can Read tab"
+      ],
+      "resposta_correta": [
+        3
+      ],
+      "enunciado_pt": "Em um registro de Knowledge Base, onde um administrador pode encontrar o User Criteria de quem pode ler os artigos?",
+      "alternativas_pt": [
+        "Na aba Accessible to",
+        "Na aba Available to",
+        "Na aba Can Access",
+        "Na aba Can Read"
+      ]
+    },
+    {
+      "id": "curso5_q55",
+      "materia": "CSA - ServiceNow",
+      "tema": "Virtual Agent",
+      "enunciado": "What is the name of the conversational bot platform that provides assistance to help users obtain information, make decisions, and perform common tasks?",
+      "alternativas": [
+        "Answer Agent",
+        "live Feed",
+        "Virtual Agent",
+        "Connect Chat"
+      ],
+      "resposta_correta": [
+        2
+      ],
+      "enunciado_pt": "Qual é o nome da plataforma de bot conversacional que oferece assistência para ajudar usuários a obter informações, tomar decisões, e realizar tarefas comuns?",
+      "alternativas_pt": [
+        "Answer Agent",
+        "live Feed",
+        "Virtual Agent",
+        "Connect Chat"
+      ]
+    },
+    {
+      "id": "curso5_q56",
+      "materia": "CSA - ServiceNow",
+      "tema": "Reporting",
+      "enunciado": "A manager is complaining that they can't get the data they need on a report, because the data resides in two different tables. This data is used for many different reports in their department. You have checked to see if dot-walking will meet the requirement, and it is not possible. What else might you try to help this manager?",
+      "alternativas": [
+        "Export the tables to spreadsheet",
+        "Create a Database View",
+        "Create a Report Template",
+        "Create a Report Source",
+        "Create a custom table"
+      ],
+      "resposta_correta": [
+        1
+      ],
+      "enunciado_pt": "Um gerente está reclamando que não consegue obter os dados que precisa em um relatório, porque os dados residem em duas tabelas diferentes. Esses dados são usados em muitos relatórios diferentes no departamento dele. Você já verificou se dot-walking atenderia o requisito, e não é possível. O que mais você poderia tentar para ajudar esse gerente?",
+      "alternativas_pt": [
+        "Exportar as tabelas para planilha",
+        "Criar uma Database View",
+        "Criar um Report Template",
+        "Criar um Report Source",
+        "Criar uma tabela customizada"
+      ]
+    },
+    {
+      "id": "curso5_q57",
+      "materia": "CSA - ServiceNow",
+      "tema": "Service Catalog",
+      "enunciado": "A REQ number in the Service Catalog represents…",
+      "alternativas": [
+        "the order number.",
+        "the stage.",
+        "the task to complete.",
+        "the individual item in the order."
+      ],
+      "resposta_correta": [
+        0
+      ],
+      "enunciado_pt": "Um número REQ no Service Catalog representa…",
+      "alternativas_pt": [
+        "o número do pedido (order number).",
+        "o estágio (stage).",
+        "a task a ser concluída.",
+        "o item individual no pedido."
+      ]
+    },
+    {
+      "id": "curso5_q58",
+      "materia": "CSA - ServiceNow",
+      "tema": "Integrations (Flow Designer)",
+      "enunciado": "Which of the following is used to initiate a flow?",
+      "alternativas": [
+        "A Trigger",
+        "Core Action",
+        "A spoke",
+        "An Event"
+      ],
+      "resposta_correta": [
+        0
+      ],
+      "enunciado_pt": "Qual das opções a seguir é usada para iniciar um flow?",
+      "alternativas_pt": [
+        "Um Trigger",
+        "Core Action",
+        "Um spoke",
+        "Um Event"
+      ]
+    },
+    {
+      "id": "curso5_q59",
+      "materia": "CSA - ServiceNow",
+      "tema": "CMDB",
+      "enunciado": "Which tool graphically displays an infrastructure view for a configuration item (CI) and its relationship with other CIs?",
+      "alternativas": [
+        "Schema Map",
+        "Dependency View",
+        "Dependency Map",
+        "Database View"
+      ],
+      "resposta_correta": [
+        1
+      ],
+      "enunciado_pt": "Qual ferramenta exibe graficamente uma visão de infraestrutura de um configuration item (CI) e seu relacionamento com outros CIs?",
+      "alternativas_pt": [
+        "Schema Map",
+        "Dependency View",
+        "Dependency Map",
+        "Database View"
+      ]
+    },
+    {
+      "id": "curso5_q60",
+      "materia": "CSA - ServiceNow",
+      "tema": "Scripting/Client Development",
+      "enunciado": "If a user is on an Incident form and is alerted when they change the value of the Priority field, which type of script executes in the Platform?",
+      "alternativas": [
+        "A server script",
+        "A client script",
+        "A fix script",
+        "A business rule"
+      ],
+      "resposta_correta": [
+        1
+      ],
+      "enunciado_pt": "Se um usuário está em um formulário de Incident e é avisado quando altera o valor do campo Priority, que tipo de script está sendo executado na Platform?",
+      "alternativas_pt": [
+        "Um server script",
+        "Um client script",
+        "Um fix script",
+        "Uma business rule"
+      ]
+    }
+  ]
+}

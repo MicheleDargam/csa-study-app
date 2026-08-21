@@ -22,6 +22,7 @@ import {
   seedAvulsas,
   seedLembretePadrao,
   migrateMateriasParaTemas,
+  migrateDedupCursoSimulados,
 } from '../db/seed';
 
 // recharts pulls in a sizeable chunk — only fetch it when Progresso is visited
@@ -35,6 +36,7 @@ export function App() {
   useEffect(() => {
     seedDefaultMaterias();
     migrateMateriasParaTemas();
+    migrateDedupCursoSimulados();
     seedSimulados();
     seedAvulsas();
     seedLembretePadrao();
