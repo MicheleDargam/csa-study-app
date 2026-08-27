@@ -5,6 +5,8 @@ import { FileQuestion, History, RefreshCw } from 'lucide-react';
 import { db } from '../../db/database';
 import { seedSimuladosPrepper } from '../../db/seed';
 import { formatPercent } from '../simulados/simuladoUtils';
+import { DomainBreakdownCard } from './DomainBreakdownCard';
+import { domainStatsAcrossAllAttempts } from './domainStats';
 
 /**
  * Landing page for Exame Prepper — questions imported from an outside
@@ -19,6 +21,7 @@ export function ExamePrepperPage() {
 
   const simulados = useLiveQuery(() => db.simuladosPrepper.toArray(), []);
   const tentativas = useLiveQuery(() => db.tentativasPrepper.toArray(), []);
+  const domainStats = useLiveQuery(() => domainStatsAcrossAllAttempts(), []);
 
   const statsFor = (simuladoId?: number) => {
     const attempts = (tentativas ?? []).filter((t) => t.simuladoId === simuladoId);
@@ -49,6 +52,15 @@ export function ExamePrepperPage() {
           </Link>
         </div>
       </div>
+
+      {domainStats && domainStats.length > 0 && (
+        <DomainBreakdownCard
+          title="Desempenho por domínio"
+          subtitle="Acumulado de todas as tentativas de Simulados Prepper"
+          stats={domainStats}
+          emptyMessage="Nenhuma questão respondida ainda."
+        />
+      )}
 
       {simulados?.length === 0 ? (
         <div className="history-empty">

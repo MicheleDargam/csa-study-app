@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, type ReactNode } from 'react';
 import { useLiveQuery } from 'dexie-react-hooks';
 import { ArrowLeft, CheckCircle2, XCircle, Info, Languages } from 'lucide-react';
 import { db } from '../../db/database';
@@ -20,6 +20,8 @@ interface ResultadoViewProps {
    * screen backed by a different question pool (e.g. Exame Prepper).
    */
   fetchQuestoes?: (ids: number[]) => Promise<(Questao | undefined)[]>;
+  /** Extra content rendered right after the score summary, before the wrong-answer review (e.g. Exame Prepper's per-domain breakdown). */
+  extra?: ReactNode;
 }
 
 /**
@@ -29,7 +31,7 @@ interface ResultadoViewProps {
  * attempt record (TentativaSimulado or SessaoPratica) and passing its fields
  * down.
  */
-export function ResultadoView({ title, acertos, total, duracaoSegundos, erros, onBack, fetchQuestoes }: ResultadoViewProps) {
+export function ResultadoView({ title, acertos, total, duracaoSegundos, erros, onBack, fetchQuestoes, extra }: ResultadoViewProps) {
   const errorQuestoes = useLiveQuery(async () => {
     if (erros.length === 0) return [];
     const loadQuestoes = fetchQuestoes ?? ((ids: number[]) => db.questoes.bulkGet(ids));
@@ -63,6 +65,8 @@ export function ResultadoView({ title, acertos, total, duracaoSegundos, erros, o
           {acertos} de {total} corretas · {formatDuration(duracaoSegundos)}
         </span>
       </div>
+
+      {extra}
 
       {errorQuestoes && errorQuestoes.length > 0 ? (
         <div className="resultado-review">
