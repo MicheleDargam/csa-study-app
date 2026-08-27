@@ -774,28 +774,6 @@
       ]
     },
     {
-      "id": "curso6_q34",
-      "materia": "CSA - ServiceNow",
-      "tema": "Data Management (Import Sets)",
-      "enunciado": "Which module is used as the first step for importing data?",
-      "alternativas": [
-        "Coalesce Data",
-        "Transform Data",
-        "Import Data",
-        "Load Data"
-      ],
-      "resposta_correta": [
-        3
-      ],
-      "enunciado_pt": "Qual módulo é usado como a primeira etapa para importar dados?",
-      "alternativas_pt": [
-        "Coalesce Data",
-        "Transform Data",
-        "Import Data",
-        "Load Data"
-      ]
-    },
-    {
       "id": "curso6_q35",
       "materia": "CSA - ServiceNow",
       "tema": "Data Management (Import Sets)",
@@ -976,30 +954,6 @@
       ]
     },
     {
-      "id": "curso6_q42",
-      "materia": "CSA - ServiceNow",
-      "tema": "Integrations (Flow Designer)",
-      "enunciado": "What do you need to do before you can use an Application-based trigger in your flow?",
-      "alternativas": [
-        "Activate application trigger spoke",
-        "Activate trigger security rules",
-        "Activate application spoke, and plug-ins as needed",
-        "Assign Application trigger role [sn_app_trigger_write] to SME",
-        "Activate application plugins only"
-      ],
-      "resposta_correta": [
-        2
-      ],
-      "enunciado_pt": "O que você precisa fazer antes de poder usar um trigger baseado em aplicativo no seu flow?",
-      "alternativas_pt": [
-        "Ativar o spoke de trigger da aplicação",
-        "Ativar as regras de segurança do trigger",
-        "Ativar o spoke da aplicação e os plugins necessários",
-        "Atribuir a role de trigger da aplicação [sn_app_trigger_write] ao SME",
-        "Ativar apenas os plugins da aplicação"
-      ]
-    },
-    {
       "id": "curso6_q43",
       "materia": "CSA - ServiceNow",
       "tema": "Integrations (Flow Designer)",
@@ -1045,28 +999,6 @@
         "Trigger Criteria and Clock",
         "Trigger and Condition",
         "Scope and Trigger Condition"
-      ]
-    },
-    {
-      "id": "curso6_q45",
-      "materia": "CSA - ServiceNow",
-      "tema": "Application Scope",
-      "enunciado": "Which of the following protects applications by identifying and restricting access to available files and data?",
-      "alternativas": [
-        "Application Configuration",
-        "Verbose Log",
-        "Access Control Rules",
-        "Application Scope"
-      ],
-      "resposta_correta": [
-        3
-      ],
-      "enunciado_pt": "Qual das seguintes opções protege as aplicações identificando e restringindo o acesso a arquivos e dados disponíveis?",
-      "alternativas_pt": [
-        "Application Configuration",
-        "Verbose Log",
-        "Access Control Rules",
-        "Application Scope"
       ]
     },
     {

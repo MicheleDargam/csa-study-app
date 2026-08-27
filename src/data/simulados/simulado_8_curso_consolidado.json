@@ -1357,28 +1357,6 @@
         "Linhas duplicadas são rejeitadas na importação.",
         "Todas as linhas são tratadas como novos registros, mas erros serão sinalizados no log de importação"
       ]
-    },
-    {
-      "id": "curso8_q60",
-      "materia": "CSA - ServiceNow",
-      "tema": "Scripting/Client Development",
-      "enunciado": "What is the difference between a UI Policy and Data Policy?",
-      "alternativas": [
-        "Data Policies run when data is entered through the form, by an Import Set, or by web services, while UI Policies are set only by web services",
-        "Data Policies can be converted into UI Policies, but UI Policies cannot be converted into Data Policies",
-        "Data Policies run regardless of how data is entered into ServiceNow, while UI Policies are used for form interactions",
-        "Data Policies run only after UI Policies have executed successfully"
-      ],
-      "resposta_correta": [
-        2
-      ],
-      "enunciado_pt": "Qual é a diferença entre uma UI Policy e uma Data Policy?",
-      "alternativas_pt": [
-        "Data Policies rodam quando os dados são inseridos pelo formulário, por um Import Set, ou por web services, enquanto UI Policies são definidas apenas por web services",
-        "Data Policies podem ser convertidas em UI Policies, mas UI Policies não podem ser convertidas em Data Policies",
-        "Data Policies rodam independentemente de como os dados são inseridos no ServiceNow, enquanto UI Policies são usadas para interações de formulário",
-        "Data Policies só rodam depois que as UI Policies executam com sucesso"
-      ]
     }
   ]
 }

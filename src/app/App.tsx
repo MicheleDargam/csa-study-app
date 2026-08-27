@@ -23,6 +23,7 @@ import {
   seedLembretePadrao,
   migrateMateriasParaTemas,
   migrateDedupCursoSimulados,
+  migrateRemoveDuplicateQuestoes,
 } from '../db/seed';
 
 // recharts pulls in a sizeable chunk — only fetch it when Progresso is visited
@@ -37,6 +38,7 @@ export function App() {
     seedDefaultMaterias();
     migrateMateriasParaTemas();
     migrateDedupCursoSimulados();
+    migrateRemoveDuplicateQuestoes();
     seedSimulados();
     seedAvulsas();
     seedLembretePadrao();

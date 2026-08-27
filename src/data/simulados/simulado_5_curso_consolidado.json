@@ -893,28 +893,6 @@
       ]
     },
     {
-      "id": "curso5_q39",
-      "materia": "CSA - ServiceNow",
-      "tema": "Update Sets",
-      "enunciado": "What are the steps to retrieve an Update Set?",
-      "alternativas": [
-        "Verify Update Set is Complete, Retrieve, Preview, Apply",
-        "Verify Update Set is Complete, Test Connection, Apply",
-        "Verify Update Set is Complete, Test Connection, Commit",
-        "Verify Update Set is Complete, Retrieve, Preview, Commit"
-      ],
-      "resposta_correta": [
-        3
-      ],
-      "enunciado_pt": "Quais são as etapas para recuperar (retrieve) um Update Set?",
-      "alternativas_pt": [
-        "Verificar se o Update Set está Completo, Retrieve, Preview, Apply",
-        "Verificar se o Update Set está Completo, Test Connection, Apply",
-        "Verificar se o Update Set está Completo, Test Connection, Commit",
-        "Verificar se o Update Set está Completo, Retrieve, Preview, Commit"
-      ]
-    },
-    {
       "id": "curso5_q40",
       "materia": "CSA - ServiceNow",
       "tema": "Update Sets",

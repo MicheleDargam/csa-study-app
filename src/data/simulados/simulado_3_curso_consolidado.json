@@ -773,28 +773,6 @@
       ]
     },
     {
-      "id": "curso3_q33",
-      "materia": "CSA - ServiceNow",
-      "tema": "Data Management (Import Sets)",
-      "enunciado": "Which of the following steps can be used to import new data into ServiceNow from a spreadsheet?",
-      "alternativas": [
-        "Select Data Source, Schedule Transform",
-        "Load Data, Create Transform Map, Run Transform",
-        "Define Data Source, Select Transform Map, Run Transform",
-        "Select Import Set, Select Transform Map, Run Transform"
-      ],
-      "resposta_correta": [
-        1
-      ],
-      "enunciado_pt": "Quais das seguintes etapas podem ser usadas para importar novos dados para o ServiceNow a partir de uma planilha?",
-      "alternativas_pt": [
-        "Selecionar Data Source, Agendar Transform",
-        "Carregar dados (Load Data), Criar Transform Map, Executar Transform",
-        "Definir Data Source, Selecionar Transform Map, Executar Transform",
-        "Selecionar Import Set, Selecionar Transform Map, Executar Transform"
-      ]
-    },
-    {
       "id": "curso3_q34",
       "materia": "CSA - ServiceNow",
       "tema": "Data Management (Import Sets)",
@@ -858,28 +836,6 @@
         "Os campos de coalesce são usados apenas depois de rodar o Transform",
         "Qualquer usuário pode gerenciar e configurar import sets",
         "Um Transform Map existente pode ser usado múltiplas vezes no mesmo import set"
-      ]
-    },
-    {
-      "id": "curso3_q37",
-      "materia": "CSA - ServiceNow",
-      "tema": "CMDB",
-      "enunciado": "Which tool is used for creating dependencies between configuration items in the CMDB?",
-      "alternativas": [
-        "CI Relationship Editor",
-        "CMDB Builder",
-        "CI Service Manager",
-        "CI Class Manager"
-      ],
-      "resposta_correta": [
-        0
-      ],
-      "enunciado_pt": "Qual ferramenta é usada para criar dependências entre itens de configuração no CMDB?",
-      "alternativas_pt": [
-        "CI Relationship Editor",
-        "CMDB Builder",
-        "CI Service Manager",
-        "CI Class Manager"
       ]
     },
     {
@@ -1406,28 +1362,6 @@
         "Retrieve, Assess, Apply",
         "Get, Test, Push",
         "Pull, Review, Push"
-      ]
-    },
-    {
-      "id": "curso3_q60",
-      "materia": "CSA - ServiceNow",
-      "tema": "Data Management (Import Sets)",
-      "enunciado": "What is the primary application used to load data into ServiceNow?",
-      "alternativas": [
-        "Service Level Management",
-        "Configuration",
-        "System Import Sets",
-        "System Update Sets"
-      ],
-      "resposta_correta": [
-        2
-      ],
-      "enunciado_pt": "Qual é a principal aplicação usada para carregar dados no ServiceNow?",
-      "alternativas_pt": [
-        "Service Level Management",
-        "Configuration",
-        "System Import Sets",
-        "System Update Sets"
       ]
     }
   ]

@@ -281,28 +281,6 @@
       ]
     },
     {
-      "id": "curso7_q13",
-      "materia": "CSA - ServiceNow",
-      "tema": "Database/Tables",
-      "enunciado": "Group records are stored in which table?",
-      "alternativas": [
-        "Group [sn_user_group]",
-        "Group [sys_user_group]",
-        "Group [s_sys_group]",
-        "Group [u_sys_group]"
-      ],
-      "resposta_correta": [
-        1
-      ],
-      "enunciado_pt": "Os registros de grupo são armazenados em qual tabela?",
-      "alternativas_pt": [
-        "Group [sn_user_group]",
-        "Group [sys_user_group]",
-        "Group [s_sys_group]",
-        "Group [u_sys_group]"
-      ]
-    },
-    {
       "id": "curso7_q14",
       "materia": "CSA - ServiceNow",
       "tema": "Database/Tables",
@@ -711,32 +689,6 @@
       ]
     },
     {
-      "id": "curso7_q32",
-      "materia": "CSA - ServiceNow",
-      "tema": "Data Management (Import Sets)",
-      "enunciado": "Which tool is used to define relationships between fields in an import set table and a target table?",
-      "alternativas": [
-        "Transform Schema",
-        "Schema Map",
-        "Dictionary Map",
-        "Transform Map",
-        "Field Transformer",
-        "Import Designer"
-      ],
-      "resposta_correta": [
-        3
-      ],
-      "enunciado_pt": "Qual ferramenta é usada para definir relacionamentos entre campos de uma tabela de import set e uma tabela de destino?",
-      "alternativas_pt": [
-        "Transform Schema",
-        "Schema Map",
-        "Dictionary Map",
-        "Transform Map",
-        "Field Transformer",
-        "Import Designer"
-      ]
-    },
-    {
       "id": "curso7_q33",
       "materia": "CSA - ServiceNow",
       "tema": "Data Management (Import Sets)",
@@ -994,30 +946,6 @@
         "Access Control Rules",
         "Assignment Rules",
         "Application Scope"
-      ]
-    },
-    {
-      "id": "curso7_q44",
-      "materia": "CSA - ServiceNow",
-      "tema": "System Administration",
-      "enunciado": "What do you activate when you want to add applications or functionality within your development instance?",
-      "alternativas": [
-        "App Package",
-        "Updated Pack",
-        "Patch",
-        "Plugin",
-        "App Updated Set"
-      ],
-      "resposta_correta": [
-        3
-      ],
-      "enunciado_pt": "O que você ativa quando quer adicionar aplicações ou funcionalidades na sua instância de desenvolvimento?",
-      "alternativas_pt": [
-        "App Package",
-        "Updated Pack",
-        "Patch",
-        "Plugin",
-        "App Updated Set"
       ]
     },
     {
@@ -1316,30 +1244,6 @@
         "Na configuração do Shopping Cart, selecionar a opção para mostrar o botão Add Accessories.",
         "Criar um Catalog item para cada um: tablet, case, limpador de tela, suporte para tablet e protetor de tela.",
         "Criar um Catalog Item para o tablet, e no formulário, adicionar uma variável de check box para cada opção de acessório."
-      ]
-    },
-    {
-      "id": "curso7_q58",
-      "materia": "CSA - ServiceNow",
-      "tema": "Integrations (Flow Designer)",
-      "enunciado": "When you need to orchestrate business processes across services with little technical user knowledge, which utility would you use?",
-      "alternativas": [
-        "Flow Manager",
-        "Flow Designer",
-        "Flow Editor",
-        "Workflow Editor",
-        "Workflow Designer"
-      ],
-      "resposta_correta": [
-        1
-      ],
-      "enunciado_pt": "Quando você precisa orquestrar processos de negócio entre serviços com pouco conhecimento técnico do usuário, qual utilitário você usaria?",
-      "alternativas_pt": [
-        "Flow Manager",
-        "Flow Designer",
-        "Flow Editor",
-        "Workflow Editor",
-        "Workflow Designer"
       ]
     },
     {
