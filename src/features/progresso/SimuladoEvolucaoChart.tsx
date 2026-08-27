@@ -1,13 +1,26 @@
 import { useEffect, useState } from 'react';
 import { useLiveQuery } from 'dexie-react-hooks';
 import { CartesianGrid, Line, LineChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
-import { getEvolucaoSimulado, getSimuladosComTentativas } from './progressoData';
+import { getEvolucaoSimulado, getSimuladosComTentativas, type SimuladoResumo, type SimuladoTentativaPonto } from './progressoData';
 import { ChartTooltip } from './ChartTooltip';
 import { CHART_ACCENT, CHART_AXIS_TEXT, CHART_GRID, CHART_TOOLTIP_BG } from './chartTheme';
 import { formatAttemptDate } from '../simulados/simuladoUtils';
 
-export function SimuladoEvolucaoChart() {
-  const resumos = useLiveQuery(() => getSimuladosComTentativas(), []);
+interface SimuladoEvolucaoChartProps {
+  title?: string;
+  emptyMessage?: string;
+  /** Defaults to the CSA tables — pass the Prepper equivalents to reuse this chart there. */
+  getResumos?: () => Promise<SimuladoResumo[]>;
+  getEvolucao?: (simuladoId: number) => Promise<SimuladoTentativaPonto[]>;
+}
+
+export function SimuladoEvolucaoChart({
+  title = 'Desempenho nos simulados',
+  emptyMessage = 'Nenhuma tentativa de simulado registrada ainda.',
+  getResumos = getSimuladosComTentativas,
+  getEvolucao = getEvolucaoSimulado,
+}: SimuladoEvolucaoChartProps) {
+  const resumos = useLiveQuery(() => getResumos(), [getResumos]);
   const [selecionado, setSelecionado] = useState<number | null>(null);
 
   useEffect(() => {
@@ -17,16 +30,16 @@ export function SimuladoEvolucaoChart() {
   }, [resumos, selecionado]);
 
   const pontos = useLiveQuery(
-    () => (selecionado !== null ? getEvolucaoSimulado(selecionado) : Promise.resolve([])),
-    [selecionado],
+    () => (selecionado !== null ? getEvolucao(selecionado) : Promise.resolve([])),
+    [selecionado, getEvolucao],
   );
 
   return (
     <div className="progresso-card">
-      <h2 className="progresso-card-title">Desempenho nos simulados</h2>
+      <h2 className="progresso-card-title">{title}</h2>
 
       {!resumos || resumos.length === 0 ? (
-        <p className="progresso-empty">Nenhuma tentativa de simulado registrada ainda.</p>
+        <p className="progresso-empty">{emptyMessage}</p>
       ) : (
         <>
           <div className="subject-chips progresso-simulado-chips">

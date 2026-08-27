@@ -4,7 +4,7 @@ import { Timer, CheckSquare, FileQuestion, GraduationCap, BarChart3 } from 'luci
 const tabs = [
   { path: '/', icon: Timer, label: 'Timer' },
   { path: '/tarefas', icon: CheckSquare, label: 'Tarefas' },
-  { path: '/simulados', icon: FileQuestion, label: 'Simulados' },
+  { path: '/simulados', icon: FileQuestion, label: 'CSA' },
   { path: '/exame-prepper', icon: GraduationCap, label: 'Prepper' },
   { path: '/progresso', icon: BarChart3, label: 'Progresso' },
 ];

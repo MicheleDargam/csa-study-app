@@ -33,8 +33,8 @@ export function SimuladosPage() {
     <div className="simulados-page">
       <div className="timer-page-header">
         <div>
-          <h1 className="timer-page-title">Simulados</h1>
-          <p className="timer-page-subtitle">Pratique para a certificação CSA</p>
+          <h1 className="timer-page-title">CSA</h1>
+          <p className="timer-page-subtitle">Simulados e Banco de Questões do curso</p>
         </div>
         <div className="header-actions">
           <Link to="banco" className="timer-btn-icon" title="Banco de Questões">

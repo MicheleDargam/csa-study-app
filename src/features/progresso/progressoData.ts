@@ -5,7 +5,10 @@ import type { SessaoPratica } from '../../types';
 /**
  * Centralized read layer for the Progresso module. Every function here only
  * reads from tables other features already write to (sessions, tentativas,
- * praticas) — this module creates no data of its own.
+ * praticas, tentativasPrepper) — this module creates no data of its own.
+ * Functions named *Prepper mirror a CSA one exactly but read the separate
+ * Exame Prepper tables, so its stats can be shown in their own tab without
+ * ever summing into the CSA numbers.
  */
 
 export type Periodo = 'semana' | 'mes';
@@ -48,10 +51,11 @@ export interface VisaoGeral {
 }
 
 export async function getVisaoGeral(): Promise<VisaoGeral> {
-  const [sessions, tentativas, praticas] = await Promise.all([
+  const [sessions, tentativas, praticas, tentativasPrepper] = await Promise.all([
     db.sessions.toArray(),
     db.tentativas.toArray(),
     db.praticas.toArray(),
+    db.tentativasPrepper.toArray(),
   ]);
 
   const studySessions = sessions.filter((s) => s.type === 'study');
@@ -63,10 +67,18 @@ export async function getVisaoGeral(): Promise<VisaoGeral> {
       .filter((s) => s.startedAt >= start)
       .reduce((sum, s) => sum + s.duration, 0);
 
+  // Combined across CSA (tentativas/praticas) and Exame Prepper — this is the
+  // one place the two intentionally add up, since it's just an overall
+  // "how much have I practiced" total; everything below this tile is split
+  // by trilha (CSA vs Prepper) instead of summed.
   const questoesRespondidas =
-    tentativas.reduce((sum, t) => sum + t.total, 0) + praticas.reduce((sum, p) => sum + p.total, 0);
+    tentativas.reduce((sum, t) => sum + t.total, 0) +
+    praticas.reduce((sum, p) => sum + p.total, 0) +
+    tentativasPrepper.reduce((sum, t) => sum + t.total, 0);
   const acertosTotais =
-    tentativas.reduce((sum, t) => sum + t.acertos, 0) + praticas.reduce((sum, p) => sum + p.acertos, 0);
+    tentativas.reduce((sum, t) => sum + t.acertos, 0) +
+    praticas.reduce((sum, p) => sum + p.acertos, 0) +
+    tentativasPrepper.reduce((sum, t) => sum + t.acertos, 0);
 
   return {
     horasSemana: secondsSince(weekStart) / 3600,
@@ -140,6 +152,35 @@ export interface SimuladoTentativaPonto {
 
 export async function getEvolucaoSimulado(simuladoId: number): Promise<SimuladoTentativaPonto[]> {
   const tentativas = await db.tentativas.where('simuladoId').equals(simuladoId).sortBy('completedAt');
+  return tentativas.map((t, i) => ({
+    numero: i + 1,
+    percent: t.total > 0 ? Math.round((t.acertos / t.total) * 100) : 0,
+    acertos: t.acertos,
+    total: t.total,
+    completedAt: t.completedAt,
+  }));
+}
+
+// ---- Same two, for Exame Prepper's separate tables ----
+
+export async function getSimuladosPrepperComTentativas(): Promise<SimuladoResumo[]> {
+  const [simulados, tentativas] = await Promise.all([
+    db.simuladosPrepper.toArray(),
+    db.tentativasPrepper.toArray(),
+  ]);
+
+  const counts = new Map<number, number>();
+  for (const t of tentativas) {
+    counts.set(t.simuladoId, (counts.get(t.simuladoId) ?? 0) + 1);
+  }
+
+  return simulados
+    .filter((s) => (counts.get(s.id!) ?? 0) > 0)
+    .map((s) => ({ simuladoId: s.id!, simuladoNome: s.nome, tentativas: counts.get(s.id!) ?? 0 }));
+}
+
+export async function getEvolucaoSimuladoPrepper(simuladoId: number): Promise<SimuladoTentativaPonto[]> {
+  const tentativas = await db.tentativasPrepper.where('simuladoId').equals(simuladoId).sortBy('completedAt');
   return tentativas.map((t, i) => ({
     numero: i + 1,
     percent: t.total > 0 ? Math.round((t.acertos / t.total) * 100) : 0,
