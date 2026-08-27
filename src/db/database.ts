@@ -10,6 +10,13 @@ class StudyTimerDB extends Dexie {
   tentativas!: EntityTable<TentativaSimulado, 'id'>;
   praticas!: EntityTable<SessaoPratica, 'id'>;
   lembretes!: EntityTable<Lembrete, 'id'>;
+  // Exame Prepper: same shapes as simulados/questoes/tentativas above, kept
+  // in their own tables (not the Banco de Questões ones) on purpose — these
+  // hold questions from an outside source and must never mix into the
+  // existing question bank or its stats.
+  simuladosPrepper!: EntityTable<Simulado, 'id'>;
+  questoesPrepper!: EntityTable<Questao, 'id'>;
+  tentativasPrepper!: EntityTable<TentativaSimulado, 'id'>;
 
   constructor() {
     super('CSAStudyTimerDB');
@@ -73,6 +80,24 @@ class StudyTimerDB extends Dexie {
       tentativas: '++id, simuladoId, completedAt, [simuladoId+completedAt]',
       praticas: '++id, tema, materia, completedAt, [tema+completedAt]',
       lembretes: '++id, tipo',
+    });
+
+    // v7: adds Exame Prepper — a self-contained set of simulados/questoes/
+    // tentativas tables for questions imported from an outside source, kept
+    // fully separate from the existing Banco de Questões data and from the
+    // Progresso charts (which only ever read the v3/v4 tables above).
+    this.version(7).stores({
+      subjects: '++id, name, createdAt',
+      sessions: '++id, subjectId, startedAt, [subjectId+startedAt]',
+      tasks: '++id, subjectId, date, [subjectId+date]',
+      simulados: '++id, &nome, createdAt',
+      questoes: '++id, &externalId, simuladoId, tema, materia, [simuladoId+ordem]',
+      tentativas: '++id, simuladoId, completedAt, [simuladoId+completedAt]',
+      praticas: '++id, tema, materia, completedAt, [tema+completedAt]',
+      lembretes: '++id, tipo',
+      simuladosPrepper: '++id, &nome, createdAt',
+      questoesPrepper: '++id, &externalId, simuladoId, tema, materia, [simuladoId+ordem]',
+      tentativasPrepper: '++id, simuladoId, completedAt, [simuladoId+completedAt]',
     });
   }
 }

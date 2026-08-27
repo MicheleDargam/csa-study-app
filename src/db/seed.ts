@@ -1,7 +1,10 @@
+import type { EntityTable } from 'dexie';
 import { db } from './database';
 import { DEFAULT_MATERIAS } from '../features/materias/materiaColors';
 import { BUNDLED_SIMULADOS, type QuestaoJSON } from '../data/simulados';
 import { BUNDLED_AVULSAS } from '../data/avulsas';
+import { BUNDLED_SIMULADOS_PREPPER } from '../data/simulados-prepper';
+import type { Questao } from '../types';
 
 /**
  * Seed the default CSA study subjects on first run only.
@@ -175,10 +178,17 @@ type UpsertResult = 'inserted' | 'updated' | 'unchanged';
  * already imported into someone's browser — a plain "skip if exists"
  * dedup would leave the old, wrong content there forever.
  * `simuladoId` is only passed for questions belonging to a fixed simulado;
- * omitted for standalone/avulsas questions.
+ * omitted for standalone/avulsas questions. `table` lets this same upsert
+ * logic serve the main `questoes` table (Simulados/Banco de Questões) and
+ * the separate `questoesPrepper` table (Exame Prepper) without duplicating it.
  */
-async function upsertQuestao(q: QuestaoJSON, ordem: number, simuladoId?: number): Promise<UpsertResult> {
-  const existing = await db.questoes.where('externalId').equals(q.id).first();
+async function upsertQuestao(
+  table: EntityTable<Questao, 'id'>,
+  q: QuestaoJSON,
+  ordem: number,
+  simuladoId?: number,
+): Promise<UpsertResult> {
+  const existing = await table.where('externalId').equals(q.id).first();
 
   const fields = {
     materia: q.materia,
@@ -192,7 +202,7 @@ async function upsertQuestao(q: QuestaoJSON, ordem: number, simuladoId?: number)
   };
 
   if (!existing) {
-    await db.questoes.add({ externalId: q.id, simuladoId, ordem, ...fields });
+    await table.add({ externalId: q.id, simuladoId, ordem, ...fields });
     return 'inserted';
   }
 
@@ -207,7 +217,7 @@ async function upsertQuestao(q: QuestaoJSON, ordem: number, simuladoId?: number)
     JSON.stringify(existing.alternativasPt) !== JSON.stringify(fields.alternativasPt);
 
   if (changed) {
-    await db.questoes.update(existing.id!, fields);
+    await table.update(existing.id!, fields);
     return 'updated';
   }
 
@@ -239,7 +249,35 @@ export async function seedSimulados(): Promise<void> {
       }
 
       for (let index = 0; index < raw.questoes.length; index++) {
-        await upsertQuestao(raw.questoes[index], index, simulado.id);
+        await upsertQuestao(db.questoes, raw.questoes[index], index, simulado.id);
+      }
+    });
+  }
+}
+
+/**
+ * Same as seedSimulados(), but for the separate Exame Prepper tables
+ * (simuladosPrepper/questoesPrepper) — questions from an outside source that
+ * must never mix into the main Simulados/Banco de Questões data.
+ */
+export async function seedSimuladosPrepper(): Promise<void> {
+  for (const raw of BUNDLED_SIMULADOS_PREPPER) {
+    await db.transaction('rw', db.simuladosPrepper, db.questoesPrepper, async () => {
+      let simulado = await db.simuladosPrepper.where('nome').equals(raw.simulado).first();
+
+      if (!simulado) {
+        const newId = (await db.simuladosPrepper.add({
+          nome: raw.simulado,
+          totalQuestoes: raw.questoes.length,
+          createdAt: new Date(),
+        })) as number;
+        simulado = { id: newId, nome: raw.simulado, totalQuestoes: raw.questoes.length, createdAt: new Date() };
+      } else if (simulado.totalQuestoes !== raw.questoes.length) {
+        await db.simuladosPrepper.update(simulado.id!, { totalQuestoes: raw.questoes.length });
+      }
+
+      for (let index = 0; index < raw.questoes.length; index++) {
+        await upsertQuestao(db.questoesPrepper, raw.questoes[index], index, simulado.id);
       }
     });
   }
@@ -290,7 +328,7 @@ export async function seedAvulsas(): Promise<AvulsasImportSummary[]> {
 
     await db.transaction('rw', db.questoes, async () => {
       for (let index = 0; index < batch.questoes.length; index++) {
-        const result = await upsertQuestao(batch.questoes[index], index);
+        const result = await upsertQuestao(db.questoes, batch.questoes[index], index);
         if (result === 'inserted') novas += 1;
         else if (result === 'updated') atualizadas += 1;
         else ignoradas += 1;

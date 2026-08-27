@@ -14,18 +14,26 @@ interface ResultadoViewProps {
   duracaoSegundos: number;
   erros: TentativaErro[];
   onBack: () => void;
+  /**
+   * Loads the wrong-answer questions by id — defaults to the main `questoes`
+   * table. Pass `(ids) => db.questoesPrepper.bulkGet(ids)` for a review
+   * screen backed by a different question pool (e.g. Exame Prepper).
+   */
+  fetchQuestoes?: (ids: number[]) => Promise<(Questao | undefined)[]>;
 }
 
 /**
  * Score summary + wrong-answer review, shared by the Simulados and Banco de
- * Questões result screens. Only needs the graded outcome — the caller is
- * responsible for loading its own attempt record (TentativaSimulado or
- * SessaoPratica) and passing its fields down.
+ * Questões result screens (and Exame Prepper's, via `fetchQuestoes`). Only
+ * needs the graded outcome — the caller is responsible for loading its own
+ * attempt record (TentativaSimulado or SessaoPratica) and passing its fields
+ * down.
  */
-export function ResultadoView({ title, acertos, total, duracaoSegundos, erros, onBack }: ResultadoViewProps) {
+export function ResultadoView({ title, acertos, total, duracaoSegundos, erros, onBack, fetchQuestoes }: ResultadoViewProps) {
   const errorQuestoes = useLiveQuery(async () => {
     if (erros.length === 0) return [];
-    const questoes = await db.questoes.bulkGet(erros.map((e) => e.questaoId));
+    const loadQuestoes = fetchQuestoes ?? ((ids: number[]) => db.questoes.bulkGet(ids));
+    const questoes = await loadQuestoes(erros.map((e) => e.questaoId));
     const byId = new Map<number, Questao>();
     for (const q of questoes) {
       if (q?.id) byId.set(q.id, q);

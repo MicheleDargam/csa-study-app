@@ -16,10 +16,15 @@ import { BancoQuestoesPage } from '../features/banco-questoes/BancoQuestoesPage'
 import { TemaPracticaPage } from '../features/banco-questoes/TemaPracticaPage';
 import { ResultadoPraticaPage } from '../features/banco-questoes/ResultadoPraticaPage';
 import { HistoricoPraticaPage } from '../features/banco-questoes/HistoricoPraticaPage';
+import { ExamePrepperPage } from '../features/exame-prepper/ExamePrepperPage';
+import { SimuladoPrepperRunnerPage } from '../features/exame-prepper/SimuladoPrepperRunnerPage';
+import { ResultadoPrepperPage } from '../features/exame-prepper/ResultadoPrepperPage';
+import { HistoricoPrepperPage } from '../features/exame-prepper/HistoricoPrepperPage';
 import {
   seedDefaultMaterias,
   seedSimulados,
   seedAvulsas,
+  seedSimuladosPrepper,
   seedLembretePadrao,
   migrateMateriasParaTemas,
   migrateDedupCursoSimulados,
@@ -41,6 +46,7 @@ export function App() {
     migrateRemoveDuplicateQuestoes();
     seedSimulados();
     seedAvulsas();
+    seedSimuladosPrepper();
     seedLembretePadrao();
   }, []);
 
@@ -65,6 +71,10 @@ export function App() {
               <Route path="/simulados/banco/historico" element={<HistoricoPraticaPage />} />
               <Route path="/simulados/banco/resultado/:praticaId" element={<ResultadoPraticaPage />} />
               <Route path="/simulados/:simuladoId" element={<SimuladoRunnerPage />} />
+              <Route path="/exame-prepper" element={<ExamePrepperPage />} />
+              <Route path="/exame-prepper/historico" element={<HistoricoPrepperPage />} />
+              <Route path="/exame-prepper/resultado/:tentativaId" element={<ResultadoPrepperPage />} />
+              <Route path="/exame-prepper/:simuladoId" element={<SimuladoPrepperRunnerPage />} />
               <Route
                 path="/progresso"
                 element={
