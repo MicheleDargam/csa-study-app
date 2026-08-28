@@ -48,50 +48,6 @@
       ]
     },
     {
-      "id": "curso6_q03",
-      "materia": "CSA - ServiceNow",
-      "tema": "UI Fundamentals",
-      "enunciado": "On a Form header, what is the three bar icon called?",
-      "alternativas": [
-        "Pancake icon",
-        "Additional Actions or Context Menu",
-        "Hamburger icon",
-        "Cake icon"
-      ],
-      "resposta_correta": [
-        1
-      ],
-      "enunciado_pt": "No cabeçalho de um formulário, como é chamado o ícone de três barras?",
-      "alternativas_pt": [
-        "Ícone Pancake",
-        "Additional Actions ou Context Menu",
-        "Ícone Hamburger",
-        "Ícone Cake"
-      ]
-    },
-    {
-      "id": "curso6_q04",
-      "materia": "CSA - ServiceNow",
-      "tema": "UI Fundamentals",
-      "enunciado": "What icon do you use to change the icon and color on a Favorite?",
-      "alternativas": [
-        "Clock",
-        "Pencil",
-        "Triangle",
-        "Star"
-      ],
-      "resposta_correta": [
-        1
-      ],
-      "enunciado_pt": "Qual ícone você usa para alterar o ícone e a cor de um Favorite?",
-      "alternativas_pt": [
-        "Relógio",
-        "Lápis",
-        "Triângulo",
-        "Estrela"
-      ]
-    },
-    {
       "id": "curso6_q05",
       "materia": "CSA - ServiceNow",
       "tema": "UI Fundamentals",
@@ -157,28 +113,6 @@
         "More Options (...)",
         "Páginas (Pages)",
         "Clipe de papel (Paperclip)"
-      ]
-    },
-    {
-      "id": "curso6_q08",
-      "materia": "CSA - ServiceNow",
-      "tema": "UI Fundamentals",
-      "enunciado": "Which displays the list of activities, or history, on a form?",
-      "alternativas": [
-        "Formatter",
-        "Dictionary",
-        "Sidebar",
-        "History Menu"
-      ],
-      "resposta_correta": [
-        0
-      ],
-      "enunciado_pt": "O que exibe a lista de atividades, ou histórico, em um formulário?",
-      "alternativas_pt": [
-        "Formatter",
-        "Dictionary",
-        "Sidebar",
-        "History Menu"
       ]
     },
     {
@@ -274,28 +208,6 @@
         "Uma coluna é um campo e um registro é uma linha",
         "Uma coluna é um campo e um registro é uma coluna",
         "Uma coluna contém dados de um usuário e um registro é um conjunto de campos"
-      ]
-    },
-    {
-      "id": "curso6_q13",
-      "materia": "CSA - ServiceNow",
-      "tema": "Database/Tables",
-      "enunciado": "What is the name of the table relationship, where two or more tables are related in a bi-directional relationship, so that the related records are visible from both tables in a related list?",
-      "alternativas": [
-        "Database View",
-        "Many to Many",
-        "One to Many",
-        "Extended"
-      ],
-      "resposta_correta": [
-        1
-      ],
-      "enunciado_pt": "Qual é o nome do relacionamento de tabelas, onde duas ou mais tabelas são relacionadas de forma bidirecional, de modo que os registros relacionados fiquem visíveis nas related lists de ambas as tabelas?",
-      "alternativas_pt": [
-        "Database View",
-        "Many to Many",
-        "One to Many",
-        "Extended"
       ]
     },
     {
@@ -437,28 +349,6 @@
         "Approving Manager",
         "Service Desk User",
         "Process User"
-      ]
-    },
-    {
-      "id": "curso6_q20",
-      "materia": "CSA - ServiceNow",
-      "tema": "Security/ACL",
-      "enunciado": "What is the result of the order in which access controls are evaluated?",
-      "alternativas": [
-        "Ensures user has access to the fields in a table, before considering their access to the table",
-        "Ensures user can get to work as quickly as possible",
-        "Ensures user has access to the application, before evaluating access to a module within the application",
-        "Ensures user has access to a table, before evaluating access to a field in the table"
-      ],
-      "resposta_correta": [
-        3
-      ],
-      "enunciado_pt": "Qual é o resultado da ordem em que os access controls são avaliados?",
-      "alternativas_pt": [
-        "Garante que o usuário tenha acesso aos campos de uma tabela, antes de considerar o acesso à tabela",
-        "Garante que o usuário consiga começar a trabalhar o mais rápido possível",
-        "Garante que o usuário tenha acesso à aplicação, antes de avaliar o acesso a um módulo dentro da aplicação",
-        "Garante que o usuário tenha acesso a uma tabela, antes de avaliar o acesso a um campo da tabela"
       ]
     },
     {
@@ -649,28 +539,6 @@
       ]
     },
     {
-      "id": "curso6_q29",
-      "materia": "CSA - ServiceNow",
-      "tema": "Scripting/Client Development",
-      "enunciado": "What function do you use to add buttons, links, and context menu items on forms and lists?",
-      "alternativas": [
-        "UI Policies",
-        "UI Settings",
-        "UI Actions",
-        "UI Config"
-      ],
-      "resposta_correta": [
-        2
-      ],
-      "enunciado_pt": "Qual função você usa para adicionar botões, links e itens de menu de contexto em formulários e listas?",
-      "alternativas_pt": [
-        "UI Policies",
-        "UI Settings",
-        "UI Actions",
-        "UI Config"
-      ]
-    },
-    {
       "id": "curso6_q30",
       "materia": "CSA - ServiceNow",
       "tema": "Scripting/Client Development",
@@ -820,30 +688,6 @@
       ]
     },
     {
-      "id": "curso6_q37",
-      "materia": "CSA - ServiceNow",
-      "tema": "CMDB",
-      "enunciado": "What do you call any component that needs to be managed in order to deliver services?",
-      "alternativas": [
-        "CSDM Items",
-        "CMDB",
-        "Configuration item",
-        "Service Offerings",
-        "Asset"
-      ],
-      "resposta_correta": [
-        2
-      ],
-      "enunciado_pt": "Como você chama qualquer componente que precisa ser gerenciado para entregar serviços?",
-      "alternativas_pt": [
-        "CSDM Items",
-        "CMDB",
-        "Configuration item",
-        "Service Offerings",
-        "Asset"
-      ]
-    },
-    {
       "id": "curso6_q38",
       "materia": "CSA - ServiceNow",
       "tema": "CMDB",
@@ -890,67 +734,6 @@
         "Tables and Fields",
         "A Database",
         "The Dependency View"
-      ]
-    },
-    {
-      "id": "curso6_q40",
-      "materia": "CSA - ServiceNow",
-      "tema": "Update Sets",
-      "enunciado": "Which of the following are not included in an Update Set, by default? (Choose four.)",
-      "alternativas": [
-        "Homepages",
-        "Data",
-        "Published Workflows",
-        "Business Rules",
-        "Schedules",
-        "Database changes",
-        "Related Lists",
-        "Report Definitions",
-        "Scheduled Jobs",
-        "Client Scripts",
-        "Views"
-      ],
-      "resposta_correta": [
-        0,
-        1,
-        4,
-        8
-      ],
-      "enunciado_pt": "Quais dos seguintes NÃO estão incluídos em um Update Set, por padrão? (Escolha quatro.)",
-      "alternativas_pt": [
-        "Homepages",
-        "Dados (Data)",
-        "Published Workflows",
-        "Business Rules",
-        "Schedules",
-        "Alterações de banco de dados",
-        "Related Lists",
-        "Report Definitions",
-        "Scheduled Jobs",
-        "Client Scripts",
-        "Views"
-      ]
-    },
-    {
-      "id": "curso6_q41",
-      "materia": "CSA - ServiceNow",
-      "tema": "Update Sets",
-      "enunciado": "What are the steps to apply an update set retrieved from another instance?",
-      "alternativas": [
-        "Load the Update Set > Import the Update Set > Install",
-        "Verity Update Set is Complete, Retrieve, Preview, Commit",
-        "Verify Update Set is Complete, Test Connection, Apply",
-        "Import the Update Set > Verify the Update Set is complete > Link the Update Set > Publish"
-      ],
-      "resposta_correta": [
-        1
-      ],
-      "enunciado_pt": "Quais são as etapas para aplicar um update set recuperado de outra instância?",
-      "alternativas_pt": [
-        "Load the Update Set > Import the Update Set > Install",
-        "Verify Update Set is Complete, Retrieve, Preview, Commit",
-        "Verify Update Set is Complete, Test Connection, Apply",
-        "Import the Update Set > Verify the Update Set is complete > Link the Update Set > Publish"
       ]
     },
     {
@@ -1021,28 +804,6 @@
         "Junit",
         "Selenium",
         "Automated Test Framework (ATF)"
-      ]
-    },
-    {
-      "id": "curso6_q47",
-      "materia": "CSA - ServiceNow",
-      "tema": "Service Catalog",
-      "enunciado": "What feature do you use to specify which users are able to access a Service Catalog Item?",
-      "alternativas": [
-        "Can Read Role",
-        "Catalog User Role",
-        "Can Order Tab",
-        "User Criteria"
-      ],
-      "resposta_correta": [
-        3
-      ],
-      "enunciado_pt": "Qual recurso você usa para especificar quais usuários podem acessar um Service Catalog Item?",
-      "alternativas_pt": [
-        "Can Read Role",
-        "Catalog User Role",
-        "Can Order Tab",
-        "User Criteria"
       ]
     },
     {

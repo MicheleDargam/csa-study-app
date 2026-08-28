@@ -623,29 +623,6 @@
       ]
     },
     {
-      "id": "curso4_q27",
-      "materia": "CSA - ServiceNow",
-      "tema": "Task Management",
-      "enunciado": "What types of entities can receive task assignments, in ServiceNow? (Choose two.)",
-      "alternativas": [
-        "Users",
-        "Departments",
-        "Groups",
-        "Teams"
-      ],
-      "resposta_correta": [
-        0,
-        2
-      ],
-      "enunciado_pt": "Quais tipos de entidades podem receber atribuições de task no ServiceNow? (Escolha duas.)",
-      "alternativas_pt": [
-        "Users",
-        "Departments",
-        "Groups",
-        "Teams"
-      ]
-    },
-    {
       "id": "curso4_q28",
       "materia": "CSA - ServiceNow",
       "tema": "Scripting/Client Development",
@@ -854,28 +831,6 @@
       ]
     },
     {
-      "id": "curso4_q37",
-      "materia": "CSA - ServiceNow",
-      "tema": "CMDB",
-      "enunciado": "ServiceNow contains a resource which provides: a standard and shared set of service related definitions and a CMDB framework. What resource do these statements describe?",
-      "alternativas": [
-        "Common Services Data Model (CSDM)",
-        "Information Technology Service Management (ITSM)",
-        "Configuration Management Database (CMDB)",
-        "Information Technology Infrastructure Library (ITIL)"
-      ],
-      "resposta_correta": [
-        0
-      ],
-      "enunciado_pt": "O ServiceNow contém um recurso que fornece: um conjunto padrão e compartilhado de definições relacionadas a serviço e uma estrutura de CMDB. Qual recurso essas afirmações descrevem?",
-      "alternativas_pt": [
-        "Common Services Data Model (CSDM)",
-        "Information Technology Service Management (ITSM)",
-        "Configuration Management Database (CMDB)",
-        "Information Technology Infrastructure Library (ITIL)"
-      ]
-    },
-    {
       "id": "curso4_q38",
       "materia": "CSA - ServiceNow",
       "tema": "CMDB",
@@ -964,30 +919,6 @@
         "Eles não podem ser movidos via update set",
         "Eles são adicionados automaticamente ao update set",
         "Criar um update set separado para eles"
-      ]
-    },
-    {
-      "id": "curso4_q42",
-      "materia": "CSA - ServiceNow",
-      "tema": "Integrations (Flow Designer)",
-      "enunciado": "Which feature allows you to automate business logic for a particular application or process such as approvals, tasks notifications, and record operations?",
-      "alternativas": [
-        "Flows",
-        "Action Sequences",
-        "Action Sets",
-        "Task Flows",
-        "Flow Diagrams"
-      ],
-      "resposta_correta": [
-        0
-      ],
-      "enunciado_pt": "Qual recurso permite automatizar lógica de negócio para uma aplicação ou processo específico, como aprovações, notificações de tasks e operações de registro?",
-      "alternativas_pt": [
-        "Flows",
-        "Action Sequences",
-        "Action Sets",
-        "Task Flows",
-        "Flow Diagrams"
       ]
     },
     {
@@ -1182,30 +1113,6 @@
       ]
     },
     {
-      "id": "curso4_q51",
-      "materia": "CSA - ServiceNow",
-      "tema": "Reporting",
-      "enunciado": "What is a key difference between Reporting and Performance Analytics?",
-      "alternativas": [
-        "Performance Analytics contains snapshots of data taken over time; Reporting shows only the data as it is, at the moment the report is run.",
-        "Performance Analytics can show trends; Reports cannot.",
-        "Reports can be run on a scheduled basis; Performance Analytics cannot.",
-        "Performance Analytics data can be published to Dashboards; Reports cannot.",
-        "Performance Analytics shows KPIs; Reporting does not."
-      ],
-      "resposta_correta": [
-        0
-      ],
-      "enunciado_pt": "Qual é uma diferença fundamental entre Reporting e Performance Analytics?",
-      "alternativas_pt": [
-        "Performance Analytics contém snapshots de dados capturados ao longo do tempo; Reporting mostra apenas os dados como estão, no momento em que o relatório é executado.",
-        "Performance Analytics pode mostrar tendências; Reports não conseguem.",
-        "Reports podem ser executados de forma agendada; Performance Analytics não pode.",
-        "Dados do Performance Analytics podem ser publicados em Dashboards; Reports não podem.",
-        "Performance Analytics mostra KPIs; Reporting não mostra."
-      ]
-    },
-    {
       "id": "curso4_q52",
       "materia": "CSA - ServiceNow",
       "tema": "Reporting",
@@ -1322,30 +1229,6 @@
         "Can Read",
         "Can Write",
         "Can Author"
-      ]
-    },
-    {
-      "id": "curso4_q57",
-      "materia": "CSA - ServiceNow",
-      "tema": "Virtual Agent",
-      "enunciado": "Which ServiceNow capability provides assistance to help users obtain information, make decisions, and perform common work tasks via a messaging interface?",
-      "alternativas": [
-        "Agent Workspace",
-        "Chat bot",
-        "Virtual Agent",
-        "Knowledge Chat",
-        "Now Support"
-      ],
-      "resposta_correta": [
-        2
-      ],
-      "enunciado_pt": "Qual recurso do ServiceNow oferece assistência para ajudar usuários a obter informações, tomar decisões e realizar tarefas comuns de trabalho por meio de uma interface de mensagens?",
-      "alternativas_pt": [
-        "Agent Workspace",
-        "Chat bot",
-        "Virtual Agent",
-        "Knowledge Chat",
-        "Now Support"
       ]
     },
     {

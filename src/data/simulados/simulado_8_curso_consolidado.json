@@ -2,34 +2,6 @@
   "simulado": "Simulado 8 - Curso Consolidado (6/7)",
   "questoes": [
     {
-      "id": "curso8_q01",
-      "materia": "CSA - ServiceNow",
-      "tema": "UI Fundamentals",
-      "enunciado": "The ServiceNow platform includes which types of interfaces? (Choose three.)",
-      "alternativas": [
-        "Now Mobile Apps",
-        "Agent Control Center",
-        "Back Office Dashboard",
-        "Service Portals",
-        "Now Platform User Interfaces",
-        "Field Service Taskboard"
-      ],
-      "resposta_correta": [
-        0,
-        3,
-        4
-      ],
-      "enunciado_pt": "A plataforma ServiceNow inclui quais tipos de interface? (Escolha três.)",
-      "alternativas_pt": [
-        "Now Mobile Apps",
-        "Agent Control Center",
-        "Back Office Dashboard",
-        "Service Portals",
-        "Now Platform User Interfaces",
-        "Field Service Taskboard"
-      ]
-    },
-    {
       "id": "curso8_q02",
       "materia": "CSA - ServiceNow",
       "tema": "UI Fundamentals",
@@ -373,28 +345,6 @@
       ]
     },
     {
-      "id": "curso8_q17",
-      "materia": "CSA - ServiceNow",
-      "tema": "Security/ACL",
-      "enunciado": "Which one statement correctly describes Access Control rule evaluation?",
-      "alternativas": [
-        "Table access rules are evaluated from the general to the specific",
-        "If more than one rule applies to a record, the older rule is evaluated first",
-        "If a row level rule and a field level rule exist, both rules must be true before an operation is allowed",
-        "The role with the most permissions evaluates the rules first"
-      ],
-      "resposta_correta": [
-        2
-      ],
-      "enunciado_pt": "Qual afirmação descreve corretamente a avaliação de regra de Access Control?",
-      "alternativas_pt": [
-        "As regras de acesso de tabela são avaliadas do geral para o específico",
-        "Se mais de uma regra se aplica a um registro, a regra mais antiga é avaliada primeiro",
-        "Se existir uma regra de nível de linha e uma regra de nível de campo, ambas precisam ser verdadeiras antes que a operação seja permitida",
-        "A role com mais permissões avalia as regras primeiro"
-      ]
-    },
-    {
       "id": "curso8_q18",
       "materia": "CSA - ServiceNow",
       "tema": "Security/ACL",
@@ -669,28 +619,6 @@
         "Database script",
         "Client script",
         "Local script"
-      ]
-    },
-    {
-      "id": "curso8_q30",
-      "materia": "CSA - ServiceNow",
-      "tema": "Scripting/Client Development",
-      "enunciado": "When an administrator sets a policy that is applied to all data entered into the Platform (UI, Import Sets, or Web Services), where does this policy run by default?",
-      "alternativas": [
-        "Network",
-        "Server",
-        "Client",
-        "Browser"
-      ],
-      "resposta_correta": [
-        1
-      ],
-      "enunciado_pt": "Quando um administrador define uma policy aplicada a todos os dados inseridos na Platform (UI, Import Sets, ou Web Services), onde essa policy roda por padrão?",
-      "alternativas_pt": [
-        "Network",
-        "Server",
-        "Client",
-        "Browser"
       ]
     },
     {

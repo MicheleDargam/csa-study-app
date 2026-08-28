@@ -168,6 +168,45 @@ export async function migrateRemoveDuplicateQuestoes(): Promise<void> {
   localStorage.setItem(DUPLICATE_QUESTOES_MIGRATION_FLAG, '1');
 }
 
+// externalIds removed in a second, more thorough duplicate pass — this time
+// a fuzzy (word-overlap) comparison across every bundled question, not just
+// exact-text matches, catching duplicates that were reworded slightly
+// between a Simulado Curso Consolidado file and another one, or between one
+// of those and the last remaining material_professor_1.json questions
+// (which, after this pass, is left with zero questions — every one of them
+// turned out to restate something already covered by a Simulado). Found
+// 2026-08-28.
+const DUPLICATE_QUESTOES_EXTERNAL_IDS_V2 = [
+  'curso3_q42',
+  'curso4_q37', 'curso4_q42', 'curso4_q51', 'curso4_q57', 'curso4_q27',
+  'curso5_q03', 'curso5_q29', 'curso5_q41', 'curso5_q36', 'curso5_q04', 'curso5_q19',
+  'curso6_q40', 'curso6_q03', 'curso6_q47', 'curso6_q29', 'curso6_q13', 'curso6_q04',
+  'curso6_q08', 'curso6_q37', 'curso6_q41', 'curso6_q20',
+  'curso7_q38', 'curso7_q28', 'curso7_q19', 'curso7_q35', 'curso7_q07',
+  'curso8_q01', 'curso8_q30', 'curso8_q17',
+  'mat_q34', 'mat_q35', 'mat_q36', 'mat_q37', 'mat_q38', 'mat_q39', 'mat_q53', 'mat_q75',
+];
+
+const DUPLICATE_QUESTOES_MIGRATION_V2_FLAG = 'csa-duplicate-questoes-migration-v2';
+
+/**
+ * Second one-time migration, same purpose as migrateRemoveDuplicateQuestoes()
+ * but for the batch of near-duplicates found by the fuzzy word-similarity
+ * pass (see DUPLICATE_QUESTOES_EXTERNAL_IDS_V2's comment). Kept as a
+ * separate function/flag rather than appended to the v1 list, since v1 has
+ * already run (and its flag already set) for anyone who used the app
+ * before this pass — appending here would never re-run for them.
+ */
+export async function migrateRemoveDuplicateQuestoesV2(): Promise<void> {
+  if (localStorage.getItem(DUPLICATE_QUESTOES_MIGRATION_V2_FLAG)) return;
+
+  await db.transaction('rw', db.questoes, async () => {
+    await db.questoes.where('externalId').anyOf(DUPLICATE_QUESTOES_EXTERNAL_IDS_V2).delete();
+  });
+
+  localStorage.setItem(DUPLICATE_QUESTOES_MIGRATION_V2_FLAG, '1');
+}
+
 type UpsertResult = 'inserted' | 'updated' | 'unchanged';
 
 /**

@@ -148,28 +148,6 @@
       "imagem": "csa-images/curso7_q06.png"
     },
     {
-      "id": "curso7_q07",
-      "materia": "CSA - ServiceNow",
-      "tema": "UI Fundamentals",
-      "enunciado": "What section on a task record is used to see the most recent updates made to a record?",
-      "alternativas": [
-        "Timeline",
-        "Related List",
-        "Activity Stream",
-        "Audit Log"
-      ],
-      "resposta_correta": [
-        2
-      ],
-      "enunciado_pt": "Qual seção em um registro de task é usada para ver as atualizações mais recentes feitas em um registro?",
-      "alternativas_pt": [
-        "Timeline",
-        "Related List",
-        "Activity Stream",
-        "Audit Log"
-      ]
-    },
-    {
       "id": "curso7_q08",
       "materia": "CSA - ServiceNow",
       "tema": "UI Fundamentals",
@@ -396,30 +374,6 @@
       ]
     },
     {
-      "id": "curso7_q19",
-      "materia": "CSA - ServiceNow",
-      "tema": "Security/ACL",
-      "enunciado": "When a user reports that they are not able to see modules on the application navigator, what can you do, to see what modules are visible to them?",
-      "alternativas": [
-        "Look up their password, so you can login with their account",
-        "Initiate a Connect Chat session",
-        "Install the Bomgar plug-in",
-        "Impersonate the user",
-        "Launch a NowChat window"
-      ],
-      "resposta_correta": [
-        3
-      ],
-      "enunciado_pt": "Quando um usuário relata que não consegue ver módulos no application navigator, o que você pode fazer para ver quais módulos estão visíveis para ele?",
-      "alternativas_pt": [
-        "Buscar a senha dele, para você conseguir logar com a conta dele",
-        "Iniciar uma sessão de Connect Chat",
-        "Instalar o plugin Bomgar",
-        "Fazer impersonate do usuário",
-        "Abrir uma janela do NowChat"
-      ]
-    },
-    {
       "id": "curso7_q20",
       "materia": "CSA - ServiceNow",
       "tema": "Security/ACL",
@@ -602,28 +556,6 @@
       ]
     },
     {
-      "id": "curso7_q28",
-      "materia": "CSA - ServiceNow",
-      "tema": "Scripting/Client Development",
-      "enunciado": "On a Business Rule, the When setting determines at what point the rule executes. What are the options for specifying that timing?",
-      "alternativas": [
-        "Before, After, Async, Display",
-        "Prior to, Synchronous, on Update",
-        "Insert, Update, Delete, Query",
-        "Before, Synchronous, Scheduled Job, View"
-      ],
-      "resposta_correta": [
-        0
-      ],
-      "enunciado_pt": "Em uma Business Rule, a configuração When determina em que momento a regra é executada. Quais são as opções para especificar esse timing?",
-      "alternativas_pt": [
-        "Before, After, Async, Display",
-        "Prior to, Synchronous, on Update",
-        "Insert, Update, Delete, Query",
-        "Before, Synchronous, Scheduled Job, View"
-      ]
-    },
-    {
       "id": "curso7_q29",
       "materia": "CSA - ServiceNow",
       "tema": "Scripting/Client Development",
@@ -738,30 +670,6 @@
       ]
     },
     {
-      "id": "curso7_q35",
-      "materia": "CSA - ServiceNow",
-      "tema": "CMDB",
-      "enunciado": "Which database provides a logical model of your company infrastructure by identifying, controlling, maintaining and verifying CIs that exist?",
-      "alternativas": [
-        "IMDB",
-        "ITSM",
-        "CSDM",
-        "CMDB",
-        "LDAP"
-      ],
-      "resposta_correta": [
-        3
-      ],
-      "enunciado_pt": "Qual banco de dados fornece um modelo lógico da infraestrutura da sua empresa identificando, controlando, mantendo e verificando os CIs existentes?",
-      "alternativas_pt": [
-        "IMDB",
-        "ITSM",
-        "CSDM",
-        "CMDB",
-        "LDAP"
-      ]
-    },
-    {
       "id": "curso7_q36",
       "materia": "CSA - ServiceNow",
       "tema": "CMDB",
@@ -807,34 +715,6 @@
         "Um schema map organiza graficamente os quadros de task visuais do CMDB",
         "Um schema map exibe graficamente os Configuration Items que sustentam um business service",
         "Um schema map exibe os detalhes das tabelas e seus relacionamentos de forma visual, permitindo que administradores visualizem e acessem facilmente diferentes partes do schema do banco de dados"
-      ]
-    },
-    {
-      "id": "curso7_q38",
-      "materia": "CSA - ServiceNow",
-      "tema": "Update Sets",
-      "enunciado": "What is used frequently to move customizations from one instance to another?",
-      "alternativas": [
-        "Update Sets",
-        "Code Sets",
-        "Update Packs",
-        "Configuration Logs",
-        "Remote Sets",
-        "Local Sets",
-        "Code Packs"
-      ],
-      "resposta_correta": [
-        0
-      ],
-      "enunciado_pt": "O que é frequentemente usado para mover customizações de uma instância para outra?",
-      "alternativas_pt": [
-        "Update Sets",
-        "Code Sets",
-        "Update Packs",
-        "Configuration Logs",
-        "Remote Sets",
-        "Local Sets",
-        "Code Packs"
       ]
     },
     {

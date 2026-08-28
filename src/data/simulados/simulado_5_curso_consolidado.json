@@ -48,55 +48,6 @@
       ]
     },
     {
-      "id": "curso5_q03",
-      "materia": "CSA - ServiceNow",
-      "tema": "UI Fundamentals",
-      "enunciado": "From a form, what would you click to add additional fields to the form? (Choose two.)",
-      "alternativas": [
-        "Context Menu > Form > Layout",
-        "Context Menu > Configure > Form Layout",
-        "Context Menu > Configure > Form Design",
-        "Right click on header > Add > Field",
-        "Context Menu > Form > Designer",
-        "Right click on header > Configure > UX Dashboard"
-      ],
-      "resposta_correta": [
-        1,
-        2
-      ],
-      "enunciado_pt": "A partir de um formulário, no que você clicaria para adicionar campos adicionais? (Escolha duas.)",
-      "alternativas_pt": [
-        "Context Menu > Form > Layout",
-        "Context Menu > Configure > Form Layout",
-        "Context Menu > Configure > Form Design",
-        "Right click on header > Add > Field",
-        "Context Menu > Form > Designer",
-        "Right click on header > Configure > UX Dashboard"
-      ]
-    },
-    {
-      "id": "curso5_q04",
-      "materia": "CSA - ServiceNow",
-      "tema": "UI Fundamentals",
-      "enunciado": "On the Form header, which icon do you use to access form templates?",
-      "alternativas": [
-        "Stamp",
-        "Pages",
-        "More Options (…)",
-        "Paperclip"
-      ],
-      "resposta_correta": [
-        0
-      ],
-      "enunciado_pt": "No cabeçalho do formulário, qual ícone você usa para acessar os templates de formulário?",
-      "alternativas_pt": [
-        "Carimbo (Stamp)",
-        "Páginas (Pages)",
-        "More Options (…)",
-        "Clipe de papel (Paperclip)"
-      ]
-    },
-    {
       "id": "curso5_q05",
       "materia": "CSA - ServiceNow",
       "tema": "UI Fundamentals",
@@ -427,30 +378,6 @@
       ]
     },
     {
-      "id": "curso5_q19",
-      "materia": "CSA - ServiceNow",
-      "tema": "Security/ACL",
-      "enunciado": "After finishing your work on High Security Settings, what do you do to return to normal admin security levels?",
-      "alternativas": [
-        "Select Normal role",
-        "Log out and back in",
-        "Use System Administration > Normal Security module",
-        "Select Global Update Set",
-        "End Impersonation"
-      ],
-      "resposta_correta": [
-        1
-      ],
-      "enunciado_pt": "Depois de terminar seu trabalho em High Security Settings, o que você faz para voltar aos níveis normais de segurança de admin?",
-      "alternativas_pt": [
-        "Selecionar a role Normal",
-        "Fazer logout e login novamente",
-        "Usar o módulo System Administration > Normal Security",
-        "Selecionar Global Update Set",
-        "Encerrar Impersonation (End Impersonation)"
-      ]
-    },
-    {
       "id": "curso5_q20",
       "materia": "CSA - ServiceNow",
       "tema": "Security/ACL",
@@ -668,28 +595,6 @@
       ]
     },
     {
-      "id": "curso5_q29",
-      "materia": "CSA - ServiceNow",
-      "tema": "Scripting/Client Development",
-      "enunciado": "A customer requests the following data quality measures be added: Incident numbers should be read only, on all lists and forms, for all users. Short Description field should be mandatory, on all records, across all applications, on Insert. Which type of policy would you use to meet this requirement?",
-      "alternativas": [
-        "Data Quality Policy",
-        "Dictionary Design Policy",
-        "Data Policy",
-        "Field Criteria Policy"
-      ],
-      "resposta_correta": [
-        2
-      ],
-      "enunciado_pt": "Um cliente pede que as seguintes medidas de qualidade de dados sejam adicionadas: números de incident devem ser somente leitura, em todas as listas e formulários, para todos os usuários. O campo Short Description deve ser obrigatório, em todos os registros, em todas as aplicações, ao inserir (Insert). Qual tipo de policy você usaria para atender a esse requisito?",
-      "alternativas_pt": [
-        "Data Quality Policy",
-        "Dictionary Design Policy",
-        "Data Policy",
-        "Field Criteria Policy"
-      ]
-    },
-    {
       "id": "curso5_q30",
       "materia": "CSA - ServiceNow",
       "tema": "Scripting/Client Development",
@@ -826,30 +731,6 @@
       ]
     },
     {
-      "id": "curso5_q36",
-      "materia": "CSA - ServiceNow",
-      "tema": "CMDB",
-      "enunciado": "Which ServiceNow resource is a framework that ensures the data your ServiceNow application requires maps correctly to the appropriate CMDB tables?",
-      "alternativas": [
-        "Common Service Data Model (CSDM)",
-        "Service Mapping Utility (SMU)",
-        "Service Schema Map (SSM)",
-        "CMDB Class Manager (CMDBCM)",
-        "CI Class Manager (CICM)"
-      ],
-      "resposta_correta": [
-        0
-      ],
-      "enunciado_pt": "Qual recurso do ServiceNow é uma estrutura que garante que os dados que sua aplicação ServiceNow requer sejam mapeados corretamente para as tabelas apropriadas do CMDB?",
-      "alternativas_pt": [
-        "Common Service Data Model (CSDM)",
-        "Service Mapping Utility (SMU)",
-        "Service Schema Map (SSM)",
-        "CMDB Class Manager (CMDBCM)",
-        "CI Class Manager (CICM)"
-      ]
-    },
-    {
       "id": "curso5_q37",
       "materia": "CSA - ServiceNow",
       "tema": "CMDB",
@@ -913,28 +794,6 @@
         "Update sets",
         "Import sets",
         "System dictionaries"
-      ]
-    },
-    {
-      "id": "curso5_q41",
-      "materia": "CSA - ServiceNow",
-      "tema": "Integrations (Flow Designer)",
-      "enunciado": "IntegrationHub enables execution of third-party APIs as a part of a flow. These integrations are referred to as:",
-      "alternativas": [
-        "an action",
-        "a spoke",
-        "a connection",
-        "an integration step"
-      ],
-      "resposta_correta": [
-        1
-      ],
-      "enunciado_pt": "O IntegrationHub permite a execução de APIs de terceiros como parte de um flow. Essas integrações são chamadas de:",
-      "alternativas_pt": [
-        "uma action",
-        "um spoke",
-        "uma connection",
-        "um integration step"
       ]
     },
     {

@@ -937,30 +937,6 @@
       ]
     },
     {
-      "id": "curso3_q42",
-      "materia": "CSA - ServiceNow",
-      "tema": "Integrations (Flow Designer)",
-      "enunciado": "When designing a flow, how do you reference data from a record, in that flow?",
-      "alternativas": [
-        "Drag the table icon onto the flow definition",
-        "Use the condition builder to specify the desired values",
-        "Specify the source table on the data pill related list",
-        "Drag the data pill onto the flow definition",
-        "Add the table reference using the slush bucket"
-      ],
-      "resposta_correta": [
-        3
-      ],
-      "enunciado_pt": "Ao projetar um flow, como você referencia dados de um registro dentro desse flow?",
-      "alternativas_pt": [
-        "Arrastar o ícone da tabela para a definição do flow",
-        "Usar o condition builder para especificar os valores desejados",
-        "Especificar a tabela de origem na related list de data pill",
-        "Arrastar o data pill para a definição do flow",
-        "Adicionar a referência da tabela usando o slush bucket"
-      ]
-    },
-    {
       "id": "curso3_q43",
       "materia": "CSA - ServiceNow",
       "tema": "Integrations (Flow Designer)",
