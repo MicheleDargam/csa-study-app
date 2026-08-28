@@ -207,18 +207,20 @@
       "tema": "Knowledge Management",
       "enunciado": "On the Knowledge Base record, which tab would you use to define which users are NOT able to write/create articles?",
       "alternativas": [
-        "Can Contribute (Users not listed here cannot write)",
+        "Can Contribute",
         "Cannot Author",
-        "Can Read",
-        "Can Write"
+        "Cannot Contribute",
+        "Cannot Write",
+        "Read Only"
       ],
-      "resposta_correta": [0],
+      "resposta_correta": [2],
       "enunciado_pt": "No registro da Knowledge Base, qual aba você usaria para definir quais usuários NÃO podem escrever/criar artigos?",
       "alternativas_pt": [
-        "Can Contribute (usuários não listados aqui não podem escrever)",
+        "Can Contribute",
         "Cannot Author",
-        "Can Read",
-        "Can Write"
+        "Cannot Contribute",
+        "Cannot Write",
+        "Read Only"
       ]
     },
     {
