@@ -64,6 +64,7 @@ export function BancoQuestoesPage() {
         </div>
       ) : (
         <div className="materia-group-list">
+          <h2 className="task-group-title">Por Matéria</h2>
           {porMateria.map((group) => (
             <div key={group.materia} className="materia-group">
               <div className="materia-group-header">
