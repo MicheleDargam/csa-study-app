@@ -45,7 +45,8 @@
         "Connect Chat",
         "Collaborate Now",
         "Live Feed"
-      ]
+      ],
+      "imagem": "csa-images/curso7_q02.png"
     },
     {
       "id": "curso7_q03",
@@ -143,7 +144,8 @@
         "All > System Properties > UI Properties > ativar a propriedade \"glide.ui.advanced\".",
         "All > System Properties > UI Properties > ativar o botão \"Save\".",
         "Context Menu > Form Layout > adicionar o botão \"Save\"."
-      ]
+      ],
+      "imagem": "csa-images/curso7_q06.png"
     },
     {
       "id": "curso7_q07",
@@ -346,7 +348,8 @@
         "The Form Context menu > View > Table",
         "The Form Context menu > Configure > Dictionary",
         "The Form Context menu > Configure > Table"
-      ]
+      ],
+      "imagem": "csa-images/curso7_q16.png"
     },
     {
       "id": "curso7_q17",

@@ -579,7 +579,8 @@
         "O gerente não é membro do grupo Service Desk",
         "O gerente não é membro dos grupos Network e Hardware",
         "O campo Assignment Group manager está vazio"
-      ]
+      ],
+      "imagem": "csa-images/curso8_q25.png"
     },
     {
       "id": "curso8_q26",

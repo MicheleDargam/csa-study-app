@@ -348,6 +348,7 @@
         2
       ],
       "enunciado_pt": "Em um formulário, qual tipo de campo tem esse ícone que pode ser clicado, para ver uma prévia do registro associado?",
+      "imagem": "csa-images/curso5_q15.png",
       "alternativas_pt": [
         "Lookup",
         "Preview",
