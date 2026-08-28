@@ -51,11 +51,12 @@ export interface VisaoGeral {
 }
 
 export async function getVisaoGeral(): Promise<VisaoGeral> {
-  const [sessions, tentativas, praticas, tentativasPrepper] = await Promise.all([
+  const [sessions, tentativas, praticas, tentativasPrepper, praticasPrepper] = await Promise.all([
     db.sessions.toArray(),
     db.tentativas.toArray(),
     db.praticas.toArray(),
     db.tentativasPrepper.toArray(),
+    db.praticasPrepper.toArray(),
   ]);
 
   const studySessions = sessions.filter((s) => s.type === 'study');
@@ -74,11 +75,13 @@ export async function getVisaoGeral(): Promise<VisaoGeral> {
   const questoesRespondidas =
     tentativas.reduce((sum, t) => sum + t.total, 0) +
     praticas.reduce((sum, p) => sum + p.total, 0) +
-    tentativasPrepper.reduce((sum, t) => sum + t.total, 0);
+    tentativasPrepper.reduce((sum, t) => sum + t.total, 0) +
+    praticasPrepper.reduce((sum, p) => sum + p.total, 0);
   const acertosTotais =
     tentativas.reduce((sum, t) => sum + t.acertos, 0) +
     praticas.reduce((sum, p) => sum + p.acertos, 0) +
-    tentativasPrepper.reduce((sum, t) => sum + t.acertos, 0);
+    tentativasPrepper.reduce((sum, t) => sum + t.acertos, 0) +
+    praticasPrepper.reduce((sum, p) => sum + p.acertos, 0);
 
   return {
     horasSemana: secondsSince(weekStart) / 3600,

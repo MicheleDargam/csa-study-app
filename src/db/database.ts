@@ -1,5 +1,14 @@
 import Dexie, { type EntityTable } from 'dexie';
-import type { Subject, StudySession, Task, Simulado, Questao, TentativaSimulado, SessaoPratica, Lembrete } from '../types';
+import type {
+  Subject,
+  StudySession,
+  Task,
+  Simulado,
+  Questao,
+  TentativaSimulado,
+  SessaoPratica,
+  Lembrete,
+} from '../types';
 
 class StudyTimerDB extends Dexie {
   subjects!: EntityTable<Subject, 'id'>;
@@ -17,6 +26,9 @@ class StudyTimerDB extends Dexie {
   simuladosPrepper!: EntityTable<Simulado, 'id'>;
   questoesPrepper!: EntityTable<Questao, 'id'>;
   tentativasPrepper!: EntityTable<TentativaSimulado, 'id'>;
+  // Questões Prepper: practice-by-domain over questoesPrepper, same shape
+  // and purpose as `praticas` above but scoped to the Prepper pool.
+  praticasPrepper!: EntityTable<SessaoPratica, 'id'>;
 
   constructor() {
     super('CSAStudyTimerDB');
@@ -98,6 +110,26 @@ class StudyTimerDB extends Dexie {
       simuladosPrepper: '++id, &nome, createdAt',
       questoesPrepper: '++id, &externalId, simuladoId, tema, materia, [simuladoId+ordem]',
       tentativasPrepper: '++id, simuladoId, completedAt, [simuladoId+completedAt]',
+    });
+
+    // v8: adds Questões Prepper — practice-by-domain over questoesPrepper
+    // (mirrors praticas/Banco de Questões), plus a "Gerar Simulado" flow
+    // that draws a fresh 60-question exam (10 per domain) on the fly; both
+    // read/write the existing Prepper tables above, so only one new table
+    // (praticasPrepper) is needed here.
+    this.version(8).stores({
+      subjects: '++id, name, createdAt',
+      sessions: '++id, subjectId, startedAt, [subjectId+startedAt]',
+      tasks: '++id, subjectId, date, [subjectId+date]',
+      simulados: '++id, &nome, createdAt',
+      questoes: '++id, &externalId, simuladoId, tema, materia, [simuladoId+ordem]',
+      tentativas: '++id, simuladoId, completedAt, [simuladoId+completedAt]',
+      praticas: '++id, tema, materia, completedAt, [tema+completedAt]',
+      lembretes: '++id, tipo',
+      simuladosPrepper: '++id, &nome, createdAt',
+      questoesPrepper: '++id, &externalId, simuladoId, tema, materia, [simuladoId+ordem]',
+      tentativasPrepper: '++id, simuladoId, completedAt, [simuladoId+completedAt]',
+      praticasPrepper: '++id, tema, materia, completedAt, [tema+completedAt]',
     });
   }
 }

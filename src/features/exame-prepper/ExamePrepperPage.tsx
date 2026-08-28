@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useLiveQuery } from 'dexie-react-hooks';
-import { FileQuestion, History, RefreshCw } from 'lucide-react';
+import { Database, FileQuestion, History, RefreshCw, Wand2 } from 'lucide-react';
 import { db } from '../../db/database';
 import { seedSimuladosPrepper } from '../../db/seed';
 import { formatPercent } from '../simulados/simuladoUtils';
@@ -49,11 +49,20 @@ export function ExamePrepperPage() {
           <p className="timer-page-subtitle">Questões Prepper, separadas dos simulados do curso</p>
         </div>
         <div className="header-actions">
+          <Link to="questoes" className="timer-btn-icon" title="Questões Prepper">
+            <Database size={20} />
+          </Link>
           <Link to="historico" className="timer-btn-icon" title="Histórico de tentativas">
             <History size={20} />
           </Link>
         </div>
       </div>
+
+      {simulados && simulados.length > 0 && (
+        <button className="btn-primary" onClick={() => navigate('gerado')}>
+          <Wand2 size={18} /> Gerar Simulado (60 questões, 10 por domínio)
+        </button>
+      )}
 
       {domainStats && domainStats.length > 0 && (
         <DomainBreakdownCard

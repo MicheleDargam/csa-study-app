@@ -88,6 +88,12 @@ export interface TentativaSimulado {
   startedAt: Date;
   completedAt: Date;
   duracaoSegundos: number;
+  // Only set for an on-the-fly generated exam (e.g. Exame Prepper's
+  // "Gerar Simulado" button), which has no real simuladoId to look its
+  // question roster up by (simuladoId is 0 for these) — the exact question
+  // ids drawn for that attempt, so per-domain breakdowns can still be
+  // computed after the fact.
+  questaoIds?: number[];
 }
 
 /**

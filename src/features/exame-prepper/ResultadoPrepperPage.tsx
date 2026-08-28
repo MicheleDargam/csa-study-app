@@ -13,7 +13,7 @@ export function ResultadoPrepperPage() {
 
   const tentativa = useLiveQuery(() => db.tentativasPrepper.get(id), [id]);
   const domainStats = useLiveQuery(
-    () => (tentativa ? domainStatsForAttempt(tentativa.simuladoId, tentativa.erros) : undefined),
+    () => (tentativa ? domainStatsForAttempt(tentativa) : undefined),
     [tentativa],
   );
 

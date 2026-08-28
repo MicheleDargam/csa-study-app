@@ -38,11 +38,25 @@ function tallyByDomain(questoes: Questao[], erros: TentativaErro[], byDomain: Ma
   }
 }
 
-/** Per-domain correct/total for a single Simulado Prepper attempt. */
-export async function domainStatsForAttempt(simuladoId: number, erros: TentativaErro[]): Promise<DomainStat[]> {
-  const questoes = await db.questoesPrepper.where('simuladoId').equals(simuladoId).toArray();
+/**
+ * A generated exam ("Gerar Simulado") has no real simuladoId to look its
+ * roster up by — it stores the exact questaoIds it drew instead, so this
+ * falls back to that whenever present. Fixed Simulados Prepper keep working
+ * off simuladoId as before.
+ */
+async function getRosterForTentativa(t: TentativaSimulado): Promise<Questao[]> {
+  if (t.questaoIds && t.questaoIds.length > 0) {
+    const fetched = await db.questoesPrepper.bulkGet(t.questaoIds);
+    return fetched.filter((q): q is Questao => !!q);
+  }
+  return db.questoesPrepper.where('simuladoId').equals(t.simuladoId).toArray();
+}
+
+/** Per-domain correct/total for a single Exame Prepper attempt (fixed or generated). */
+export async function domainStatsForAttempt(tentativa: TentativaSimulado): Promise<DomainStat[]> {
+  const questoes = await getRosterForTentativa(tentativa);
   const byDomain = new Map<string, DomainStat>();
-  tallyByDomain(questoes, erros, byDomain);
+  tallyByDomain(questoes, tentativa.erros, byDomain);
   return sortByDomainOrder([...byDomain.values()]);
 }
 
@@ -51,13 +65,17 @@ export async function domainStatsAcrossAllAttempts(): Promise<DomainStat[]> {
   const tentativas: TentativaSimulado[] = await db.tentativasPrepper.toArray();
   const byDomain = new Map<string, DomainStat>();
 
-  // Cache each simulado's question roster — the same exam may be retaken
-  // more than once, and its roster doesn't change between attempts.
+  // Cache each fixed simulado's question roster — the same exam may be
+  // retaken more than once, and its roster doesn't change between attempts.
+  // Generated attempts each drew their own one-off set, so they're never
+  // worth caching.
   const rosterCache = new Map<number, Questao[]>();
   for (const t of tentativas) {
-    let questoes = rosterCache.get(t.simuladoId);
-    if (!questoes) {
-      questoes = await db.questoesPrepper.where('simuladoId').equals(t.simuladoId).toArray();
+    let questoes: Questao[];
+    if (t.questaoIds && t.questaoIds.length > 0) {
+      questoes = await getRosterForTentativa(t);
+    } else {
+      questoes = rosterCache.get(t.simuladoId) ?? (await getRosterForTentativa(t));
       rosterCache.set(t.simuladoId, questoes);
     }
     tallyByDomain(questoes, t.erros, byDomain);

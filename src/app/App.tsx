@@ -20,6 +20,11 @@ import { ExamePrepperPage } from '../features/exame-prepper/ExamePrepperPage';
 import { SimuladoPrepperRunnerPage } from '../features/exame-prepper/SimuladoPrepperRunnerPage';
 import { ResultadoPrepperPage } from '../features/exame-prepper/ResultadoPrepperPage';
 import { HistoricoPrepperPage } from '../features/exame-prepper/HistoricoPrepperPage';
+import { QuestoesPrepperPage } from '../features/exame-prepper/QuestoesPrepperPage';
+import { DomainPracticaPrepperPage } from '../features/exame-prepper/DomainPracticaPrepperPage';
+import { ResultadoPraticaPrepperPage } from '../features/exame-prepper/ResultadoPraticaPrepperPage';
+import { HistoricoPraticaPrepperPage } from '../features/exame-prepper/HistoricoPraticaPrepperPage';
+import { SimuladoGeradoPage } from '../features/exame-prepper/SimuladoGeradoPage';
 import {
   seedDefaultMaterias,
   seedSimulados,
@@ -74,6 +79,11 @@ export function App() {
               <Route path="/exame-prepper" element={<ExamePrepperPage />} />
               <Route path="/exame-prepper/historico" element={<HistoricoPrepperPage />} />
               <Route path="/exame-prepper/resultado/:tentativaId" element={<ResultadoPrepperPage />} />
+              <Route path="/exame-prepper/gerado" element={<SimuladoGeradoPage />} />
+              <Route path="/exame-prepper/questoes" element={<QuestoesPrepperPage />} />
+              <Route path="/exame-prepper/questoes/dominio" element={<DomainPracticaPrepperPage />} />
+              <Route path="/exame-prepper/questoes/historico" element={<HistoricoPraticaPrepperPage />} />
+              <Route path="/exame-prepper/questoes/resultado/:praticaId" element={<ResultadoPraticaPrepperPage />} />
               <Route path="/exame-prepper/:simuladoId" element={<SimuladoPrepperRunnerPage />} />
               <Route
                 path="/progresso"
