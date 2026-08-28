@@ -109,6 +109,14 @@ function ReviewCard({ erro, questao }: ReviewCardProps) {
         )}
       </div>
 
+      {questao.imagem && (
+        <img
+          src={`${import.meta.env.BASE_URL}${questao.imagem}`}
+          alt="Diagrama da questão"
+          className="question-card-image"
+        />
+      )}
+
       <p className="question-card-enunciado">{questao.enunciado}</p>
 
       {showTranslation && <TranslationPanel questao={questao} />}

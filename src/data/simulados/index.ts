@@ -18,6 +18,7 @@ export interface QuestaoJSON {
   nota?: string;
   enunciado_pt?: string;
   alternativas_pt?: string[];
+  imagem?: string; // path under public/, e.g. "prepper-images/q123.png"
 }
 
 export interface SimuladoJSON {

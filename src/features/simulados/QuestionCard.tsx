@@ -49,6 +49,14 @@ export function QuestionCard({ questao, index, total, selected, onChange }: Ques
 
       {multi && <p className="question-card-hint">Selecione todas as alternativas corretas</p>}
 
+      {questao.imagem && (
+        <img
+          src={`${import.meta.env.BASE_URL}${questao.imagem}`}
+          alt="Diagrama da questão"
+          className="question-card-image"
+        />
+      )}
+
       <p className="question-card-enunciado">{questao.enunciado}</p>
 
       {showTranslation && <TranslationPanel questao={questao} />}

@@ -70,6 +70,7 @@ export interface Questao {
   ordem: number; // preserves original question order within the simulado
   enunciadoPt?: string; // PT-BR translation, shown alongside the English text when toggled
   alternativasPt?: string[]; // same order/length as `alternativas`
+  imagem?: string; // optional diagram/screenshot the question references, shown above the enunciado
 }
 
 export interface TentativaErro {

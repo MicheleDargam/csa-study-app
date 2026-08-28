@@ -199,6 +199,7 @@ async function upsertQuestao(
     nota: q.nota,
     enunciadoPt: q.enunciado_pt,
     alternativasPt: q.alternativas_pt,
+    imagem: q.imagem,
   };
 
   if (!existing) {
@@ -212,6 +213,7 @@ async function upsertQuestao(
     existing.enunciado !== fields.enunciado ||
     existing.nota !== fields.nota ||
     existing.enunciadoPt !== fields.enunciadoPt ||
+    existing.imagem !== fields.imagem ||
     JSON.stringify(existing.alternativas) !== JSON.stringify(fields.alternativas) ||
     JSON.stringify(existing.respostaCorreta) !== JSON.stringify(fields.respostaCorreta) ||
     JSON.stringify(existing.alternativasPt) !== JSON.stringify(fields.alternativasPt);
