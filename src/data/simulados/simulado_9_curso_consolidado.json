@@ -2,29 +2,6 @@
   "simulado": "Simulado 9 - Curso Consolidado (7/7)",
   "questoes": [
     {
-      "id": "curso9_q01",
-      "materia": "CSA - ServiceNow",
-      "tema": "UI Fundamentals",
-      "enunciado": "You are showing your customer a new form that you have created for their new application. They would like to add a field to the form. Where could you do that? (Choose two.)",
-      "alternativas": [
-        "Select Fields and Columns module",
-        "Right click on form header, select Configure > Form Layout",
-        "Click on context menu, select Configure > Form Designer",
-        "Select Field Class Manager module"
-      ],
-      "resposta_correta": [
-        1,
-        2
-      ],
-      "enunciado_pt": "Você está mostrando ao seu cliente um novo formulário que você criou para a nova aplicação dele. Ele gostaria de adicionar um campo ao formulário. Onde você poderia fazer isso? (Escolha duas.)",
-      "alternativas_pt": [
-        "Selecionar o módulo Fields and Columns",
-        "Clicar com o botão direito no cabeçalho do formulário, selecionar Configure > Form Layout",
-        "Clicar no menu de contexto, selecionar Configure > Form Designer",
-        "Selecionar o módulo Field Class Manager"
-      ]
-    },
-    {
       "id": "curso9_q02",
       "materia": "CSA - ServiceNow",
       "tema": "UI Fundamentals",
@@ -222,34 +199,6 @@
         "Editando system scripts",
         "Alterando o schema do banco de dados",
         "Alterando o tema do cabeçalho da página"
-      ]
-    },
-    {
-      "id": "curso9_q11",
-      "materia": "CSA - ServiceNow",
-      "tema": "Database/Tables",
-      "enunciado": "What field contains a record's 32-character, unique identifier?",
-      "alternativas": [
-        "sn_rec_id",
-        "rec_id",
-        "u_id",
-        "sys_id",
-        "sn_gu_id",
-        "sn_sys_id",
-        "id"
-      ],
-      "resposta_correta": [
-        3
-      ],
-      "enunciado_pt": "Qual campo contém o identificador único de 32 caracteres de um registro?",
-      "alternativas_pt": [
-        "sn_rec_id",
-        "rec_id",
-        "u_id",
-        "sys_id",
-        "sn_gu_id",
-        "sn_sys_id",
-        "id"
       ]
     },
     {

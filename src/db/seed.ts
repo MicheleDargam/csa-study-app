@@ -207,6 +207,32 @@ export async function migrateRemoveDuplicateQuestoesV2(): Promise<void> {
   localStorage.setItem(DUPLICATE_QUESTOES_MIGRATION_V2_FLAG, '1');
 }
 
+// externalIds of the 2 questions found duplicated in Simulado 9 (the one
+// "Curso Consolidado" file skipped by the first two passes, since it was
+// treated as an untouchable reference copy like Simulados 1/2 until the user
+// asked for it to be checked too). Both restate a question already in
+// Simulado 2. Found 2026-08-28.
+const DUPLICATE_QUESTOES_EXTERNAL_IDS_V3 = ['curso9_q01', 'curso9_q11'];
+
+const DUPLICATE_QUESTOES_MIGRATION_V3_FLAG = 'csa-duplicate-questoes-migration-v3';
+
+/**
+ * Third one-time migration, same purpose as migrateRemoveDuplicateQuestoes()/
+ * migrateRemoveDuplicateQuestoesV2() but for the 2 duplicates found in
+ * Simulado 9 (see DUPLICATE_QUESTOES_EXTERNAL_IDS_V3's comment). Kept as a
+ * separate function/flag for the same reason as V2 — V1/V2 may have already
+ * run for some users.
+ */
+export async function migrateRemoveDuplicateQuestoesV3(): Promise<void> {
+  if (localStorage.getItem(DUPLICATE_QUESTOES_MIGRATION_V3_FLAG)) return;
+
+  await db.transaction('rw', db.questoes, async () => {
+    await db.questoes.where('externalId').anyOf(DUPLICATE_QUESTOES_EXTERNAL_IDS_V3).delete();
+  });
+
+  localStorage.setItem(DUPLICATE_QUESTOES_MIGRATION_V3_FLAG, '1');
+}
+
 type UpsertResult = 'inserted' | 'updated' | 'unchanged';
 
 /**

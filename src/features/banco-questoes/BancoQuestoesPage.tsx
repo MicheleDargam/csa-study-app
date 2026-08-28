@@ -1,10 +1,8 @@
-import { useMemo, useState } from 'react';
+import { useMemo } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useLiveQuery } from 'dexie-react-hooks';
 import { ArrowLeft, Database, History } from 'lucide-react';
 import { db } from '../../db/database';
-
-type View = 'tema' | 'materia';
 
 interface TemaGroup {
   tema: string;
@@ -14,7 +12,6 @@ interface TemaGroup {
 
 export function BancoQuestoesPage() {
   const navigate = useNavigate();
-  const [view, setView] = useState<View>('tema');
   const questoes = useLiveQuery(() => db.questoes.toArray(), []);
 
   const porTema = useMemo<TemaGroup[]>(() => {
@@ -66,52 +63,24 @@ export function BancoQuestoesPage() {
           <p className="history-empty-sub">Importe um simulado para popular o banco de questões.</p>
         </div>
       ) : (
-        <>
-          <div className="segmented-control">
-            <button
-              className={`segmented-btn ${view === 'tema' ? 'segmented-btn--active' : ''}`}
-              onClick={() => setView('tema')}
-            >
-              Por Tema
-            </button>
-            <button
-              className={`segmented-btn ${view === 'materia' ? 'segmented-btn--active' : ''}`}
-              onClick={() => setView('materia')}
-            >
-              Por Matéria
-            </button>
-          </div>
-
-          {view === 'tema' ? (
-            <div className="materias-list">
-              {porTema.map((item) => (
-                <button key={item.tema} className="tema-row" onClick={() => goToTema(item.tema, item.materia)}>
-                  <span className="tema-row-name">{item.tema}</span>
-                  <span className="tema-row-count">{item.count} questões</span>
-                </button>
-              ))}
+        <div className="materia-group-list">
+          {porMateria.map((group) => (
+            <div key={group.materia} className="materia-group">
+              <div className="materia-group-header">
+                <span className="materia-group-name">{group.materia}</span>
+                <span className="materia-group-total">{group.total} questões</span>
+              </div>
+              <div className="materias-list">
+                {group.temas.map((item) => (
+                  <button key={item.tema} className="tema-row" onClick={() => goToTema(item.tema, group.materia)}>
+                    <span className="tema-row-name">{item.tema}</span>
+                    <span className="tema-row-count">{item.count} questões</span>
+                  </button>
+                ))}
+              </div>
             </div>
-          ) : (
-            <div className="materia-group-list">
-              {porMateria.map((group) => (
-                <div key={group.materia} className="materia-group">
-                  <div className="materia-group-header">
-                    <span className="materia-group-name">{group.materia}</span>
-                    <span className="materia-group-total">{group.total} questões</span>
-                  </div>
-                  <div className="materias-list">
-                    {group.temas.map((item) => (
-                      <button key={item.tema} className="tema-row" onClick={() => goToTema(item.tema, group.materia)}>
-                        <span className="tema-row-name">{item.tema}</span>
-                        <span className="tema-row-count">{item.count} questões</span>
-                      </button>
-                    ))}
-                  </div>
-                </div>
-              ))}
-            </div>
-          )}
-        </>
+          ))}
+        </div>
       )}
     </div>
   );
