@@ -43,7 +43,9 @@ export function ExamePrepperPage() {
     <div className="simulados-page">
       <div className="timer-page-header">
         <div>
-          <h1 className="timer-page-title">Exame Prepper</h1>
+          <h1 className="timer-page-title">
+            Exame Prepper <span className="title-badge">CSA</span>
+          </h1>
           <p className="timer-page-subtitle">Questões Prepper, separadas dos simulados do curso</p>
         </div>
         <div className="header-actions">

@@ -1467,6 +1467,20 @@ body::before {
   border-radius: 10px;
 }
 
+/* Small tag next to a page title, e.g. "Exame Prepper CSA" — marks which
+   certification track a page belongs to (more tracks may be added later). */
+.title-badge {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--color-accent);
+  background: rgba(99, 102, 241, 0.1);
+  padding: 3px 10px;
+  border-radius: 10px;
+  margin-left: 4px;
+}
+
 .question-card-hint {
   font-size: 0.75rem;
   color: var(--color-text-muted);
