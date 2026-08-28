@@ -1253,6 +1253,97 @@
         "Um fix script",
         "Uma business rule"
       ]
+    },
+    {
+      "id": "curso9_q10",
+      "materia": "CSA - ServiceNow",
+      "tema": "UI Fundamentals",
+      "enunciado": "How can an administrator modify the layout of a form using Table Builder?",
+      "alternativas": [
+        "By configuring form sections",
+        "By editing system scripts",
+        "By changing the database schema",
+        "By altering the page header theme"
+      ],
+      "resposta_correta": [
+        0
+      ],
+      "enunciado_pt": "Como um administrador pode modificar o layout de um formulário usando o Table Builder?",
+      "alternativas_pt": [
+        "Configurando form sections",
+        "Editando system scripts",
+        "Alterando o schema do banco de dados",
+        "Alterando o tema do cabeçalho da página"
+      ]
+    },
+    {
+      "id": "curso9_q14",
+      "materia": "CSA - ServiceNow",
+      "tema": "Database/Tables",
+      "enunciado": "How would you navigate to the Schema map for a table?",
+      "alternativas": [
+        "System Definition > Tables; Select Table; Go to Related links and click Show Schema Map",
+        "System Dictionary > Show Schema Map; Select Table",
+        "System Definition > Show Schema Map; Select Table",
+        "System Definition > Dictionary; Select Table; Go to Related links and click Show Schema Map"
+      ],
+      "resposta_correta": [
+        0
+      ],
+      "enunciado_pt": "Como você navegaria até o Schema map de uma tabela?",
+      "alternativas_pt": [
+        "System Definition > Tables; Select Table; Go to Related links and click Show Schema Map",
+        "System Dictionary > Show Schema Map; Select Table",
+        "System Definition > Show Schema Map; Select Table",
+        "System Definition > Dictionary; Select Table; Go to Related links and click Show Schema Map"
+      ]
+    },
+    {
+      "id": "curso9_q18",
+      "materia": "CSA - ServiceNow",
+      "tema": "Security/ACL",
+      "enunciado": "A Role is defined as what?",
+      "alternativas": [
+        "A collection of permissions",
+        "A set of user access policies",
+        "A Persona in a workflow",
+        "A set of access control rules"
+      ],
+      "resposta_correta": [
+        0
+      ],
+      "enunciado_pt": "Uma Role é definida como o quê?",
+      "alternativas_pt": [
+        "Uma coleção de permissões",
+        "Um conjunto de políticas de acesso de usuário",
+        "Uma Persona em um workflow",
+        "Um conjunto de regras de access control"
+      ]
+    },
+    {
+      "id": "curso9_q23",
+      "materia": "CSA - ServiceNow",
+      "tema": "Security/ACL",
+      "enunciado": "Which components are the customer's responsibility according to the Shared Responsibility Model? (Choose two.)",
+      "alternativas": [
+        "Infrastructure management",
+        "Authentication and authorization",
+        "Media disposal and destruction",
+        "Data encryption at rest",
+        "Backup and restore"
+      ],
+      "resposta_correta": [
+        1,
+        4
+      ],
+      "enunciado_pt": "Quais componentes são de responsabilidade do cliente de acordo com o Shared Responsibility Model? (Escolha duas.)",
+      "alternativas_pt": [
+        "Gerenciamento de infraestrutura",
+        "Autenticação e autorização",
+        "Descarte e destruição de mídia",
+        "Criptografia de dados em repouso (at rest)",
+        "Backup e restauração"
+      ]
     }
   ]
 }

@@ -1339,6 +1339,28 @@
         "Get, Test, Push",
         "Pull, Review, Push"
       ]
+    },
+    {
+      "id": "curso9_q21",
+      "materia": "CSA - ServiceNow",
+      "tema": "Security/ACL",
+      "enunciado": "An administrator creates \"customer_table_admin\" and \"customer_table_user\" roles for the newly created \"Customer Table\". Which ACL rule would grant access to all rows and all fields to both the customer_table_admin and customer_table_user roles?",
+      "alternativas": [
+        "customer.none",
+        "customer.all",
+        "customer.field",
+        "customer.*"
+      ],
+      "resposta_correta": [
+        3
+      ],
+      "enunciado_pt": "Um administrador cria as roles \"customer_table_admin\" e \"customer_table_user\" para a nova \"Customer Table\". Qual regra de ACL concederia acesso a todas as linhas e todos os campos tanto para a role customer_table_admin quanto para customer_table_user?",
+      "alternativas_pt": [
+        "customer.none",
+        "customer.all",
+        "customer.field",
+        "customer.*"
+      ]
     }
   ]
 }

@@ -36,6 +36,7 @@ import {
   migrateRemoveDuplicateQuestoes,
   migrateRemoveDuplicateQuestoesV2,
   migrateRemoveDuplicateQuestoesV3,
+  migrateRemoveSimulado9,
 } from '../db/seed';
 
 // recharts pulls in a sizeable chunk — only fetch it when Progresso is visited
@@ -53,6 +54,7 @@ export function App() {
     migrateRemoveDuplicateQuestoes();
     migrateRemoveDuplicateQuestoesV2();
     migrateRemoveDuplicateQuestoesV3();
+    migrateRemoveSimulado9();
     seedSimulados();
     seedAvulsas();
     seedSimuladosPrepper();

@@ -1105,6 +1105,238 @@
         "Browser",
         "Server"
       ]
+    },
+    {
+      "id": "curso9_q02",
+      "materia": "CSA - ServiceNow",
+      "tema": "UI Fundamentals",
+      "enunciado": "Which collaboration tool opens a sidebar and allows you to create new conversations with other ServiceNow users?",
+      "alternativas": [
+        "Skype Now",
+        "Collaborate Now",
+        "Agent Messenger",
+        "Agent Chat",
+        "Connect Chat"
+      ],
+      "resposta_correta": [
+        4
+      ],
+      "enunciado_pt": "Qual ferramenta de colaboração abre uma barra lateral e permite criar novas conversas com outros usuários do ServiceNow?",
+      "alternativas_pt": [
+        "Skype Now",
+        "Collaborate Now",
+        "Agent Messenger",
+        "Agent Chat",
+        "Connect Chat"
+      ]
+    },
+    {
+      "id": "curso9_q03",
+      "materia": "CSA - ServiceNow",
+      "tema": "UI Fundamentals",
+      "enunciado": "On a filter condition, which component is always a choice list?",
+      "alternativas": [
+        "Operator",
+        "Filter Criteria",
+        "Operation",
+        "Match Criteria"
+      ],
+      "resposta_correta": [
+        0
+      ],
+      "enunciado_pt": "Em uma condição de filtro, qual componente é sempre uma lista de opções (choice list)?",
+      "alternativas_pt": [
+        "Operator",
+        "Filter Criteria",
+        "Operation",
+        "Match Criteria"
+      ]
+    },
+    {
+      "id": "curso9_q04",
+      "materia": "CSA - ServiceNow",
+      "tema": "UI Fundamentals",
+      "enunciado": "What section on a task record would you use to see the most recent update made to a record?",
+      "alternativas": [
+        "Audit Log",
+        "Timeline",
+        "Activity",
+        "Journal"
+      ],
+      "resposta_correta": [
+        2
+      ],
+      "enunciado_pt": "Qual seção em um registro de task você usaria para ver a atualização mais recente feita em um registro?",
+      "alternativas_pt": [
+        "Audit Log",
+        "Timeline",
+        "Activity",
+        "Journal"
+      ]
+    },
+    {
+      "id": "curso9_q05",
+      "materia": "CSA - ServiceNow",
+      "tema": "UI Fundamentals",
+      "enunciado": "While on an Incident record, how would you add a Tag for \"Special Handling\" to the record?",
+      "alternativas": [
+        "Click on the Context menu, select Add Tag, type Special Handling, press enter",
+        "Click on the More options (...) icon, click Add Tag, type Special Handling, press enter",
+        "On the Tag field, select Special Handling from the choice list",
+        "On the Special Handling field, check the box"
+      ],
+      "resposta_correta": [
+        1
+      ],
+      "enunciado_pt": "Estando em um registro de Incident, como você adicionaria uma Tag de \"Special Handling\" ao registro?",
+      "alternativas_pt": [
+        "Clicar no Context menu, selecionar Add Tag, digitar Special Handling, pressionar enter",
+        "Clicar no ícone More options (...), clicar em Add Tag, digitar Special Handling, pressionar enter",
+        "No campo Tag, selecionar Special Handling na choice list",
+        "No campo Special Handling, marcar a caixa"
+      ]
+    },
+    {
+      "id": "curso9_q06",
+      "materia": "CSA - ServiceNow",
+      "tema": "UI Fundamentals",
+      "enunciado": "A colleague wants to rearrange the columns on their My Work List. Once the user has navigated to the list, where should they navigate to select and arrange the columns?",
+      "alternativas": [
+        "Right click on any column header, Context Menu > Configure > List Layout",
+        "Click List Context Menu > Configure > List Layout",
+        "Click List Context Menu > Personalize List",
+        "Click Personalize List"
+      ],
+      "resposta_correta": [
+        3
+      ],
+      "enunciado_pt": "Um colega quer reorganizar as colunas da My Work List dele. Depois de acessar a lista, para onde ele deveria navegar para selecionar e organizar as colunas?",
+      "alternativas_pt": [
+        "Clicar com o botão direito em qualquer cabeçalho de coluna, Context Menu > Configure > List Layout",
+        "Clicar em List Context Menu > Configure > List Layout",
+        "Clicar em List Context Menu > Personalize List",
+        "Clicar em Personalize List"
+      ]
+    },
+    {
+      "id": "curso9_q08",
+      "materia": "CSA - ServiceNow",
+      "tema": "UI Fundamentals",
+      "enunciado": "Which would NOT appear in the History section of the Application Navigator?",
+      "alternativas": [
+        "Records",
+        "UI Pages",
+        "Lists",
+        "Forms"
+      ],
+      "resposta_correta": [
+        1
+      ],
+      "enunciado_pt": "O que NÃO apareceria na seção History do Application Navigator?",
+      "alternativas_pt": [
+        "Records",
+        "UI Pages",
+        "Lists",
+        "Forms"
+      ]
+    },
+    {
+      "id": "curso9_q12",
+      "materia": "CSA - ServiceNow",
+      "tema": "Database/Tables",
+      "enunciado": "What type of field has a drop down list, from which you can pick from pre-defined options?",
+      "alternativas": [
+        "Choice",
+        "Picker",
+        "Drop down",
+        "Option"
+      ],
+      "resposta_correta": [
+        0
+      ],
+      "enunciado_pt": "Que tipo de campo tem uma lista suspensa (drop down), da qual você pode escolher entre opções pré-definidas?",
+      "alternativas_pt": [
+        "Choice",
+        "Picker",
+        "Drop down",
+        "Option"
+      ]
+    },
+    {
+      "id": "curso9_q15",
+      "materia": "CSA - ServiceNow",
+      "tema": "Database/Tables",
+      "enunciado": "Which tables are available by default in a ServiceNow instance? (Choose three.)",
+      "alternativas": [
+        "User",
+        "Issue",
+        "Incident",
+        "Project",
+        "Task",
+        "Item"
+      ],
+      "resposta_correta": [
+        0,
+        2,
+        4
+      ],
+      "enunciado_pt": "Quais tabelas estão disponíveis por padrão em uma instância do ServiceNow? (Escolha três.)",
+      "alternativas_pt": [
+        "User",
+        "Issue",
+        "Incident",
+        "Project",
+        "Task",
+        "Item"
+      ]
+    },
+    {
+      "id": "curso9_q19",
+      "materia": "CSA - ServiceNow",
+      "tema": "Security/ACL",
+      "enunciado": "In what order are Access Controls evaluated?",
+      "alternativas": [
+        "Field-level - most specific to most general; then Table-level - most specific to most general",
+        "Field-level - most general to most specific; then Row-level - most specific to most general",
+        "Table-level - most specific to most general; then Field-level - most specific to most general",
+        "Table-level - most specific to most general, then Row-level - most specific to most general"
+      ],
+      "resposta_correta": [
+        2
+      ],
+      "enunciado_pt": "Em que ordem os Access Controls são avaliados?",
+      "alternativas_pt": [
+        "Nível de campo - do mais específico para o mais geral; depois nível de tabela - do mais específico para o mais geral",
+        "Nível de campo - do mais geral para o mais específico; depois nível de linha - do mais específico para o mais geral",
+        "Nível de tabela - do mais específico para o mais geral; depois nível de campo - do mais específico para o mais geral",
+        "Nível de tabela - do mais específico para o mais geral, depois nível de linha - do mais específico para o mais geral"
+      ]
+    },
+    {
+      "id": "curso9_q24",
+      "materia": "CSA - ServiceNow",
+      "tema": "Notifications",
+      "enunciado": "When creating a new notification, what must you define? (Choose three.)",
+      "alternativas": [
+        "The associated knowledge base",
+        "Settings for handing inactive user accounts",
+        "Under what conditions is the notification sent",
+        "Who receives the notification",
+        "What the content of the notification"
+      ],
+      "resposta_correta": [
+        2,
+        3,
+        4
+      ],
+      "enunciado_pt": "Ao criar uma nova notificação, o que você precisa definir? (Escolha três.)",
+      "alternativas_pt": [
+        "A knowledge base associada",
+        "Configurações para lidar com contas de usuário inativas",
+        "Sob quais condições a notificação é enviada",
+        "Quem recebe a notificação",
+        "Qual é o conteúdo da notificação"
+      ]
     }
   ]
 }

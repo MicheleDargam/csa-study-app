@@ -1176,6 +1176,141 @@
         "PHP",
         "Python"
       ]
+    },
+    {
+      "id": "curso9_q07",
+      "materia": "CSA - ServiceNow",
+      "tema": "UI Fundamentals",
+      "enunciado": "On a list, what does each row show?",
+      "alternativas": [
+        "A filter",
+        "A record",
+        "A table",
+        "A field"
+      ],
+      "resposta_correta": [
+        1
+      ],
+      "enunciado_pt": "Em uma lista, o que cada linha mostra?",
+      "alternativas_pt": [
+        "A filter",
+        "A record",
+        "A table",
+        "A field"
+      ]
+    },
+    {
+      "id": "curso9_q09",
+      "materia": "CSA - ServiceNow",
+      "tema": "UI Fundamentals",
+      "enunciado": "What is the purpose of a Related List?",
+      "alternativas": [
+        "To create a one-to-many relationship",
+        "To dot-walk to a core table",
+        "To present related fields",
+        "To present related records"
+      ],
+      "resposta_correta": [
+        3
+      ],
+      "enunciado_pt": "Qual é o propósito de uma Related List?",
+      "alternativas_pt": [
+        "Criar um relacionamento one-to-many",
+        "Fazer dot-walk até uma core table",
+        "Apresentar campos relacionados",
+        "Apresentar registros relacionados"
+      ]
+    },
+    {
+      "id": "curso9_q13",
+      "materia": "CSA - ServiceNow",
+      "tema": "Database/Tables",
+      "enunciado": "Which modules can you use to create a new table? (Choose two.)",
+      "alternativas": [
+        "Dictionary",
+        "Schema Map",
+        "Tables",
+        "Tables & Columns"
+      ],
+      "resposta_correta": [
+        2,
+        3
+      ],
+      "enunciado_pt": "Quais módulos você pode usar para criar uma nova tabela? (Escolha dois.)",
+      "alternativas_pt": [
+        "Dictionary",
+        "Schema Map",
+        "Tables",
+        "Tables & Columns"
+      ]
+    },
+    {
+      "id": "curso9_q16",
+      "materia": "CSA - ServiceNow",
+      "tema": "Database/Tables",
+      "enunciado": "Which of the following statements is true when a new table is created by extending another table?",
+      "alternativas": [
+        "The new table archives the parent table and assumed its roles in the database",
+        "The new table inherits all of the Business Rules, Client Scripts, and UI Policies of the parent table, but none of the existing fields",
+        "The new table inherits all of the fields of the parent table and can also contain new fields unique to itself",
+        "The new table inherits all of the fields, but does not inherit Access Control rules, Client Scripts, and UI Policies of the parent table"
+      ],
+      "resposta_correta": [
+        2
+      ],
+      "enunciado_pt": "Qual das afirmações a seguir é verdadeira quando uma nova tabela é criada estendendo outra tabela?",
+      "alternativas_pt": [
+        "A nova tabela arquiva a tabela pai e assume seus papéis no banco de dados",
+        "A nova tabela herda todas as Business Rules, Client Scripts, e UI Policies da tabela pai, mas nenhum dos campos existentes",
+        "A nova tabela herda todos os campos da tabela pai e também pode conter novos campos exclusivos dela",
+        "A nova tabela herda todos os campos, mas não herda as Access Control rules, Client Scripts, e UI Policies da tabela pai"
+      ]
+    },
+    {
+      "id": "curso9_q20",
+      "materia": "CSA - ServiceNow",
+      "tema": "Security/ACL",
+      "enunciado": "Roles can inherit permissions from other roles. Which role inherits all of the permissions of the catalog role, and the user_criteria_admin role, plus has permissions to create Items and Services?",
+      "alternativas": [
+        "Sys Admin [sys_admin]",
+        "Catalog Admin [catalog_admin]",
+        "Catalog Author [sn_catalog_write]",
+        "Item Admin [sn_item_admin]"
+      ],
+      "resposta_correta": [
+        1
+      ],
+      "enunciado_pt": "Roles podem herdar permissões de outras roles. Qual role herda todas as permissões da role catalog, e da role user_criteria_admin, além de ter permissão para criar Items e Services?",
+      "alternativas_pt": [
+        "Sys Admin [sys_admin]",
+        "Catalog Admin [catalog_admin]",
+        "Catalog Author [sn_catalog_write]",
+        "Item Admin [sn_item_admin]"
+      ]
+    },
+    {
+      "id": "curso9_q25",
+      "materia": "CSA - ServiceNow",
+      "tema": "Task Management",
+      "enunciado": "What feature can track the amount of time that a task has been open, to ensure that tasks are completed within an allotted time?",
+      "alternativas": [
+        "Task Escalation Clock",
+        "Service Level Agreements",
+        "Inactivity Monitor",
+        "Response Time Clock",
+        "Business Time Remaining"
+      ],
+      "resposta_correta": [
+        1
+      ],
+      "enunciado_pt": "Qual recurso consegue rastrear o tempo que uma task está aberta, para garantir que as tarefas sejam concluídas dentro do prazo estipulado?",
+      "alternativas_pt": [
+        "Task Escalation Clock",
+        "Service Level Agreements",
+        "Inactivity Monitor",
+        "Response Time Clock",
+        "Business Time Remaining"
+      ]
     }
   ]
 }

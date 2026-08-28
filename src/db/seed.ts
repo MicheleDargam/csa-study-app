@@ -233,6 +233,39 @@ export async function migrateRemoveDuplicateQuestoesV3(): Promise<void> {
   localStorage.setItem(DUPLICATE_QUESTOES_MIGRATION_V3_FLAG, '1');
 }
 
+const SIMULADO_9_NOME = 'Simulado 9 - Curso Consolidado (7/7)';
+const REMOVE_SIMULADO_9_MIGRATION_FLAG = 'csa-remove-simulado-9-migration-v1';
+
+/**
+ * One-time migration that removes the Simulado 9 record (plus its questoes
+ * and attempt history) now that its remaining 24 questions have been folded
+ * into Simulados 3-8 — spread across them so all 6 land at an equal 57
+ * questions instead of leaving Simulado 9 sitting at 24 on its own. Same
+ * shape as migrateDedupCursoSimulados(): seedSimulados()/upsertQuestao()
+ * only ever insert-or-update by externalId, so a question that moved from
+ * Simulado 9 to, say, Simulado 6 in the bundled JSON would otherwise keep
+ * pointing at the old (now-deleted-from-BUNDLED_SIMULADOS) Simulado 9 forever
+ * in a browser that already had it — deleting the old rows here lets
+ * seedSimulados() re-insert them fresh under their new simuladoId right
+ * after this migration runs. Guarded by a localStorage flag so it only runs
+ * once per browser; DB writes are wrapped in one transaction so StrictMode's
+ * double-invoked effects can't race.
+ */
+export async function migrateRemoveSimulado9(): Promise<void> {
+  if (localStorage.getItem(REMOVE_SIMULADO_9_MIGRATION_FLAG)) return;
+
+  await db.transaction('rw', db.simulados, db.questoes, db.tentativas, async () => {
+    const simulado = await db.simulados.where('nome').equals(SIMULADO_9_NOME).first();
+    if (simulado?.id) {
+      await db.questoes.where('simuladoId').equals(simulado.id).delete();
+      await db.tentativas.where('simuladoId').equals(simulado.id).delete();
+      await db.simulados.delete(simulado.id);
+    }
+  });
+
+  localStorage.setItem(REMOVE_SIMULADO_9_MIGRATION_FLAG, '1');
+}
+
 type UpsertResult = 'inserted' | 'updated' | 'unchanged';
 
 /**

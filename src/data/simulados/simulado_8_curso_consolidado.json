@@ -1286,6 +1286,28 @@
         "Linhas duplicadas são rejeitadas na importação.",
         "Todas as linhas são tratadas como novos registros, mas erros serão sinalizados no log de importação"
       ]
+    },
+    {
+      "id": "curso9_q26",
+      "materia": "CSA - ServiceNow",
+      "tema": "Task Management",
+      "enunciado": "If you want to manage your personal tasks through a visual, drag-and-drop interface, what application would you use?",
+      "alternativas": [
+        "Service Desk",
+        "Virtual Agent Homepage",
+        "Visual Task Boards",
+        "Personal Task Tracker"
+      ],
+      "resposta_correta": [
+        2
+      ],
+      "enunciado_pt": "Se você quiser gerenciar suas tasks pessoais através de uma interface visual de arrastar e soltar (drag-and-drop), qual aplicação você usaria?",
+      "alternativas_pt": [
+        "Service Desk",
+        "Virtual Agent Homepage",
+        "Visual Task Boards",
+        "Personal Task Tracker"
+      ]
     }
   ]
 }

@@ -1300,6 +1300,58 @@
         "Server-side (banco de dados)",
         "Dentro de scripts server-side"
       ]
+    },
+    {
+      "id": "curso9_q17",
+      "materia": "CSA - ServiceNow",
+      "tema": "Security/ACL",
+      "enunciado": "What are three security modules often used by the System Administrator? (Choose three.)",
+      "alternativas": [
+        "System Properties > Security",
+        "Utilities > Migrate Security",
+        "System Security > Security",
+        "Self-Service > My Access",
+        "System Security > Access Control (ACL)",
+        "Password Management > Security Questions",
+        "System Security > High Security Settings"
+      ],
+      "resposta_correta": [
+        0,
+        4,
+        6
+      ],
+      "enunciado_pt": "Quais são três módulos de segurança frequentemente usados pelo System Administrator? (Escolha três.)",
+      "alternativas_pt": [
+        "System Properties > Security",
+        "Utilities > Migrate Security",
+        "System Security > Security",
+        "Self-Service > My Access",
+        "System Security > Access Control (ACL)",
+        "Password Management > Security Questions",
+        "System Security > High Security Settings"
+      ]
+    },
+    {
+      "id": "curso9_q22",
+      "materia": "CSA - ServiceNow",
+      "tema": "Security/ACL",
+      "enunciado": "Which group of permissions is used to control Application and Module access?",
+      "alternativas": [
+        "Access Control Rules",
+        "UI Policies",
+        "Roles",
+        "Assignment Rules"
+      ],
+      "resposta_correta": [
+        2
+      ],
+      "enunciado_pt": "Qual grupo de permissões é usado para controlar o acesso a Application e Module?",
+      "alternativas_pt": [
+        "Access Control Rules",
+        "UI Policies",
+        "Roles",
+        "Assignment Rules"
+      ]
     }
   ]
 }
